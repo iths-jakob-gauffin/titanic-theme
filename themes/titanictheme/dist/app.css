@@ -1,8 +1,55 @@
 .knapp {
   font-size: 10rem;
+  color: steelblue;
 }
 
-body {
-  background-color: blue;
+.Index {
+  padding: 2rem 8rem;
+  background-color: turquoise;
+  border: 1px solid red;
+}
+
+.Index__Title {
+  color: steelblue;
+}
+
+.Index__Title--Green {
+  color: green;
+}
+
+.Index__Button {
+  font-size: 3rem;
+}
+
+.Index__Button--Purple {
+  font-size: 3rem;
+  color: purple;
+  transition: all 0.5s ease-in-out;
+}
+
+.Index:hover .Index__Button--Purple {
+  background-color: yellow;
+}
+
+.Index:hover .Index__Button--Purple:hover {
+  background-color: grey;
+}
+
+.Index__TextContainer {
+  width: 50%;
+  border: 1px solid black;
+  padding: 2rem;
+}
+
+.Index__Text {
+  color: green;
+}
+
+.Text__Paragraph {
+  color: hotpink;
+}
+
+.Text__Paragraph--Blue {
+  color: blue;
 }
 

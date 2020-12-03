@@ -1,5 +1,14 @@
 @import "./knapp.scss";
+@import "./variables.scss";
+@import "./index.scss";
 
 body {
-    background-color: blue;
+    // @include sm {
+    //     background-color: red;
+    // }
+
+    // @include lg {
+    //     // background-color: $primary;
+    //     @include bgColorOpacity(hotpink, 0.2);
+    // }
 }
