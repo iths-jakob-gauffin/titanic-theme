@@ -8,4 +8,4 @@
 </head>
 <body>
 
-<h1>Det här är HEADER.PHP</h1>
+<h1 class="header-title">Det här är HEADER.PHP</h1>
