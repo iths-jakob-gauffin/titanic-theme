@@ -1,31 +1,31 @@
 <?php get_header(); ?>
+    <h1>Det här är Index.php</h1>
 
-    <div class="Index">
-        
-        <h1 class="Index__Title">hejsan det här den första texten, en h1:a</h1>
+    <?php
 
-        <h1 class="Index__Title--Green">hejsan det här den första texten, en h1:a</h1>
-        
-        <button class="Index__Button">klicka</button>
-
-        <button class="Index__Button--Purple">klicka</button>
-    <!-- BEM : Block__Element--Modifier -->
-
-        <div class="Index__TextContainer">
-            <p class="Index__Text">
-                lite brödtext
-            </p>
+    while(have_posts()){
+        the_post();
+        ?>
+        <div class="container">
+            <main class="Blog">
+                <article class="Blog__Post">
+                    <a href="<?php the_permalink(); ?>" class="Blog__PostLink"></a>
+                        <h2 class="Blog__PostTitle">
+                            <?php the_title(); ?>
+                        </h2>
+                    <div class="Blog__Text">
+                        <?php 
+                            
+                            $text = get_the_content(); 
+                            echo wp_trim_words($text, 5);
+                            
+                            ?>
+                    </div>
+                </article>
+            </main>
         </div>
-
-    </div>
-
-    <div class="Text">
-        <p class="Text__Paragraph">hejhejhej</p>
-        <p class="Text__Paragraph--Blue">hejhejhej</p>
-    </div>
-
-
-
-    
+    <?php
+    }
+    ?>
 
 <?php get_footer(); ?>

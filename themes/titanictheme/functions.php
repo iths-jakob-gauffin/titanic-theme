@@ -1,7 +1,7 @@
 <?php
 
 function titanicFiles(){
-    // wp_enqueue_style('titanicCss', get_stylesheet_uri());
+    
     wp_register_style('titanicCss', get_template_directory_uri() . '/dist/app.css', [], 1, 'all');
     wp_enqueue_style('titanicCss');
 
@@ -13,3 +13,13 @@ function titanicFiles(){
 }
 
 add_action('wp_enqueue_scripts', 'titanicFiles');
+
+
+function titanicFeatures(){
+
+    add_theme_support('post-thumbnails');
+
+    add_image_size( 'pizza', 479, 400, true );
+}
+
+add_action('after_setup_theme', 'titanicFeatures');

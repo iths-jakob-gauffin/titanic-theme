@@ -1,6 +1,11 @@
+@import "./base.scss";
 @import "./knapp.scss";
 @import "./variables.scss";
 @import "./index.scss";
+@import "./page.scss";
+@import "./header.scss";
+@import "./blog.scss";
+@import "./single.scss";
 
 body {
     // @include sm {
