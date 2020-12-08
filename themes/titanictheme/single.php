@@ -4,10 +4,20 @@
         <main class="Single">
             <h1 class="Single__Title">
                 <?php the_title(); ?>
+                Single.php
             </h1>
-            <div class="Single__Text">
-                <?php the_content(); ?>
-            </div>
+            <?php
+            while(have_posts()){
+                the_post(); 
+            ?>
+
+            <div class="Single__FormWrapper"><?php the_content(); ?></div>
+
+        <?php
+      }
+
+
+    ?>
         </main>
     </div>
 

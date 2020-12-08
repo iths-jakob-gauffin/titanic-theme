@@ -1,0 +1,40 @@
+.Booking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+
+    &__FormWrapper {
+        width: 70rem;
+        border: 1px solid blue;
+        background: white;
+        text-align: left;
+
+        * {
+            @include font();
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 2.3rem;
+        }
+
+        .mphb-check-out-date {
+            margin-bottom: 5rem;
+        }
+
+        .mphb-room-details > p {
+            margin-bottom: 2rem;
+        }
+
+        .mphb_checkout-services-list > li {
+            margin-bottom: 2rem;
+        }
+
+        .mphb-price-breakdown-group > tr {
+            margin-bottom: 2rem;
+            display: block;
+            border: 1px solid red;
+        }
+    }
+}

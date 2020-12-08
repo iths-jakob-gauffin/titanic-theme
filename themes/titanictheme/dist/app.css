@@ -15,6 +15,7 @@ a {
 
 .container {
   padding: 0rem 15rem;
+  position: relative;
 }
 
 .knapp {
@@ -24,6 +25,7 @@ a {
 
 .container {
   padding: 0rem 15rem;
+  position: relative;
 }
 
 .Index {
@@ -162,6 +164,10 @@ a {
 
 .Single {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid red;
 }
 
 .Single__Title {
@@ -171,5 +177,102 @@ a {
 
 .Single__Text {
   font-size: 2rem;
+}
+
+.Single__FormWrapper {
+  width: 70rem;
+  border: 1px solid blue;
+}
+
+.FrontPage__Container {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.FrontPage__FlexWrapper {
+  display: flex;
+  border: 1px solid red;
+  width: 100%;
+}
+
+.FrontPage__FlexWrapper .post-thumbnail {
+  width: 34rem;
+  height: 40.5rem;
+}
+
+.FrontPage__FlexWrapper .post-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+.FrontPage__FlexWrapper .mphb_sc_rooms-wrapper,
+.FrontPage__FlexWrapper .mphb-room-type:not(:first-of-type),
+.FrontPage__FlexWrapper .mphb_sc_search_results-wrapper,
+.FrontPage__FlexWrapper .mphb-room-type:not(:first-of-type),
+.FrontPage__FlexWrapper .mphb_sc_services-wrapper,
+.FrontPage__FlexWrapper .mphb-service:not(:first-of-type) {
+  margin-top: 0px !important;
+}
+
+.FrontPage__Hero {
+  width: 100%;
+  height: 50rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.Booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.Booking__FormWrapper {
+  width: 70rem;
+  border: 1px solid blue;
+  background: white;
+  text-align: left;
+}
+
+.Booking__FormWrapper * {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+}
+
+.Booking__FormWrapper h3 {
+  font-size: 2.3rem;
+}
+
+.Booking__FormWrapper .mphb-check-out-date {
+  margin-bottom: 5rem;
+}
+
+.Booking__FormWrapper .mphb-room-details > p {
+  margin-bottom: 2rem;
+}
+
+.Booking__FormWrapper .mphb_checkout-services-list > li {
+  margin-bottom: 2rem;
+}
+
+.Booking__FormWrapper .mphb-price-breakdown-group > tr {
+  margin-bottom: 2rem;
+  display: block;
+  border: 1px solid red;
 }
 

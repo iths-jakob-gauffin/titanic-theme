@@ -1,6 +1,9 @@
 <?php
 
 function titanicFiles(){
+    //fonts
+    // wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Palanquin&display=swap', false);
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap', false);
     
     wp_register_style('titanicCss', get_template_directory_uri() . '/dist/app.css', [], 1, 'all');
     wp_enqueue_style('titanicCss');
@@ -23,3 +26,5 @@ function titanicFeatures(){
 }
 
 add_action('after_setup_theme', 'titanicFeatures');
+
+add_filter('use_block_editor_for_post', '__return_false', 10);
