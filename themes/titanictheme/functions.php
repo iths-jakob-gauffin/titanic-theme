@@ -28,3 +28,48 @@ function titanicFeatures(){
 add_action('after_setup_theme', 'titanicFeatures');
 
 add_filter('use_block_editor_for_post', '__return_false', 10);
+
+function headerPizza($harbor = NULL){
+    // echo var_dump($harbor);
+    ?>
+        <nav class="Header__Nav">
+            <ul class="Header__NavList">
+                <li class="Header__ListItem">
+                    <a href="<?php echo esc_url(site_url($harbor . "-" . 'events')); ?>" class="Header__Link">
+                        Events
+                    </a>
+                </li>
+                <li class="Header__ListItem">
+                    <a href="<?php echo esc_url(site_url($harbor . "-" . 'butiken')); ?>" class="Header__Link">
+                        Butiken
+                    </a>
+                </li>
+                <li class="Header__ListItem">
+                    <a href="<?php echo esc_url(site_url($harbor . "-" . 'boka')); ?>" class="Header__Link">
+                        Boka
+                    </a>
+                </li>
+                <li class="Header__ListItem">
+                    <a href="<?php echo esc_url(site_url($harbor . "-" . 'hamnar')); ?>" class="Header__Link">
+                        Hamnar
+                    </a>
+                </li>
+                <li class="Header__ListItem">
+                    <a href="<?php echo esc_url(site_url($harbor . "-" . 'service')); ?>" class="Header__Link">
+                        Service
+                    </a>
+                </li>
+                <li class="Header__ListItem">
+                    <a href="<?php echo esc_url(site_url($harbor . "-" . 'blog')); ?>" class="Header__Link">
+                        Blogg
+                    </a>
+                </li>
+                <li class="Header__ListItem">
+                    <a href="<?php echo esc_url(site_url($harbor . "-" . 'persongalleri')); ?>" class="Header__Link">
+                        Persongalleri
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    <?php
+};

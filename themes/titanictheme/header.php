@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,51 +12,49 @@
 
 <div class="container">
     <header class="Header">
+        <?php 
+
+        if(is_front_page()){
+
+            $_SESSION['hamn'] = "NOLLSTÄLLD";
+
+        } else {
+    
+            function checkIfUrlContainsString($url, $string){
+                if (strpos($url, $string) !== false) {
+                    return true;
+                } else {
+                    return false;
+                };
+            }
+    
+            $currentUrl = home_url( add_query_arg( null, null ));
+            
+            if(checkIfUrlContainsString($currentUrl, "sandhamn")){
+
+                $_SESSION['hamn'] = 'sandhamn';
+                
+            } elseif (checkIfUrlContainsString($currentUrl, "visby")) {
+
+                $_SESSION['hamn'] = 'visby';
+
+            } elseif (checkIfUrlContainsString($currentUrl, "vaxholm")) {
+
+                $_SESSION['hamn'] = 'vaxholm';
+
+            }
+        }
+
+        ?>
         <div class="Header__Logo">
             <a href="<?php echo esc_url(site_url('/'));?>" class="Header__LogoLink">
-            Logotyp
+            Logotyp - <?php echo $_SESSION['hamn']; ?>
             </a>
         
         </div>
-        <nav class="Header__Nav">
-            <ul class="Header__NavList">
-                <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('events')); ?>" class="Header__Link">
-                        Events
-                    </a>
-                </li>
-                <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('butiken')); ?>" class="Header__Link">
-                        Butiken
-                    </a>
-                </li>
-                <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('boka')); ?>" class="Header__Link">
-                        Boka
-                    </a>
-                </li>
-                <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('hamnar')); ?>" class="Header__Link">
-                        Hamnar
-                    </a>
-                </li>
-                <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('service')); ?>" class="Header__Link">
-                        Service
-                    </a>
-                </li>
-                <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('blog')); ?>" class="Header__Link">
-                        Blogg
-                    </a>
-                </li>
-                <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('persongalleri')); ?>" class="Header__Link">
-                        Persongalleri
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <?php 
+            headerPizza($_SESSION['hamn']);
+        ?>
     </header>
 </div>
 
