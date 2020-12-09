@@ -3,7 +3,6 @@
     <div class="container">
         <main class="Single">
             <h1 class="Single__Title">
-                <?php the_title(); ?>
                 Single.php
             </h1>
             <?php

@@ -8,6 +8,12 @@
         the_post();
         $imageUrl = get_field('hero-background')['url'];
         // echo var_dump($imageUrl);
+        // $variabel = get_field('hamn');
+
+        // $harbors = new WP_Query(array(
+        //     'post_type' => 'harbor'
+        // ));
+        // echo var_dump($harbors);
 
         ?>
         <div class="container">

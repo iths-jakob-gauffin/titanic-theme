@@ -29,21 +29,19 @@
             }
     
             $currentUrl = home_url( add_query_arg( null, null ));
+
+            $harbors = get_posts( array(
+                'post_type' => 'harbor'
+            ));
+
+            foreach($harbors as $post){
+                if(checkIfUrlContainsString($currentUrl, strtolower($post->post_title))){
+                    $_SESSION['hamn'] = strtolower($post->post_title);
+                };
+            };
             
-            if(checkIfUrlContainsString($currentUrl, "sandhamn")){
-
-                $_SESSION['hamn'] = 'sandhamn';
-                
-            } elseif (checkIfUrlContainsString($currentUrl, "visby")) {
-
-                $_SESSION['hamn'] = 'visby';
-
-            } elseif (checkIfUrlContainsString($currentUrl, "vaxholm")) {
-
-                $_SESSION['hamn'] = 'vaxholm';
-
-            }
         }
+            
 
         ?>
         <div class="Header__Logo">
