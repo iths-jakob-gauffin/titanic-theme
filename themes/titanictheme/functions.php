@@ -29,43 +29,74 @@ add_action('after_setup_theme', 'titanicFeatures');
 
 add_filter('use_block_editor_for_post', '__return_false', 10);
 
-function headerPizza($harbor = NULL){
+function titanic_post_types(){
+    register_post_type('event', array(
+        'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+        'public' => true,
+        'labels' => array(
+            'name' => 'Events',
+            'add_new_item' => 'Add New Event',
+            'edit_item' => 'Edit Event',
+            'all_items' => 'All Events',
+            'singular_name' => 'Event'
+        ),
+        'menu_icon' => 'dashicons-calendar-alt'
+
+    ));
+
+    register_post_type('harbor', array(
+        'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+        'public' => true,
+        'labels' => array(
+            'name' => 'Harbors',
+            'add_new_item' => 'Add New Harbor',
+            'edit_item' => 'Edit Harbor',
+            'all_items' => 'All Harbors',
+            'singular_name' => 'Harbor'
+        ),
+        'menu_icon' => 'dashicons-sos'
+    ));
+};
+
+add_action('init', 'titanic_post_types');
+
+function headerPizza($harbor){
     // echo var_dump($harbor);
     ?>
         <nav class="Header__Nav">
             <ul class="Header__NavList">
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url($harbor . "-" . 'events')); ?>" class="Header__Link">
+                    <a href="<?php echo esc_url(site_url('events')); ?>" class="Header__Link">
                         Events
                     </a>
                 </li>
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url($harbor . "-" . 'butiken')); ?>" class="Header__Link">
+                    <a href="<?php echo esc_url(site_url('butiken')); ?>" class="Header__Link">
                         Butiken
                     </a>
                 </li>
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url($harbor . "-" . 'boka')); ?>" class="Header__Link">
+                    <a href="<?php echo esc_url(site_url('/accommodation/' . $harbor)); ?>" class="Header__Link">
                         Boka
                     </a>
                 </li>
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url($harbor . "-" . 'hamnar')); ?>" class="Header__Link">
+                    <a href="<?php echo esc_url(site_url('hamnar')); ?>" class="Header__Link">
                         Hamnar
                     </a>
                 </li>
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url($harbor . "-" . 'service')); ?>" class="Header__Link">
+                    <a href="<?php echo esc_url(site_url('service')); ?>" class="Header__Link">
                         Service
                     </a>
                 </li>
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url($harbor . "-" . 'blog')); ?>" class="Header__Link">
+                    <a href="<?php echo esc_url(site_url('blog')); ?>" class="Header__Link">
                         Blogg
                     </a>
                 </li>
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url($harbor . "-" . 'persongalleri')); ?>" class="Header__Link">
+                    <a href="<?php echo esc_url(site_url('persongalleri')); ?>" class="Header__Link">
                         Persongalleri
                     </a>
                 </li>
