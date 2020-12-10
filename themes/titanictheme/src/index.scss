@@ -1,0 +1,51 @@
+.Index {
+    padding: 2rem 8rem;
+    background-color: turquoise;
+    border: 1px solid red;
+
+    &__Title {
+        color: steelblue;
+
+        &--Green {
+            color: green;
+        }
+    }
+
+    &__Button {
+        font-size: 3rem;
+
+        &--Purple {
+            font-size: 3rem;
+            color: purple;
+            transition: all 0.5s ease-in-out;
+
+            .Index:hover & {
+                background-color: yellow;
+
+                &:hover {
+                    background-color: grey;
+                }
+            }
+        }
+    }
+
+    &__TextContainer {
+        width: 50%;
+        border: 1px solid black;
+        padding: 2rem;
+    }
+
+    &__Text {
+        color: green;
+    }
+}
+
+.Text {
+    &__Paragraph {
+        color: hotpink;
+
+        &--Blue {
+            color: blue;
+        }
+    }
+}

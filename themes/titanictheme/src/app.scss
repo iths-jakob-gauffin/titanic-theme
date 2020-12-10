@@ -1,5 +1,22 @@
+@import "./base.scss";
 @import "./knapp.scss";
+@import "./variables.scss";
+@import "./index.scss";
+@import "./page.scss";
+@import "./header.scss";
+@import "./blog.scss";
+@import "./single.scss";
+@import "./frontpage.scss";
+@import "./typography.scss";
+@import "./booking.scss";
 
 body {
-    background-color: pink;
+    // @include sm {
+    //     background-color: red;
+    // }
+
+    // @include lg {
+    //     // background-color: $primary;
+    //     @include bgColorOpacity(hotpink, 0.2);
+    // }
 }

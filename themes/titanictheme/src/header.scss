@@ -1,0 +1,38 @@
+.Header {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+
+    &__Logo {
+        font-size: 3rem;
+        background-color: tan;
+    }
+
+    &__LogoLink {
+        color: steelblue;
+        text-transform: uppercase;
+    }
+
+    &__Nav {
+        border: 1px solid blue;
+    }
+
+    &__NavList {
+        border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    &__ListItem {
+        font-size: 2rem;
+        background-color: yellowgreen;
+    }
+
+    &__ListItem:not(:last-child) {
+        margin-right: 2rem;
+    }
+}

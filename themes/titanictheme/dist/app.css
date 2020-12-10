@@ -1,8 +1,278 @@
-.knapp {
-  font-size: 10rem;
+html {
+  font-size: 10px;
 }
 
 body {
-  background-color: pink;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: grey;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0rem 15rem;
+  position: relative;
+}
+
+.knapp {
+  font-size: 10rem;
+  color: steelblue;
+}
+
+.container {
+  padding: 0rem 15rem;
+  position: relative;
+}
+
+.Index {
+  padding: 2rem 8rem;
+  background-color: turquoise;
+  border: 1px solid red;
+}
+
+.Index__Title {
+  color: steelblue;
+}
+
+.Index__Title--Green {
+  color: green;
+}
+
+.Index__Button {
+  font-size: 3rem;
+}
+
+.Index__Button--Purple {
+  font-size: 3rem;
+  color: purple;
+  transition: all 0.5s ease-in-out;
+}
+
+.Index:hover .Index__Button--Purple {
+  background-color: yellow;
+}
+
+.Index:hover .Index__Button--Purple:hover {
+  background-color: grey;
+}
+
+.Index__TextContainer {
+  width: 50%;
+  border: 1px solid black;
+  padding: 2rem;
+}
+
+.Index__Text {
+  color: green;
+}
+
+.Text__Paragraph {
+  color: hotpink;
+}
+
+.Text__Paragraph--Blue {
+  color: blue;
+}
+
+.Page__Container {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.Page__Container p {
+  font-size: 4rem;
+}
+
+.Page__Container img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+}
+
+.Header {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+
+.Header__Logo {
+  font-size: 3rem;
+  background-color: tan;
+}
+
+.Header__LogoLink {
+  color: steelblue;
+  text-transform: uppercase;
+}
+
+.Header__Nav {
+  border: 1px solid blue;
+}
+
+.Header__NavList {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.Header__ListItem {
+  font-size: 2rem;
+  background-color: yellowgreen;
+}
+
+.Header__ListItem:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.Blog__Post {
+  padding: 0 2rem;
+  background: mediumseagreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.Blog__PostTitle {
+  font-size: 2.5rem;
+  border: 1px solid black;
+}
+
+.Blog__PostLink {
+  border: 1px solid red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Single {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.Single__Title {
+  font-size: 2.5rem;
+  border: 1px solid black;
+}
+
+.Single__Text {
+  font-size: 2rem;
+}
+
+.Single__FormWrapper {
+  width: 70rem;
+  border: 1px solid blue;
+}
+
+.FrontPage__Container {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.FrontPage__FlexWrapper {
+  display: flex;
+  border: 1px solid red;
+  width: 100%;
+}
+
+.FrontPage__FlexWrapper .post-thumbnail {
+  width: 34rem;
+  height: 40.5rem;
+}
+
+.FrontPage__FlexWrapper .post-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+.FrontPage__FlexWrapper .mphb_sc_rooms-wrapper,
+.FrontPage__FlexWrapper .mphb-room-type:not(:first-of-type),
+.FrontPage__FlexWrapper .mphb_sc_search_results-wrapper,
+.FrontPage__FlexWrapper .mphb-room-type:not(:first-of-type),
+.FrontPage__FlexWrapper .mphb_sc_services-wrapper,
+.FrontPage__FlexWrapper .mphb-service:not(:first-of-type) {
+  margin-top: 0px !important;
+}
+
+.FrontPage__Hero {
+  width: 100%;
+  height: 50rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.Booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.Booking__FormWrapper {
+  width: 70rem;
+  border: 1px solid blue;
+  background: white;
+  text-align: left;
+}
+
+.Booking__FormWrapper * {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+}
+
+.Booking__FormWrapper h3 {
+  font-size: 2.3rem;
+}
+
+.Booking__FormWrapper .mphb-check-out-date {
+  margin-bottom: 5rem;
+}
+
+.Booking__FormWrapper .mphb-room-details > p {
+  margin-bottom: 2rem;
+}
+
+.Booking__FormWrapper .mphb_checkout-services-list > li {
+  margin-bottom: 2rem;
+}
+
+.Booking__FormWrapper .mphb-price-breakdown-group > tr {
+  margin-bottom: 2rem;
+  display: block;
+  border: 1px solid red;
 }
 
