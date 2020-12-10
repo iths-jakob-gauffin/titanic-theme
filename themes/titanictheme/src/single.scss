@@ -1,5 +1,9 @@
 .Single {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
     // &__Post {
     //     padding: 0 2rem;
     //     background: mediumseagreen;
@@ -19,5 +23,10 @@
 
     &__Text {
         font-size: 2rem;
+    }
+
+    &__FormWrapper {
+        width: 70rem;
+        border: 1px solid blue;
     }
 }

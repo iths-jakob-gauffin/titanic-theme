@@ -5,8 +5,13 @@ $primary: steelblue;
     background-color: rgba($color, $opacity);
 }
 
+@mixin font() {
+    font-family: "Montserrat", sans-serif;
+}
+
 .container {
     padding: 0rem 15rem;
+    position: relative;
 }
 
 // MEDIA-QUERYS
