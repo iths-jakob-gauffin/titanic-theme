@@ -46,7 +46,9 @@ function titanic_post_types(){
 
     register_post_type('harbor', array(
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+        'taxonomies' => array('topics','category'),
         'public' => true,
+        'has_archive' => true,
         'labels' => array(
             'name' => 'Harbors',
             'add_new_item' => 'Add New Harbor',
@@ -56,6 +58,8 @@ function titanic_post_types(){
         ),
         'menu_icon' => 'dashicons-sos'
     ));
+
+    register_taxonomy_for_object_type('post_tag', 'harbor');
 };
 
 add_action('init', 'titanic_post_types');
