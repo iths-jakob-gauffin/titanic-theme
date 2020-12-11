@@ -1,4 +1,4 @@
-const acommodationSingle = () => {
+const accommodationSingle = () => {
     (function($) {
         $(".mphb-details-title").wrap('<div class="leftWrapper"></div>');
         $(".mphb-single-room-type-attributes").wrap(
@@ -15,4 +15,4 @@ const acommodationSingle = () => {
     })(jQuery);
 };
 
-export default acommodationSingle;
+export default accommodationSingle;

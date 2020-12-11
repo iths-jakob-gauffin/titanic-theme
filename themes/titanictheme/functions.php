@@ -13,6 +13,12 @@ function titanicFiles(){
     wp_register_script('titanicJs', get_template_directory_uri() . '/dist/app.js', ['jquery'], 1, true);
     wp_enqueue_script('titanicJs');
 
+    if(site_url('search-result')){
+        wp_register_script('jakobsSearchResultJavascript', get_template_directory_uri() . '/dist/searchResult.js', ['jquery'], 1, true);
+        wp_enqueue_script('jakobsSearchResultJavascript');
+    }
+
+
 }
 
 add_action('wp_enqueue_scripts', 'titanicFiles');
@@ -100,7 +106,7 @@ function headerPizza($harbor){
                     </a>
                 </li>
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('hamnar')); ?>" class="Header__Link">
+                    <a href="<?php echo esc_url(site_url('harbor')); ?>" class="Header__Link">
                         Hamnar
                     </a>
                 </li>
@@ -115,7 +121,7 @@ function headerPizza($harbor){
                     </a>
                 </li>
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('personal-galleri')); ?>" class="Header__Link">
+                    <a href="<?php echo esc_url(site_url('staff-gallery')); ?>" class="Header__Link">
                         Personal galleri
                     </a>
                 </li>

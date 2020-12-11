@@ -1,0 +1,13 @@
+.StaffGallery {
+    &__ImageWrapper {
+        height: 15rem;
+        width: 20rem;
+        border: 1px solid red;
+    }
+
+    &__Image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
