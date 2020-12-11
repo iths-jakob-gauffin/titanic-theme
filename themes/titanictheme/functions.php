@@ -59,6 +59,21 @@ function titanic_post_types(){
         'menu_icon' => 'dashicons-sos'
     ));
 
+    register_post_type('gallery', array(
+        'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+        'taxonomies' => array('topics','category'),
+        'public' => true,
+        'has_archive' => true,
+        'labels' => array(
+            'name' => 'Gallery',
+            'add_new_item' => 'Add New Gallery',
+            'edit_item' => 'Edit Gallery',
+            'all_items' => 'All Galleries',
+            'singular_name' => 'Gallery'
+        ),
+        'menu_icon' => 'dashicons-admin-users'
+    ));
+
     register_taxonomy_for_object_type('post_tag', 'harbor');
 };
 
@@ -100,8 +115,8 @@ function headerPizza($harbor){
                     </a>
                 </li>
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('persongalleri')); ?>" class="Header__Link">
-                        Persongalleri
+                    <a href="<?php echo esc_url(site_url('personal-galleri')); ?>" class="Header__Link">
+                        Personal galleri
                     </a>
                 </li>
             </ul>
