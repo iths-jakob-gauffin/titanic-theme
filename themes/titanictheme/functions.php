@@ -10,7 +10,7 @@ function titanicFiles(){
 
     wp_enqueue_script('jquery');
 
-    wp_register_script('titanicJs', get_template_directory_uri() . 'dist/app.js', ['jquery'], 1, true);
+    wp_register_script('titanicJs', get_template_directory_uri() . '/dist/app.js', ['jquery'], 1, true);
     wp_enqueue_script('titanicJs');
 
 }
