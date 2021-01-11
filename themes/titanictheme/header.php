@@ -51,7 +51,8 @@
         
         </div>
         <?php 
-            headerPizza($_SESSION['hamn']);
+            navList($_SESSION['hamn']);
+            echo get_search_form();
         ?>
     </header>
 </div>

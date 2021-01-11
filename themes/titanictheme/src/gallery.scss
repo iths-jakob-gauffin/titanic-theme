@@ -1,0 +1,77 @@
+@import "./variables.scss";
+
+.Gallery {
+
+    &__BackgroundImage{
+        position: relative;
+        height: 30rem;
+        width: 100%;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        margin-bottom: 5rem;
+    }
+
+    &__TitleWrapper{
+        position: absolute;
+        @include bgColorOpacity($Primary, .7);
+        width: 30%;
+        top: 44%;
+        left: 0;
+    }
+
+    &__Title{
+        position: relative;
+        color: white;
+        @include h1;
+        padding: 1.5rem 0 1.5rem 3rem;
+        margin: 0;
+        font-weight: 400;
+    }
+
+    &__CardImageWrapper {
+        height: 25rem;
+        width: 100%;
+        border: 1px solid green;
+    }
+
+    &__Image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__List{
+        display: flex;
+        list-style: none;
+        border: 1px solid red;
+        justify-content: space-between;
+        
+    }
+
+    &__ListItem{
+        width: 100%;
+        max-width: 30%;
+        margin-right: 4rem;
+        
+        &:not(last-of-type){
+            margin-right: 0rem;
+        }
+    }
+    
+    &__CardListItem{
+        flex: 1 1 30%;
+        border: 1px solid blue;
+    }
+    
+    &__CardList{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__CardTitle{
+        padding: 0;
+        color: $Primary;
+    }
+}

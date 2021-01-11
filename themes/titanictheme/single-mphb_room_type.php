@@ -3,7 +3,7 @@
     <div class="container">
         <main class="Single">
             <h1 class="Single__Title">
-                Single-accommodation.php
+                Single-mphb_room_type.php
             </h1>
 
             <?php

@@ -10,9 +10,18 @@ $primary: steelblue;
 }
 
 .container {
-    padding: 0rem 15rem;
+    padding: 0rem 5rem;
     position: relative;
 }
+
+@mixin h1{
+    font-size: 4rem;
+}
+
+$White: white;
+$Primary: #1070A8;
+$Secondary: #313131;
+$Lightgray: #D8E3EC;
 
 // MEDIA-QUERYS
 // Small tablets and large smartphones (landscape view)
