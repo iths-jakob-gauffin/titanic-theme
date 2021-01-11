@@ -5,6 +5,11 @@
 
     while(have_posts()){
         the_post();
+        $hamnen = get_field("hamn")[0]->post_title;
+        echo var_dump($hamnen);
+        echo var_dump($_SESSION['hamn']);
+
+        if (strtolower($hamnen) === strtolower($_SESSION['hamn'])){
         ?>
         <div class="container">
             <main class="Blog">
@@ -24,7 +29,8 @@
                 </article>
             </main>
         </div>
-    <?php
+        <?php
+        }
     }
     ?>
 
