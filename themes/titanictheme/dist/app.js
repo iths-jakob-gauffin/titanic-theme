@@ -86,14 +86,48 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/accommodationSingle.js":
+/*!************************************!*\
+  !*** ./src/accommodationSingle.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var accommodationSingle = function accommodationSingle() {
+  (function ($) {
+    $(".mphb-details-title").wrap('<div class="leftWrapper"></div>');
+    $(".mphb-single-room-type-attributes").wrap('<div class="leftWrapper"></div>');
+    $(".mphb-regular-price").wrap('<div class="leftWrapper"></div>');
+    $(".leftWrapper").wrapAll('<div class="halfWrapper"></div>');
+    $(".mphb-calendar-title").wrap('<div class="rightWrapper"></div>');
+    $(".mphb-calendar").wrap('<div class="rightWrapper"></div>');
+    $(".rightWrapper").wrapAll('<div class="halfWrapper"></div>');
+    $(".halfWrapper").wrapAll('<div class="fullWrapper"></div>');
+  })(jQuery);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (accommodationSingle);
+
+/***/ }),
+
 /***/ "./src/app.js":
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _searchResult__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./searchResult */ "./src/searchResult.js");
+/* harmony import */ var _accommodationSingle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./accommodationSingle */ "./src/accommodationSingle.js");
+// import jQuery from "jquery";
 
 
+var searchResult = new _searchResult__WEBPACK_IMPORTED_MODULE_0__["default"]();
+Object(_accommodationSingle__WEBPACK_IMPORTED_MODULE_1__["default"])(); // searchResult();
 
 /***/ }),
 
@@ -108,6 +142,26 @@
 
 /***/ }),
 
+/***/ "./src/searchResult.js":
+/*!*****************************!*\
+  !*** ./src/searchResult.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var searchResult = function searchResult() {
+  (function ($) {
+    $(".mphb-room-type").wrapAll('<div class="testwrapper"></div>');
+    $(".mphb-room-type").wrap('<div class="innerwrapper"></div>');
+  })(jQuery);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (searchResult);
+
+/***/ }),
+
 /***/ 0:
 /*!*****************************************!*\
   !*** multi ./src/app.js ./src/app.scss ***!
@@ -115,8 +169,13 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! C:\Users\jenni\Local Sites\newtitanictheme\app\public\wp-content\themes\titanictheme\src\app.js */"./src/app.js");
 module.exports = __webpack_require__(/*! C:\Users\jenni\Local Sites\newtitanictheme\app\public\wp-content\themes\titanictheme\src\app.scss */"./src/app.scss");
+=======
+__webpack_require__(/*! C:\Users\Jakob\Local Sites\titanicny\app\public\wp-content\themes\themes\titanictheme\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Jakob\Local Sites\titanicny\app\public\wp-content\themes\themes\titanictheme\src\app.scss */"./src/app.scss");
+>>>>>>> main
 
 
 /***/ })

@@ -1,10 +1,25 @@
-<?php get_header(); ?>
+<?php get_header(); 
+    
+
+    global $query_string;
+    // echo var_dump($query_string);
+    
+    $test = wp_parse_str( $query_string, $search_query );
+    echo var_dump($search_query);
+    $search = new WP_Query( $search_query );
+    ?>
+    
     <h1>Det här är Index.php</h1>
 
     <?php
 
     while(have_posts()){
         the_post();
+        $hamnen = get_field("hamn")[0]->post_title;
+        echo var_dump($hamnen);
+        echo var_dump($_SESSION['hamn']);
+
+        if (strtolower($hamnen) === strtolower($_SESSION['hamn'])){
         ?>
         <div class="container">
             <main class="Blog">
@@ -24,7 +39,8 @@
                 </article>
             </main>
         </div>
-    <?php
+        <?php
+        }
     }
     ?>
 

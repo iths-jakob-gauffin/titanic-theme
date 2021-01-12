@@ -28,13 +28,15 @@
                     ?>
                     <ul class="PageHamnar__TagList">
                         <?php 
-
-                            foreach($tags as $tag){
-                                ?>
+                            if($tags){
+                                foreach($tags as $tag){
+                            ?>
                                     <li class="PageHamnar__TagListItem">
                                         <?php echo $tag->name ?>
                                     </li>
                                 <?php
+                            };
+                                
                             }
                         
                         ?>

@@ -10,8 +10,14 @@ function titanicFiles(){
 
     wp_enqueue_script('jquery');
 
-    wp_register_script('titanicJs', get_template_directory_uri() . 'dist/app.js', ['jquery'], 1, true);
+    wp_register_script('titanicJs', get_template_directory_uri() . '/dist/app.js', ['jquery'], 1, true);
     wp_enqueue_script('titanicJs');
+
+    if(site_url('search-result')){
+        wp_register_script('jakobsSearchResultJavascript', get_template_directory_uri() . '/dist/searchResult.js', ['jquery'], 1, true);
+        wp_enqueue_script('jakobsSearchResultJavascript');
+    }
+
 
 }
 
@@ -23,6 +29,8 @@ function titanicFeatures(){
     add_theme_support('post-thumbnails');
 
     add_image_size( 'pizza', 479, 400, true );
+    add_image_size( 'backgroundImage', 1440, 500, true );
+
 }
 
 add_action('after_setup_theme', 'titanicFeatures');
@@ -74,14 +82,28 @@ function titanic_post_types(){
         'menu_icon' => 'dashicons-admin-users'
     ));
 
+
+
     register_taxonomy_for_object_type('post_tag', 'harbor');
 };
 
 add_action('init', 'titanic_post_types');
 
-function headerPizza($harbor){
-    // echo var_dump($harbor);
-    ?>
+function navList($harbor){
+    if($harbor === "NOLLSTÄLLD"){
+        ?>
+        <nav class="Header__Nav">
+            <ul class="Header__NavList">
+                <li class="Header__ListItem">
+                    <a href="<?php echo esc_url(site_url('harbor')); ?>" class="Header__Link">
+                        Hamnar
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <?php
+    } else {
+        ?>
         <nav class="Header__Nav">
             <ul class="Header__NavList">
                 <li class="Header__ListItem">
@@ -100,7 +122,7 @@ function headerPizza($harbor){
                     </a>
                 </li>
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('hamnar')); ?>" class="Header__Link">
+                    <a href="<?php echo esc_url(site_url('harbor')); ?>" class="Header__Link">
                         Hamnar
                     </a>
                 </li>
@@ -115,11 +137,31 @@ function headerPizza($harbor){
                     </a>
                 </li>
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('personal-galleri')); ?>" class="Header__Link">
-                        Personal galleri
+                    <a href="<?php echo esc_url(site_url('gallery')); ?>" class="Header__Link">
+                        Personalgalleri
                     </a>
                 </li>
             </ul>
         </nav>
+
+        <?php
+    }
+
+    ?>
+        
     <?php
 };
+
+
+// inkludera custom post types i söket
+function include_cpt_search( $query ) {
+
+	
+    if ( $query->is_search ) {
+		$query->set( 'post_type', array( 'post', 'page', 'event', 'harbor' ) );
+    }
+    
+    return $query;
+    
+}
+add_filter( 'pre_get_posts', 'include_cpt_search' ); 
