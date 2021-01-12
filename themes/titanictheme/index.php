@@ -7,9 +7,8 @@
     $test = wp_parse_str( $query_string, $search_query );
     echo var_dump($search_query);
     $search = new WP_Query( $search_query );
-    // echo var_dump($search);
+    ?>
     
-?>
     <h1>Det här är Index.php</h1>
 
     <?php

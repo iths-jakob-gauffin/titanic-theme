@@ -30,6 +30,7 @@ function titanicFeatures(){
 
     add_image_size( 'pizza', 479, 400, true );
     add_image_size( 'backgroundImage', 1440, 500, true );
+
 }
 
 add_action('after_setup_theme', 'titanicFeatures');
