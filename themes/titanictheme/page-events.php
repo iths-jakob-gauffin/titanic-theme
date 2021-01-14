@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
+<!-- Place here: Event logo in blue that is ontop of the background image on the event-page -->
+<img src="<?php echo get_the_post_thumbnail_url();?>" alt="">
+    
     <h1>Det här är page-events.php</h1>
     <div class="container">
     <?php
