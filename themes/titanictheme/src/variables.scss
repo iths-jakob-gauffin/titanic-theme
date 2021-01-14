@@ -14,14 +14,34 @@ $primary: steelblue;
     position: relative;
 }
 
-@mixin h1{
+@mixin pageTitle{
     font-size: 4rem;
 }
+@mixin h1 {
+    font-size: 3rem;
+}
+@mixin h2 {
+    font-size: 2.5rem;
+}
+@mixin h3 {
+    font-size: 2rem;
+}
+@mixin h4 {
+    font-size: 1.8rem;
+}
+@mixin h5 {
+    font-size: 1.5rem;
+}
+@mixin p {
+    font-size: 1.5rem;
+}
+
 
 $White: white;
 $Primary: #1070A8;
 $Secondary: #313131;
 $Lightgray: #D8E3EC;
+$Darkgray: #687580;
 
 // MEDIA-QUERYS
 // Small tablets and large smartphones (landscape view)

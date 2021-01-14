@@ -146,6 +146,11 @@ a {
   margin-right: 2rem;
 }
 
+.container {
+  padding: 0rem 5rem;
+  position: relative;
+}
+
 .Blog__Post {
   padding: 0 2rem;
   background: mediumseagreen;
@@ -172,6 +177,54 @@ a {
   height: 100%;
 }
 
+.Blog__Image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Blog__ImageContainer {
+  height: 20rem;
+  width: 20rem;
+}
+
+.Blog__BackgroundImage {
+  position: relative;
+  height: 30rem;
+  width: 100%;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  margin-bottom: 5rem;
+}
+
+.Blog__TitleWrapper {
+  position: absolute;
+  background-color: rgba(16, 112, 168, 0.7);
+  width: 30%;
+  top: 44%;
+  left: 0;
+}
+
+.Blog__Title {
+  position: relative;
+  color: white;
+  font-size: 4rem;
+  padding: 1.5rem 0 1.5rem 3rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.Blog__Text {
+  color: #313131;
+}
+
+.container {
+  padding: 0rem 5rem;
+  position: relative;
+}
+
 .Single {
   background-color: white;
   display: flex;
@@ -192,6 +245,11 @@ a {
 .Single__FormWrapper {
   width: 70rem;
   border: 1px solid blue;
+}
+
+h1,
+h2 {
+  color: #313131;
 }
 
 .FrontPage__Container {
