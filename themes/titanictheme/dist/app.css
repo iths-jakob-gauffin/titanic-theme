@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: grey;
+  background-color: #D8E3EC;
 }
 
 a {
@@ -417,5 +417,126 @@ a {
 
 .Events__Title {
   color: #1070A8;
+}
+
+.Search {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 1px solid red;
+}
+
+.Search__BackgroundImage {
+  position: relative;
+  height: 30rem;
+  width: 100%;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  margin-bottom: 5rem;
+}
+
+.Search__Title {
+  position: absolute;
+  color: white;
+  font-size: 4rem;
+  background-color: rgba(16, 112, 168, 0.7);
+  padding: 1.5rem 5rem 1.5rem 5rem;
+  margin: 0;
+  font-weight: 400;
+  top: 44%;
+  left: 0;
+}
+
+.Search__QueryString {
+  font-size: 2.5rem;
+}
+
+.Search__ResultCardsWrapper {
+  width: 100%;
+}
+
+.Search__ResultCard {
+  background-color: white;
+  padding: 1.5rem 1.5rem 2rem;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+  min-width: 35rem;
+  flex: 1 1 45%;
+}
+
+.Search__ResultLink {
+  border-bottom: 1px solid #1070A8;
+  display: inline-block;
+}
+
+.Search__ResultTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #313131;
+}
+
+.Search__ResultCardWrapper {
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+}
+
+.Search__ResultText {
+  font-size: 3.5rem;
+  color: #1070A8;
+  margin-bottom: 1rem;
+}
+
+.Search__LabelWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.Search__LabelWrapper * {
+  color: #313131;
+}
+
+.Search__ResultPostType {
+  font-size: 1.5rem;
+}
+
+.Search__ResultHarbor {
+  font-size: 1.5rem;
+}
+
+.Search__Slash {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0 0.6rem;
+}
+
+.Search__Amenities {
+  border: 1px solid red;
+  flex: 1 1 55%;
+  padding: 1.5rem 1.5rem 2rem;
+  background-color: white;
+  margin-bottom: 3rem;
+}
+
+.Search__AmenitieTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.Search__AmenitieList {
+  list-style: none;
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #1070A8;
+  display: inline-block;
+  padding-bottom: 0.6rem;
+}
+
+.Search__AmenitieLink {
+  font-size: 3.5rem;
+  color: #1070A8;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 

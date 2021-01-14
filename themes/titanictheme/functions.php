@@ -165,3 +165,28 @@ function include_cpt_search( $query ) {
     
 }
 add_filter( 'pre_get_posts', 'include_cpt_search' ); 
+
+
+function searchResult($result, $withHarbor = false){
+    ?>
+    <div class="Search__ResultCardWrapper">
+        <a class="Search__ResultLink" href="<?php the_permalink($result); ?>">
+            <h4 class="Search__ResultText"><?php echo $result->post_title; ?></h4>
+            <div class="Search__LabelWrapper">
+                <?php
+                if($withHarbor){?>
+                    <h5 class="Search__ResultHarbor">
+                    <?php 
+                    $resultHarbor = get_field("hamn", $result->ID);
+                    echo $resultHarbor[0]->post_title; ?>
+                    </h5>        
+                    <span class="Search__Slash"> / </span>
+                <?php
+                }
+                ?>
+                <h5 class="Search__ResultPostType"><?php echo $result->post_type; ?></h5>
+            </div>
+        </a>
+    </div>
+<?php            
+}

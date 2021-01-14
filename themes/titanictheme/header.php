@@ -14,11 +14,23 @@
     <header class="Header">
         <?php 
 
-        if(is_front_page()){
+        global $post;
+        // echo var_dump($post);
+        $hamn = get_field("hamn");
+        
+
+        if(is_front_page() || is_search()){
 
             $_SESSION['hamn'] = "NOLLSTÄLLD";
 
-        } else {
+        } 
+        elseif ($hamn && !is_search()){
+            // $hamn = get_field("hamn");
+            // echo var_dump($hamn[0]->post_name);
+            $_SESSION['hamn'] = $hamn[0]->post_name;
+            // echo var_dump($_SESSION['hamn']);
+        }
+        else {
     
             function checkIfUrlContainsString($url, $string){
                 if (strpos($url, $string) !== false) {
