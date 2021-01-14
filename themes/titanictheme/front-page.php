@@ -22,13 +22,14 @@
                 <h1 class="FrontPage__Title">
                     <?php the_title(); ?>
                 </h1>
-                <div class="map">
-                    <?php echo do_shortcode('[wpgmza id="1"]'); ?>
-                </div>    
                 
                 <?php echo do_shortcode('[mphb_availability_search class="is-style-horizontal-form"]'); ?>
 
                 <?php echo do_shortcode('[mphb_rooms gallery="false" excerpt="false" details="false" price="false" view_button="false" class="FrontPage__FlexWrapper"]'); ?>
+
+                <div class="map">
+                    <?php echo do_shortcode('[wpgmza id="1"]'); ?>
+                </div>    
             </div>
         </div>
     <?php
