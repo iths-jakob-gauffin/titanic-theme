@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .Blog {
     &__Post {
         padding: 0 2rem;
@@ -24,4 +26,48 @@
         width: 100%;
         height: 100%;
     }
+
+    &__Image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__ImageContainer {
+        height: 20rem;
+        width: 20rem;
+    }
+    
+    &__BackgroundImage {
+        position: relative;
+        height: 30rem;
+        width: 100%;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        margin-bottom: 5rem;
+    }
+
+    &__TitleWrapper {
+        position: absolute;
+        @include bgColorOpacity($Primary, .7);
+        width: 30%;
+        top: 44%;
+        left: 0; 
+    }
+
+    &__Title {
+        position: relative;
+        color: white;
+        @include pageTitle;
+        padding: 1.5rem 0 1.5rem 3rem;
+        margin: 0;
+        font-weight: 400;
+    }
+
+    &__Text {
+        color: $Secondary;
+    }
+
 }
+
