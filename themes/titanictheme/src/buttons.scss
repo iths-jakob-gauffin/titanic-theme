@@ -11,3 +11,31 @@ button{
         background-color: $PrimaryDark;
     }
 }
+
+.mphb-reserve-btn.button{
+    border: 2px solid $Primary;
+    background-color: $White;
+    padding: .8rem 4rem;
+    color: $Primary;
+    cursor: pointer;
+    transition: all $transition;
+    font-weight: 900;
+
+    &:hover{
+        color: $PrimaryDark;
+    }
+}
+
+.button.mphb-button.mphb-confirm-reservation{
+    background-color: $Primary;
+    padding: .8rem 4rem;
+    color: $White;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all $transition;
+
+    &:hover{
+        background-color: $PrimaryDark;
+    }
+}

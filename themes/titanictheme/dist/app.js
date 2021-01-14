@@ -97,14 +97,36 @@
 __webpack_require__.r(__webpack_exports__);
 var accommodationSingle = function accommodationSingle() {
   (function ($) {
-    $(".mphb-details-title").wrap('<div class="leftWrapper"></div>');
-    $(".mphb-single-room-type-attributes").wrap('<div class="leftWrapper"></div>');
-    $(".mphb-regular-price").wrap('<div class="leftWrapper"></div>');
-    $(".leftWrapper").wrapAll('<div class="halfWrapper"></div>');
-    $(".mphb-calendar-title").wrap('<div class="rightWrapper"></div>');
-    $(".mphb-calendar").wrap('<div class="rightWrapper"></div>');
-    $(".rightWrapper").wrapAll('<div class="halfWrapper"></div>');
-    $(".halfWrapper").wrapAll('<div class="fullWrapper"></div>');
+    $(".mphb-calendar-title").wrap('<div class="leftWrapper"></div>');
+    $(".mphb-calendar").wrap('<div class="leftWrapper"></div>');
+    $(".mphb-reservation-form-title").wrap('<div class="leftWrapper"></div>');
+    $(".mphb-booking-form").wrap('<div class="leftWrapper" id="special"></div>');
+    $(".leftWrapper").wrapAll('<div class="bookingWrapper"></div>');
+    $(".mphb-check-in-date-wrapper").wrap('<div class="checkWrapper"></div>');
+    $(".mphb-check-out-date-wrapper").wrap('<div class="checkWrapper"></div>');
+    $(".checkWrapper").wrapAll('<div class="dateWrapper"></div>');
+    $(".mphb-capacity-wrapper").wrapAll('<div class="capacityWrapper"></div>');
+    $(".dateWrapper").wrapAll('<div class="confirmWrapper"></div>');
+    $(".mphb-reserve-btn-wrapper").wrap('<div class="rightConfirmWrapper"></div>');
+    $(".mphb-errors-wrapper").wrap('<div class="rightConfirmWrapper"></div>');
+    $(".mphb-reserve-room-section").wrap('<div class="rightConfirmWrapper"></div>');
+    $(".rightConfirmWrapper").wrapAll('<div class="confirmWrapper"></div>');
+    var test = document.querySelector('.mphb-price').innerText;
+    var test2 = document.querySelector('.mphb-price-period').innerText;
+    var sum = test.split("kr").join("");
+    var currency = test.slice(0, 2);
+    var priceString = sum + " " + currency + " " + test2;
+    var place = document.querySelector('#special');
+    var priceParagraph = document.createElement("p");
+    priceParagraph.innerText = priceString;
+    priceParagraph.className = "priceString";
+    place.appendChild(priceParagraph);
+    var harborGallery = document.querySelector('.mphb-room-type-gallery-wrapper');
+    var harborTextPlace = document.querySelector('.Search__Title');
+    var harborText = harborTextPlace.innerText.split(" ");
+    var harborGalleryHeader = document.createElement("h3");
+    harborGalleryHeader.innerText = "Bilder från hamnen i " + harborText[0];
+    harborGallery.appendChild(harborGalleryHeader);
   })(jQuery);
 };
 
@@ -169,8 +191,8 @@ var searchResult = function searchResult() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\jenni\Local Sites\newtitanictheme\app\public\wp-content\themes\titanictheme\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! C:\Users\jenni\Local Sites\newtitanictheme\app\public\wp-content\themes\titanictheme\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! C:\Users\Jakob\Local Sites\titanicny\app\public\wp-content\themes\themes\titanictheme\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Jakob\Local Sites\titanicny\app\public\wp-content\themes\themes\titanictheme\src\app.scss */"./src/app.scss");
 
 
 /***/ })

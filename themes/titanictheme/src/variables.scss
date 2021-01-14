@@ -35,6 +35,15 @@ $primary: steelblue;
 @mixin p {
     font-size: 1.5rem;
 }
+@mixin label {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+@mixin listItem {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
 
 // SPACINGS
 $spacingXxs: 0.5rem;
@@ -51,6 +60,7 @@ $PrimaryDark: #0b4e75;
 $Secondary: #313131;
 $Lightgray: #D8E3EC;
 $Darkgray: #687580;
+$Black: #000;
 
 
 //transitions

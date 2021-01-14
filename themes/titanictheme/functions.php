@@ -4,6 +4,10 @@ function titanicFiles(){
     //fonts
     // wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Palanquin&display=swap', false);
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap', false);
+
+    //font awesome
+    // wp_enqueue_style('fontawesome5', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css', array(), null );
+    wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.9.0/css/all.css' );
     
     wp_register_style('titanicCss', get_template_directory_uri() . '/dist/app.css', [], 1, 'all');
     wp_enqueue_style('titanicCss');

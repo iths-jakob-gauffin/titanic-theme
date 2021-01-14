@@ -247,11 +247,6 @@ a {
   border: 1px solid blue;
 }
 
-h1,
-h2 {
-  color: #313131;
-}
-
 .FrontPage__Container {
   display: flex;
   flex-direction: column;
@@ -541,7 +536,6 @@ h2 {
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  margin-bottom: 5rem;
 }
 
 .Search__Title {
@@ -670,5 +664,251 @@ button {
 
 button:hover {
   background-color: #0b4e75;
+}
+
+.mphb-reserve-btn.button {
+  border: 2px solid #1070A8;
+  background-color: white;
+  padding: 0.8rem 4rem;
+  color: #1070A8;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: 900;
+}
+
+.mphb-reserve-btn.button:hover {
+  color: #0b4e75;
+}
+
+.button.mphb-button.mphb-confirm-reservation {
+  background-color: #1070A8;
+  padding: 0.8rem 4rem;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button.mphb-button.mphb-confirm-reservation:hover {
+  background-color: #0b4e75;
+}
+
+.container {
+  padding: 0rem 5rem;
+  position: relative;
+}
+
+.SingleMRT {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+}
+
+.SingleMRT__EntryInfoWrapper {
+  display: flex;
+  margin-bottom: 2.5rem;
+}
+
+.SingleMRT__RichText {
+  flex: 1 1 75%;
+  margin-right: 2.5rem;
+}
+
+.SingleMRT__RichText h2 {
+  color: #1070A8;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.SingleMRT__RichText p {
+  font-size: 1.5rem;
+}
+
+.SingleMRT__Amenities {
+  flex: 1 1 25%;
+  background-color: #D8E3EC;
+}
+
+.SingleMRT__AmenitieTitle {
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: #1070A8;
+  color: white;
+}
+
+.SingleMRT__AmenitieList {
+  list-style: none;
+  padding: 1rem;
+}
+
+.SingleMRT__AmenitieListItem {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.SingleMRT__AmenitieListItem i {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  width: 2rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.SingleMRT__Title {
+  font-size: 2.5rem;
+  border: 1px solid black;
+}
+
+.SingleMRT__Text {
+  font-size: 2rem;
+}
+
+.SingleMRT__FormWrapper {
+  width: 75%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.SingleMRT__FormWrapper h2 {
+  display: none;
+}
+
+.SingleMRT__FormWrapper p {
+  font-size: 1.5rem;
+}
+
+.SingleMRT__FormWrapper .mphb-room-type-gallery-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.SingleMRT__FormWrapper .mphb-room-type-gallery-wrapper h3 {
+  font-size: 2rem;
+  color: #1070A8;
+}
+
+.SingleMRT__FormWrapper #gallery-1 {
+  margin: 0;
+}
+
+.SingleMRT__FormWrapper #gallery-1 .gallery-item {
+  text-align: left;
+}
+
+.SingleMRT__FormWrapper #gallery-1 img {
+  border: 0;
+}
+
+.SingleMRT .bookingWrapper {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #1070A8;
+}
+
+.SingleMRT .bookingWrapper .leftWrapper:nth-child(2) {
+  margin-bottom: 2rem;
+}
+
+.SingleMRT .bookingWrapper #special {
+  display: flex !important;
+  margin-bottom: 2rem;
+}
+
+.SingleMRT .bookingWrapper #special small {
+  display: none;
+}
+
+.SingleMRT .bookingWrapper #special .priceString {
+  align-self: flex-end;
+  text-align: right;
+  border-bottom: 1px solid #1070A8;
+  width: 100%;
+  margin-right: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1070A8;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.SingleMRT .bookingWrapper .datepick {
+  width: 100% !important;
+}
+
+.SingleMRT .bookingWrapper .datepick-nav a {
+  font-size: 1.5rem;
+}
+
+.SingleMRT .bookingWrapper .datepick-month {
+  width: 50%;
+}
+
+.SingleMRT .bookingWrapper .datepick-month span {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.SingleMRT .bookingWrapper .datepick-month .datepick-month-header {
+  font-size: 1.5rem;
+}
+
+.SingleMRT .bookingWrapper .datepick-month-row {
+  display: flex;
+}
+
+.SingleMRT .bookingWrapper .datepick-month-row td {
+  height: 3rem;
+  width: calc(100% / 7);
+}
+
+.SingleMRT .dateWrapper {
+  display: flex;
+  margin-bottom: 2.5rem;
+}
+
+.SingleMRT .dateWrapper label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.SingleMRT .dateWrapper input {
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: 1px solid black;
+}
+
+.SingleMRT .checkWrapper {
+  margin-right: 2.5rem;
+}
+
+.SingleMRT .capacityWrapper {
+  display: flex;
+}
+
+.SingleMRT .rightConfirmWrapper input {
+  margin-bottom: 1.5rem;
+}
+
+.SingleMRT .rightConfirmWrapper .mphb-rooms-quantity-wrapper.mphb-rooms-quantity-multiple {
+  margin-bottom: 1.5rem;
+}
+
+.SingleMRT .rightConfirmWrapper select {
+  border-radius: 0.4rem;
+}
+
+.SingleMRT .mphb-regular-price {
+  display: none;
 }
 
