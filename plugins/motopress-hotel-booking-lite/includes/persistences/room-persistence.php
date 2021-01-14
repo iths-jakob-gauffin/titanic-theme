@@ -83,6 +83,15 @@ class RoomPersistence extends RoomTypeDependencedPersistence {
         /** @since 3.9 */
         $atts = apply_filters('mphb_search_rooms_atts', array_merge($defaults, $atts), $defaults);
 
+        // Reset the "count" parameter if searching for free rooms - find all
+        // locked rooms instead of min($count, %all%)
+        $count = $atts['count'];
+
+        if ($atts['availability'] == 'free') {
+            $atts['count'] = 0;
+        }
+
+        // Find locked rooms
         if ($atts['skip_buffer_rules'] || !mphb_has_buffer_days()) {
             $roomIds = $this->findLockedRooms($atts);
 
@@ -94,10 +103,6 @@ class RoomPersistence extends RoomTypeDependencedPersistence {
             // have different buffer range)
             foreach ($roomTypeIds as $roomTypeId) {
                 $modifiedAtts = $atts;
-
-                if( isset( $modifiedAtts['count'] ) ) {
-                  unset( $modifiedAtts['count'] );
-                }
 
                 // Force room type ID
                 $modifiedAtts['room_type_id'] = $roomTypeId;
@@ -120,15 +125,14 @@ class RoomPersistence extends RoomTypeDependencedPersistence {
 
 
             }
-
-            // Limit the number of rooms
-            if (!empty($atts['count']) && $atts['availability'] != 'free') {
-                $roomIds = array_slice($roomIds, 0, $atts['count']);
-            }
         } // If search with buffer rules
 
         // Get the list of free room
         if ($atts['availability'] == 'free') {
+            // Restore the real count
+            $atts['count'] = $count;
+
+            // Find free rooms
             $roomIds = $this->findFreeRooms($roomIds, $atts);
         }
 
