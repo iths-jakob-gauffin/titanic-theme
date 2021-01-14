@@ -166,6 +166,7 @@ a {
 .Blog__PostTitle {
   font-size: 2.5rem;
   border: 1px solid black;
+  padding: 6rem;
 }
 
 .Blog__PostLink {
@@ -211,7 +212,6 @@ a {
   position: relative;
   color: white;
   font-size: 4rem;
-  padding: 1.5rem 0 1.5rem 3rem;
   margin: 0;
   font-weight: 400;
 }
@@ -497,7 +497,7 @@ h2 {
 .Search__Title {
   position: absolute;
   color: white;
-  font-size: 4rem;
+  font-size: 3rem;
   background-color: rgba(16, 112, 168, 0.7);
   padding: 1.5rem 5rem 1.5rem 5rem;
   margin: 0;
