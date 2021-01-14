@@ -14,6 +14,7 @@
 
             <div class="Single__Title"><?php the_title(); ?></div>
             <div class="Single__FormWrapper"><?php the_content(); ?></div>
+            <img src="<?php echo get_the_post_thumbnail_url();?>" alt="">
 
             <?php
         }

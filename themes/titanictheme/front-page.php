@@ -22,6 +22,9 @@
                 <h1 class="FrontPage__Title">
                     <?php the_title(); ?>
                 </h1>
+                <div class="map">
+                    <?php echo do_shortcode('[wpgmza id="1"]'); ?>
+                </div>    
                 
                 <?php echo do_shortcode('[mphb_availability_search class="is-style-horizontal-form"]'); ?>
 
