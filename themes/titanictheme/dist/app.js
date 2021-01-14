@@ -169,8 +169,13 @@ var searchResult = function searchResult() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! C:\Users\SS\Local Sites\titanictheme\app\public\wp-content\themes\titanictheme\src\app.js */"./src/app.js");
 module.exports = __webpack_require__(/*! C:\Users\SS\Local Sites\titanictheme\app\public\wp-content\themes\titanictheme\src\app.scss */"./src/app.scss");
+=======
+__webpack_require__(/*! C:\Users\jenni\Local Sites\newtitanictheme\app\public\wp-content\themes\titanictheme\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! C:\Users\jenni\Local Sites\newtitanictheme\app\public\wp-content\themes\titanictheme\src\app.scss */"./src/app.scss");
+>>>>>>> 651f8d58ad679aa3e9acee82bc825e9252a21f4e
 
 
 /***/ })
