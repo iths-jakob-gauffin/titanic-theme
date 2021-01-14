@@ -5,6 +5,7 @@
             <h1 class="Single__Title">
                 Single.php
             </h1>
+            
 
             <?php
 
@@ -14,10 +15,10 @@
 
             <div class="Single__Title"><?php the_title(); ?></div>
             <div class="Single__FormWrapper"><?php the_content(); ?></div>
-
+        <img src="<?php echo get_the_post_thumbnail_url();?>">
             <?php
         }
-
+echo var_dump(get_the_post_thumbnail_url());
     ?>
         </main>
     </div>
