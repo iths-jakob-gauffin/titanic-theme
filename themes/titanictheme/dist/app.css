@@ -473,8 +473,35 @@ h2 {
   color: #1070A8;
 }
 
+.container {
+  padding: 0rem 5rem;
+  position: relative;
+}
+
+.Events__BackgroundImage {
+  position: relative;
+  height: 30rem;
+  width: 100%;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  margin-bottom: 5rem;
+}
+
+.Events__TitleWrapper {
+  position: absolute;
+  background-color: rgba(16, 112, 168, 0.7);
+  width: 30%;
+  top: 44%;
+  left: 0;
+}
+
 .Events__Title {
-  color: #1070A8;
+  position: relative;
+  color: white;
+  font-size: 4rem;
+  margin: 0;
+  font-weight: 400;
 }
 
 .Search {
