@@ -2,7 +2,12 @@
 
     <h1>Det här är page-events.php</h1>
     <div class="container">
+
+
+    
     <?php
+
+
 
     $today = date('Ymd');
 
