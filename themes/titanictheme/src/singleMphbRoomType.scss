@@ -141,8 +141,6 @@
             .priceString{
                 align-self: flex-end;
                 text-align: right;
-                border-bottom: 1px solid $Primary;
-                // text-decoration: underline;
                 width: 100%;
                 margin-right: $spacingM;
                 @include h3;

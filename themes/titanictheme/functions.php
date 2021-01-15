@@ -27,7 +27,7 @@ function titanicFiles(){
         wp_enqueue_script('jakobsRoomTypeJavascript');
     } 
 
-    if(is_search()){
+    if(is_search() || is_front_page()){
         echo "JAAA";
         wp_register_script('jakobsSearchResultJavascript', get_template_directory_uri() . '/dist/search.js', ['jquery'], 1, true);
         wp_enqueue_script('jakobsSearchResultJavascript');

@@ -14,7 +14,7 @@
     // echo var_dump($harborInfo->posts);
     // $correct = array_filter($harborInfo->posts, function(){
     //     foreach
-    // })
+    // })w
     $specificHarbor = [];
     foreach($harborInfo->posts as $harbor){
         if(strtolower($harbor->post_title) === strtolower($_SESSION['hamn'])){

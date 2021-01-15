@@ -3,8 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid red;
-    padding: 0 4rem;
+    // border: 1px solid red;
+    // padding: 0 4rem;
     // &__Post {
     //     padding: 0 2rem;
     //     background: mediumseagreen;
@@ -28,7 +28,7 @@
 
     &__FormWrapper {
         width: 100%;
-        border: 1px solid blue;
+        // border: 1px solid blue;
     }
     .testwrapper {
         display: flex;
@@ -41,13 +41,76 @@
         max-width: 50%;
         margin: 0 2rem;
     }
+    .mphb_sc_search_results-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 $spacingS;
+    }
 
     .mphb-room-type {
-        border: 1px solid red;
+        padding: $spacingXs $spacingS $spacingS;
+        // border: 2px solid $Primary;
         margin-top: 0 !important;
+        max-width: 45%;
+        min-width: 32rem;
+        flex: 1 1 40%;
+        margin-bottom: $spacingL;
+        border-radius: .5rem;
+        @include bgColorOpacity($Lightgray, .4);
+        // background-color: $Lightgray;
+        // margin: 0 $spacingL $spacingL;
+    }
+    
+    .flexslider{
+        border: 4px solid rgba(216, 227, 236, .4);
+        @include bgColorOpacity($Lightgray, .4);
+        // color: rgba(216, 227, 236, .4);
+    }
+
+    .mphb-room-type-details-title{
+        display: none;
+    }
+
+    .mphb_sc_search_results-info{
+        display: none;
+    }
+
+    .mphb-view-details-button-wrapper{
+        display: none;
+    }
+
+    .mphb-room-type-title{
+        @include h3;
+        color: $Primary;
+        margin-bottom: $spacingXxs;
+    }
+
+    .mphb-reservation-cart{
+        display: none;
     }
 
     .mphb-flexslider ul.slides img {
         width: 100% !important;
+    }
+
+    .mphb-flexslider.mphb-gallery-slider:first-child{
+        height: 25rem !important;
+        overflow: hidden;
+        // border: 1px solid red;
+    
+        *{
+            height: 100% !important;
+        }
+        img{
+            object-fit: cover !important;
+            object-position: center !important;
+        }
+    
+        a.flex-next,
+        a.flex-prev{
+            font-size: 0;
+        }
+    
     }
 }
