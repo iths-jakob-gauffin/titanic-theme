@@ -51,6 +51,14 @@
         if (strtolower($hamnen) === strtolower($_SESSION['hamn'])){
         ?>
         <div class="container">
+            <main class="Events">
+                <article class="Events__Post">
+                    <a href="<?php the_permalink(); ?>" class="Event__PostLink"></a>
+                        <h2 class="Event__PostTitle">
+                        <?php the_title(); ?>
+                        </h2>
+                </article>
+            </main>
             <main class="Blog">
                 <article class="Blog__Post">
                     <a href="<?php the_permalink(); ?>" class="Blog__PostLink"></a>

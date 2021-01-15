@@ -3,7 +3,7 @@ Contributors: MotoPress
 Donate link: https://motopress.com/
 Tags: hotel booking, reservation, hotel, booking engine, booking, booking calendar, booking system, calendar, online booking, travel, airbnb, booking.com
 Requires at least: 4.6
-Tested up to: 5.5
+Tested up to: 5.6
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -95,11 +95,15 @@ Get a better sense of how the plugin works:
 
 Have a look at all Pro [plugin features](https://motopress.com/motopress-wordpress-hotel-booking-pro-vs-lite/?utm_source=wp-org&utm_medium=pro-features&utm_campaign=hotel-booking-lite&utm_content=here).
 
+### Sell appointments & hourly bookings
+
+Offer smooth and quick event and appointment reservations on your rental property site with our [WordPress Appointment plugin](https://motopress.com/products/appointment-booking/?utm_source=wp_org_hb_lite_page&utm_medium=text_link&utm_campaign=appointment_plugin). Create appointments of any duration, add flexible staff schedules, and start accepting online bookings.
+
 ### Hotel and Vacation Rental WordPress Themes
 
 Check out our [Hotel and Vacation Rental WordPress Themes](https://motopress.com/products/category/hotel-rental-wordpress-themes/?utm_source=wp-org&utm_medium=hotel-themes&utm_campaign=hotel-booking-lite&utm_content=wordpress-hotel-themes) where the Pro version of the [WordPress Booking Plugin](https://motopress.com/products/hotel-booking/?utm_source=wp-org&utm_medium=pro-link&utm_campaign=hotel-booking-lite&utm_content=wordpress-booking-plugin) is included for free.
 
-You may also use the Palmeria [free hotel booking theme](https://wordpress.org/themes/palmeria/) with the built-in Hotel Booking Lite plugin.
+You may also use the Palmeria [free hotel booking theme](https://wordpress.org/themes/palmeria/) and Albatross [free hotel Elementor theme](https://wordpress.org/themes/albatross/) with the built-in Hotel Booking Lite plugin.
 
 == Installation ==
 
@@ -122,7 +126,7 @@ You may also use the Palmeria [free hotel booking theme](https://wordpress.org/t
 
 == Copyright ==
 
-Hotel Booking Lite plugin, Copyright (C) 2016 - 2020, MotoPress https://motopress.com/
+Hotel Booking Lite plugin, Copyright (C) 2016, MotoPress https://motopress.com/
 Hotel Booking Lite plugin is distributed under the terms of the GNU GPL.
 
 
@@ -139,6 +143,12 @@ Hotel Booking Lite plugin is distributed under the terms of the GNU GPL.
 
 
 == Changelog ==
+
+= 3.9.2, Dec 21 2020 =
+* Improved compatibility with image lazy-loading feature.
+
+= 3.9.1, Dec 10 2020 =
+* Bug fix: fixed an issue with the overbooking.
 
 = 3.9.0, Nov 24 2020 =
 * Added the ability to set the Booking Buffer.

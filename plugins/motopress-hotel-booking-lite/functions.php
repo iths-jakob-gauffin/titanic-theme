@@ -1658,12 +1658,3 @@ function mphb_filter_checkin_checkout_dates( $datesArray, $roomsTotal ) {
 	return array( $checkIns, $checkOuts );
 
 }
-
-/*
- * @return boolean
- *
- * @since 3.8.4
- */
-function mphb_sliders_lazy_load_enabled(){
-    return false;
-}
