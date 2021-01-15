@@ -1,0 +1,66 @@
+@import "./variables.scss";
+
+.SingleBlog {
+  &__Post {
+      padding: 0 9rem;
+      // background: mediumseagreen;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include p;
+      // font-size: 2rem;
+      // font-weight: 700;
+      margin-bottom: 3rem;
+      position: relative;
+  }
+
+  &__PostTitle {
+      @include h2;
+      // border: 1px solid black;
+      padding: $spacingXl;
+  }
+
+
+  &__Image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+  }
+
+  &__ImageContainer {
+      height: 40rem;
+      width: 100%;
+      padding-top: 4rem;
+  }
+  
+  &__BackgroundImage {
+      position: relative;
+      height: 30rem;
+      width: 100%;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      margin-bottom: 5rem;
+  }
+
+  &__TitleWrapper {
+      position: absolute;
+      @include bgColorOpacity($Primary, .7);
+      width: 30%;
+      top: 44%;
+      left: 0; 
+  }
+
+  &__Title {
+      position: relative;
+      color: white;
+      @include pageTitle;
+      padding: 1.5rem 5rem 1.5rem 5rem;
+      margin: 0;
+      font-weight: 400;
+      
+  }
+
+ 
+
+}

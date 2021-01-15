@@ -2,25 +2,26 @@
 
 .Blog {
     &__Post {
-        padding: 0 2rem;
-        background: mediumseagreen;
+        padding: 0 9rem;
+        // background: mediumseagreen;
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 2rem;
-        font-weight: 700;
+        @include p;
+        // font-size: 2rem;
+        // font-weight: 700;
         margin-bottom: 3rem;
         position: relative;
     }
 
     &__PostTitle {
-        font-size: 2.5rem;
-        border: 1px solid black;
-        padding: $spacingXl *2;
+        @include h2;
+        // border: 1px solid black;
+        padding: $spacingXl;
     }
 
     &__PostLink {
-        border: 1px solid red;
+        // border: 1px solid red;
         position: absolute;
         top: 0;
         left: 0;
@@ -35,8 +36,8 @@
     }
 
     &__ImageContainer {
-        height: 20rem;
-        width: 20rem;
+        height: 40rem;
+        width: 100%;
     }
     
     &__BackgroundImage {
@@ -61,15 +62,13 @@
         position: relative;
         color: white;
         @include pageTitle;
-        // padding: 1.5rem 0 1.5rem 3rem;
+        padding: 1.5rem 5rem 1.5rem 5rem;
         margin: 0;
         font-weight: 400;
         
     }
 
-    &__Text {
-        color: $Secondary;
-    }
+ 
 
 }
 
