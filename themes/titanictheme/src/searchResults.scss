@@ -113,4 +113,18 @@
         }
     
     }
+
+    .detailFlexWrapper{
+        display: flex;
+    }
+
+    .detailToFlex{
+        flex: 1 1 35%;
+        @include p;
+        
+        &:first-child{
+            margin-right: $spacingL; 
+            flex: 1 1 65%;
+        }
+    }
 }

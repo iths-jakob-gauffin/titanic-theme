@@ -490,6 +490,20 @@ a {
   font-size: 0;
 }
 
+.SearchResults .detailFlexWrapper {
+  display: flex;
+}
+
+.SearchResults .detailToFlex {
+  flex: 1 1 35%;
+  font-size: 1.5rem;
+}
+
+.SearchResults .detailToFlex:first-child {
+  margin-right: 2.5rem;
+  flex: 1 1 65%;
+}
+
 .fullWrapper {
   display: flex;
 }
