@@ -86,70 +86,19 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/accommodationSingle.js":
-/*!************************************!*\
-  !*** ./src/accommodationSingle.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var accommodationSingle = function accommodationSingle() {
-  (function ($) {
-    $(".mphb-calendar-title").wrap('<div class="leftWrapper"></div>');
-    $(".mphb-calendar").wrap('<div class="leftWrapper"></div>');
-    $(".mphb-reservation-form-title").wrap('<div class="leftWrapper"></div>');
-    $(".mphb-booking-form").wrap('<div class="leftWrapper" id="special"></div>');
-    $(".leftWrapper").wrapAll('<div class="bookingWrapper"></div>');
-    $(".mphb-check-in-date-wrapper").wrap('<div class="checkWrapper"></div>');
-    $(".mphb-check-out-date-wrapper").wrap('<div class="checkWrapper"></div>');
-    $(".checkWrapper").wrapAll('<div class="dateWrapper"></div>');
-    $(".mphb-capacity-wrapper").wrapAll('<div class="capacityWrapper"></div>');
-    $(".dateWrapper").wrapAll('<div class="confirmWrapper"></div>');
-    $(".mphb-reserve-btn-wrapper").wrap('<div class="rightConfirmWrapper"></div>');
-    $(".mphb-errors-wrapper").wrap('<div class="rightConfirmWrapper"></div>');
-    $(".mphb-reserve-room-section").wrap('<div class="rightConfirmWrapper"></div>');
-    $(".rightConfirmWrapper").wrapAll('<div class="confirmWrapper"></div>');
-    var test = document.querySelector('.mphb-price').innerText;
-    var test2 = document.querySelector('.mphb-price-period').innerText;
-    var sum = test.split("kr").join("");
-    var currency = test.slice(0, 2);
-    var priceString = sum + " " + currency + " " + test2;
-    var place = document.querySelector('#special');
-    var priceParagraph = document.createElement("p");
-    priceParagraph.innerText = priceString;
-    priceParagraph.className = "priceString";
-    place.appendChild(priceParagraph);
-    var harborGallery = document.querySelector('.mphb-room-type-gallery-wrapper');
-    var harborTextPlace = document.querySelector('.Search__Title');
-    var harborText = harborTextPlace.innerText.split(" ");
-    var harborGalleryHeader = document.createElement("h3");
-    harborGalleryHeader.innerText = "Bilder från hamnen i " + harborText[0];
-    harborGallery.appendChild(harborGalleryHeader);
-  })(jQuery);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (accommodationSingle);
-
-/***/ }),
-
 /***/ "./src/app.js":
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _searchResult__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./searchResult */ "./src/searchResult.js");
-/* harmony import */ var _accommodationSingle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./accommodationSingle */ "./src/accommodationSingle.js");
 // import jQuery from "jquery";
-
-
-var searchResult = new _searchResult__WEBPACK_IMPORTED_MODULE_0__["default"]();
-Object(_accommodationSingle__WEBPACK_IMPORTED_MODULE_1__["default"])(); // searchResult();
+// import SearchResult from "./searchResult";
+// import accommodationSingle from "./accommodationSingle";
+// const searchResult = new SearchResult();
+// accommodationSingle();
+// searchResult();
 
 /***/ }),
 
@@ -161,26 +110,6 @@ Object(_accommodationSingle__WEBPACK_IMPORTED_MODULE_1__["default"])(); // searc
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./src/searchResult.js":
-/*!*****************************!*\
-  !*** ./src/searchResult.js ***!
-  \*****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var searchResult = function searchResult() {
-  (function ($) {
-    $(".mphb-room-type").wrapAll('<div class="testwrapper"></div>');
-    $(".mphb-room-type").wrap('<div class="innerwrapper"></div>');
-  })(jQuery);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (searchResult);
 
 /***/ }),
 

@@ -13,9 +13,7 @@
 <div class="container">
     <header class="Header">
         <?php 
-
-        global $post;
-        // echo var_dump($post);
+        
         $hamn = get_field("hamn");
         
 

@@ -17,9 +17,22 @@ function titanicFiles(){
     wp_register_script('titanicJs', get_template_directory_uri() . '/dist/app.js', ['jquery'], 1, true);
     wp_enqueue_script('titanicJs');
 
-    if(site_url('search-result')){
-        wp_register_script('jakobsSearchResultJavascript', get_template_directory_uri() . '/dist/searchResult.js', ['jquery'], 1, true);
+    // $test = get_current_blog_id();
+    // echo var_dump($test);
+    
+
+    global $post;
+    if($post->post_type === "mphb_room_type"){
+        wp_register_script('jakobsRoomTypeJavascript', get_template_directory_uri() . '/dist/booking.js', ['jquery'], 1, true);
+        wp_enqueue_script('jakobsRoomTypeJavascript');
+    } 
+
+    if(is_search()){
+        echo "JAAA";
+        wp_register_script('jakobsSearchResultJavascript', get_template_directory_uri() . '/dist/search.js', ['jquery'], 1, true);
         wp_enqueue_script('jakobsSearchResultJavascript');
+    } else{
+        echo "nejsan";
     }
 
 
