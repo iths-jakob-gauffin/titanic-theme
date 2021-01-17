@@ -1442,3 +1442,56 @@ button:hover {
   display: none;
 }
 
+.Footer {
+  background-color: #D9D9D9;
+  padding: 5rem 0 10rem;
+}
+
+.Footer__SectionsWrapper {
+  padding: 0 7.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Footer__Section {
+  flex: 1 1 25%;
+}
+
+.Footer__SectionTitle {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.Footer__LocationList,
+.Footer__ContactList,
+.Footer__LinkList {
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.Footer__LocationList {
+  margin-bottom: 1.5rem;
+}
+
+.Footer__LocationListItem {
+  margin-bottom: 0.5rem;
+}
+
+.Footer__LocationListText {
+  font-weight: 700;
+}
+
+.Footer__ContactListItem {
+  margin-bottom: 0.5rem;
+}
+
+.Footer__LinkListItem {
+  margin-bottom: 1.5rem;
+}
+
+.Footer__Link {
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+

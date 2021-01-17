@@ -292,7 +292,7 @@ function navList($harbor){
 };
 
 
-function wp_search_form( $form ) { $form = "<section class='search search-form'><form role='search' method='get' action='" . home_url( "/" ) . "' > <label class='screen-reader-text' for='s'>" . __("", "domain") . "</label> <input type='search' class='search-field  Header__SearchField' value='" . get_search_query() . "' name='s' id='s' placeholder='T.ex. \"bensin, tennis, butik etc.\"' /> <button type='submit' id='searchsubmit' class='search-submit Search__Button' value='". esc_attr__("Sök", "domain") ."' ><i class='fa fa-search'></i></button> </form></section>"; return $form; } add_filter( 'get_search_form', 'wp_search_form' );
+function wp_search_form( $form ) { $form = "<section class='search search-form'><form role='search' method='get' action='" . home_url( "/" ) . "' > <label class='screen-reader-text' for='s'>" . __("", "domain") . "</label> <input type='search' class='search-field  Header__SearchField' value='" . get_search_query() . "' name='s' id='s' placeholder='T.ex. \"bensin\", \"tennis\", \"butik\" etc.' /> <button type='submit' id='searchsubmit' class='search-submit Search__Button' value='". esc_attr__("Sök", "domain") ."' ><i class='fa fa-search'></i></button> </form></section>"; return $form; } add_filter( 'get_search_form', 'wp_search_form' );
 
 // inkludera custom post types i söket
 function include_cpt_search( $query ) {
