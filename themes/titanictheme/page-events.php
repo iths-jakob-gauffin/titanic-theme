@@ -25,7 +25,7 @@ $imgUrl = "";
         <div class="Events__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
          <div class="Events__TitleWrapper">
             <h1 class="Events__Title">
-               Event
+               Events
             </h1>
         </div>
     </div>
@@ -67,6 +67,8 @@ $imgUrl = "";
         
             <ul class="Events__List">
                 <li class="Events__ListItem">
+<!-- -------- Placera event-bilden för just detta event här?! ---------- -->
+                    
                     <h1 class="Events__ListTitle">
                         <?php the_title(); ?>
                     </h1>
