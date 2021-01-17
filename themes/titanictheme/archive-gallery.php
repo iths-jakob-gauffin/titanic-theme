@@ -23,6 +23,7 @@
 ?>
 
     <h1>Det här är archive-gallery.php</h1>
+
     <div class="Gallery">
         <div class="Gallery__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
         ¨<div class="Gallery__TitleWrapper">
@@ -30,14 +31,19 @@
                 Personal
             </h1>
         </div>
+        <div class="Gallery__StaffBox">
+            <p class="Gallery__StaffTitle">Här kan du logga in</p>
+            <a href="<?php echo wp_login_url();?>" class="Gallery__Button">Logga in</a>
+            <a href="<?php echo wp_registration_url();?>" class="Gallery__Button">Skapa konto</a>
+        </div>
     </div>
     <div class="container">
         
     <ul class="Gallery__List">
         
         <?php
-        global $post;
-        echo var_dump($post);
+        // global $post;
+        // echo var_dump($post);
         while(have_posts()){    
             the_post();
 

@@ -70,10 +70,23 @@
         </div>
         <?php 
             navList($_SESSION['hamn']);
-            echo "<div class='Header__SearchWrapper'>";
-            echo get_search_form();
-            echo "</div>";
-            
         ?>
+        <div class="Header__SearchAndUserWrapper">
+            <div class='Header__SearchWrapper'>;
+                <?php echo get_search_form(); ?>
+            </div>;
+            <?php if( is_user_logged_in() ){?>
+                <div class="Header__UserWrapper">
+                <a href="<?php echo wp_login_url();?>" class="Header__UserIcon"><img src="<?php echo get_template_directory_uri() . '/dist/icons/user.svg'; ?>" alt=""></a>
+                <div class="Header__UserNameAndLogoutWrapper">
+                    <p class="Header__UserName"><?php 
+                    global $current_user;
+                    wp_get_current_user();
+                    echo $current_user->display_name ?></p>
+                    <a href="<?php echo wp_logout_url(); ?>" class="Header__Logout">Logga ut</a>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
     </header>
 

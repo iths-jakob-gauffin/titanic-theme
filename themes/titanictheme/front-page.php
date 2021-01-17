@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
     <h1>Det här är front-page.php</h1>
+    <?php echo get_current_user(); ?>
 
     <?php
 

@@ -58,6 +58,7 @@ $primary: steelblue;
     border: none;
     cursor: pointer;
     transition: all $transition;
+    @include p;
 
     &:hover{
         background-color: $PrimaryDark;
