@@ -45,6 +45,25 @@ $primary: steelblue;
     font-weight: 700;
 }
 
+@mixin input{
+    padding: $spacingXxs;
+    min-width: 25rem;
+}
+
+@mixin button{
+    background-color: $Primary;
+    padding: .8rem 4rem;
+    color: $White;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all $transition;
+
+    &:hover{
+        background-color: $PrimaryDark;
+    }
+}
+
 // SPACINGS
 $spacingXxs: 0.5rem;
 $spacingXs: 1rem;

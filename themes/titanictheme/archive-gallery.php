@@ -36,7 +36,8 @@
     <ul class="Gallery__List">
         
         <?php
-
+        global $post;
+        echo var_dump($post);
         while(have_posts()){    
             the_post();
 

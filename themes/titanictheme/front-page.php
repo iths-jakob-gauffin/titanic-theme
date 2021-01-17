@@ -18,7 +18,7 @@
         ?>
         <div class="container">
             <div class="Frontpage__Hero" style="background: url('<?php echo $imageUrl; ?>')" ></div>
-            <div class="FrontPage__Container" >
+            <div class="FrontPage">
                 <h1 class="FrontPage__Title">
                     <?php the_title(); ?>
                 </h1>

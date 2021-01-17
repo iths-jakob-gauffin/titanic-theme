@@ -1,6 +1,5 @@
 .FrontPage {
-    &__Container {
-        // padding: 0 2rem;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -8,16 +7,6 @@
         background-position: center;
         position: relative;
 
-        // p {
-        //     font-size: 4rem;
-        // }
-
-        // img {
-        //     width: 100%;
-        //     height: 100%;
-        //     max-width: 300px;
-        // }
-    }
 
     //Flexwrapperklassen är injectad i shortcoden på front-page.php. Den här klassen behövs för att linjera alla accommodations bredvid varandra, istället för att presenteras som en kolumn.
     &__FlexWrapper {
@@ -109,6 +98,38 @@
         left: 0;
     }
 
+    .mphb_sc_search-form{
+        *{
+            @include p;
+        }
+
+        label{
+            @include label;
+            margin-bottom: $spacingXxs;
+            display: inline-block;
+        }
+
+        input{
+            @include input;
+            min-width: 100%;
+        }
+
+        .button{
+            @include button;
+        }
+    }
+
     
 
+}
+
+.datepick-popup{
+    // width: 100% !important;
+    *{
+        @include p;
+    }
+
+    .datepick.datepick-multi.mphb-datepick-popup{
+        width: 50rem !important;
+    }
 }

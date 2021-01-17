@@ -39,3 +39,9 @@ button{
         background-color: $PrimaryDark;
     }
 }
+
+.Search__Button{
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: .8rem 2rem .8rem 1.2rem;
+}

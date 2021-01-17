@@ -39,9 +39,35 @@ const searchResult = () => {
 
             let reserveStuff = room.querySelector(".mphb-reserve-room-section");
             room.insertBefore(wrapper, reserveStuff);
+            let cost = room.querySelector(".mphb-price").innerText;
+            console.log("🚀 ~ file: searchResult.js ~ line 43 ~ searchResult ~ cost", cost);
+            let amount = cost.split("kr").join("");
+            let currency = cost.slice(0,2);
+            // let priceString = amount + " " + currency;    
+            // console.log("🚀 ~ file: searchResult.js ~ line 47 ~ searchResult ~ priceString", priceString)
+
+            let period = room.querySelector('.mphb-price-period').innerText;
+            console.log("🚀 ~ file: searchResult.js ~ line 50 ~ searchResult ~ period", period)
+            console.log("rummet: ", room);
+            let priceDOM = room.querySelector(".mphb-regular-price.detailToFlex");
+            let priceString = amount + " " + currency + " " + period + ".";
+            let priceParagraph = document.createElement("p");
+            priceParagraph.innerText = priceString;
+            priceParagraph.className = "priceString";
+            // priceDOM.innerHTML = amount + " " + currency + " " + period + ".";
+            // priceDOM.innerHTML = priceString;
+            priceDOM.innerHTML = "";
+            priceDOM.appendChild(priceParagraph);
         })
 
-        
+        // let test = document.querySelector('.mphb-price').innerText;
+        // let test2 = document.querySelector('.mphb-price-period').innerText;
+
+        // let sum = test.split("kr").join("");
+
+        // let currency = test.slice(0,2);
+
+        // let priceString = sum + " " + currency + " " + test2;
 
         
 

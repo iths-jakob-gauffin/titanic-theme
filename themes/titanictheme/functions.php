@@ -7,7 +7,7 @@ function titanicFiles(){
 
     //font awesome
     // wp_enqueue_style('fontawesome5', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css', array(), null );
-    wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.9.0/css/all.css' );
+    wp_enqueue_style( 'load-fa', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' );
     
     wp_register_style('titanicCss', get_template_directory_uri() . '/dist/app.css', [], 1, 'all');
     wp_enqueue_style('titanicCss');
@@ -28,13 +28,21 @@ function titanicFiles(){
     } 
 
     if(is_search() || is_front_page()){
-        echo "JAAA";
+        // echo "JAAA";
         wp_register_script('jakobsSearchResultJavascript', get_template_directory_uri() . '/dist/search.js', ['jquery'], 1, true);
         wp_enqueue_script('jakobsSearchResultJavascript');
     } else{
-        echo "nejsan";
+        // echo "nejsan";
     }
 
+
+    if(is_page( "booking-confirmation" )){
+        wp_register_script('jakobsConfirmBookingJavascript', get_template_directory_uri() . '/dist/confirm.js', ['jquery'], 1, true);
+        wp_enqueue_script('jakobsConfirmBookingJavascript');
+        // echo "det är bokning";
+    } else {
+        // echo "DET ÄR INTE BOKNING";
+    }
 
 }
 
@@ -108,13 +116,31 @@ function titanic_post_types(){
 add_action('init', 'titanic_post_types');
 
 function navList($harbor){
+    $currentUrl = home_url( add_query_arg( null, null ));
     if($harbor === "NOLLSTÄLLD"){
         ?>
         <nav class="Header__Nav">
             <ul class="Header__NavList">
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('harbor')); ?>" class="Header__Link">
-                        Hamnar
+                    <a href="<?php echo esc_url(site_url('harbor')); ?>" class="<?php 
+                    $activePage = is_post_type_archive("harbor");
+                    $cssClass = ($activePage? "Header__Link Header__Link--Active" : "Header__Link");
+                    echo $cssClass;
+                    ?>">
+                        <p class="Header__LinkText">
+                            Hamnar
+                        </p>
+                        <div class="<?php 
+                        $cssClass = ($activePage? "Header__LinkIconWrapper Header__LinkIconWrapper--Active": "Header__LinkIconWrapper");
+                        echo $cssClass;
+                        ?>">
+
+                            <img src="<?php 
+                            $iconUrl = ($activePage? "anchorwhite.svg": "anchor.svg");
+                            
+                            echo get_template_directory_uri() . '/dist/icons/' . $iconUrl; ?>" alt="">
+                            
+                        </div>
                     </a>
                 </li>
             </ul>
@@ -125,38 +151,133 @@ function navList($harbor){
         <nav class="Header__Nav">
             <ul class="Header__NavList">
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('events')); ?>" class="Header__Link">
-                        Events
+                    <a href="<?php 
+                    $urlString = "harbor/" . $_SESSION['hamn']; 
+                    echo esc_url(site_url($urlString)); ?>" class="<?php 
+                    $activePage = is_singular("harbor");
+                    $cssClass = ($activePage? "Header__Link Header__Link--Active" : "Header__Link");
+                    echo $cssClass;
+                    ?>">
+                        <p class="Header__LinkText">    
+                            <?php echo ucfirst($_SESSION['hamn']); ?>
+                        </p>
+                        <div class="<?php 
+                        $cssClass = ($activePage? "Header__LinkIconWrapper Header__LinkIconWrapper--Active": "Header__LinkIconWrapper");
+                        echo $cssClass;
+                        ?>">
+
+                            <img src="<?php 
+                            $iconUrl = ($activePage? "anchorwhite.svg": "anchor.svg");
+                            
+                            echo get_template_directory_uri() . '/dist/icons/' . $iconUrl; ?>" alt="">
+                            
+                        </div>
                     </a>
                 </li>
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('butiken')); ?>" class="Header__Link">
-                        Butiken
+                    
+                    <a href="<?php echo esc_url(site_url('events')); ?>"
+                    class="<?php 
+                    $activePage = is_page("events");
+                    $cssClass = ($activePage? "Header__Link Header__Link--Active" : "Header__Link");
+                    echo $cssClass;
+                    ?>">
+                        <p class="Header__LinkText">
+                            Events
+                        </p>
+                        <div class="<?php 
+                        $cssClass = ($activePage? "Header__LinkIconWrapper Header__LinkIconWrapper--Active": "Header__LinkIconWrapper");
+                        echo $cssClass;
+                        ?>">
+
+                            <img src="<?php 
+                            $iconUrl = ($activePage? "anchorwhite.svg": "anchor.svg");
+                            
+                            echo get_template_directory_uri() . '/dist/icons/' . $iconUrl; ?>" alt="">
+                            
+                        </div>
                     </a>
                 </li>
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('/accommodation/' . $harbor)); ?>" class="Header__Link">
-                        Boka
+                <a href="<?php 
+                $bookingHarborUrl = "accommodation/" . strtolower($harbor) . "/";
+                echo esc_url(site_url($bookingHarborUrl)); ?>"
+                    class="<?php 
+                    ;
+                    $activePage = checkIfUrlContainsString($currentUrl, $bookingHarborUrl);
+                    $cssClass = ($activePage? "Header__Link Header__Link--Active":"Header__Link");
+                    echo $cssClass;
+                    ?>"
+                    >
+                        <p class="Header__LinkText">
+                            Boka
+                        </p>
+                        <div class="<?php 
+                        $cssClass = ($activePage? "Header__LinkIconWrapper Header__LinkIconWrapper--Active": "Header__LinkIconWrapper");
+                        echo $cssClass;
+                        ?>">
+
+                            <img src="<?php 
+                            $iconUrl = ($activePage? "anchorwhite.svg": "anchor.svg");
+                            
+                            echo get_template_directory_uri() . '/dist/icons/' . $iconUrl; ?>" alt="">
+                        </div>
                     </a>
                 </li>
-                <li class="Header__ListItem">
+                <!-- <li class="Header__ListItem">
                     <a href="<?php echo esc_url(site_url('harbor')); ?>" class="Header__Link">
                         Hamnar
                     </a>
-                </li>
-                <li class="Header__ListItem">
+                </li> -->
+                <!-- <li class="Header__ListItem">
                     <a href="<?php echo esc_url(site_url('service')); ?>" class="Header__Link">
                         Service
                     </a>
-                </li>
+                </li> -->
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('blog')); ?>" class="Header__Link">
-                        Blogg
+                    <a href="<?php echo esc_url(site_url('blog')); ?>" 
+                    class="<?php 
+                    $activePage = is_home() || is_singular('post');
+                    $cssClass = ($activePage? "Header__Link Header__Link--Active" : "Header__Link");
+                    echo $cssClass;
+                    ?>"
+                    >
+                        <p class="Header__LinkText">
+                            Blogg
+                        </p>
+                        <div class="<?php 
+                        $cssClass = ($activePage? "Header__LinkIconWrapper Header__LinkIconWrapper--Active": "Header__LinkIconWrapper");
+                        echo $cssClass;
+                        ?>">
+
+                            <img src="<?php 
+                            $iconUrl = ($activePage? "anchorwhite.svg": "anchor.svg");
+                            
+                            echo get_template_directory_uri() . '/dist/icons/' . $iconUrl; ?>" alt="">
+                        </div>
                     </a>
                 </li>
                 <li class="Header__ListItem">
-                    <a href="<?php echo esc_url(site_url('gallery')); ?>" class="Header__Link">
-                        Personalgalleri
+                    <a href="<?php echo esc_url(site_url('gallery')); ?>" 
+                    class="<?php 
+                    $activePage = is_post_type_archive( "gallery" );
+                    $cssClass = ($activePage? "Header__Link Header__Link--Active" : "Header__Link");
+                    echo $cssClass;
+                    ?>"
+                    >
+                        <p class="Header__LinkText">
+                            Personal
+                        </p>
+                        <div class="<?php 
+                        $cssClass = ($activePage? "Header__LinkIconWrapper Header__LinkIconWrapper--Active": "Header__LinkIconWrapper");
+                        echo $cssClass;
+                        ?>">
+
+                            <img src="<?php 
+                            $iconUrl = ($activePage? "anchorwhite.svg": "anchor.svg");
+                            
+                            echo get_template_directory_uri() . '/dist/icons/' . $iconUrl; ?>" alt="">
+                        </div>
                     </a>
                 </li>
             </ul>
@@ -170,6 +291,8 @@ function navList($harbor){
     <?php
 };
 
+
+function wp_search_form( $form ) { $form = "<section class='search search-form'><form role='search' method='get' action='" . home_url( "/" ) . "' > <label class='screen-reader-text' for='s'>" . __("", "domain") . "</label> <input type='search' class='search-field  Header__SearchField' value='" . get_search_query() . "' name='s' id='s' placeholder='T.ex. \"bensin, tennis, butik etc.\"' /> <button type='submit' id='searchsubmit' class='search-submit Search__Button' value='". esc_attr__("Sök", "domain") ."' ><i class='fa fa-search'></i></button> </form></section>"; return $form; } add_filter( 'get_search_form', 'wp_search_form' );
 
 // inkludera custom post types i söket
 function include_cpt_search( $query ) {
