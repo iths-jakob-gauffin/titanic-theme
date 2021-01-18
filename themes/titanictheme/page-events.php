@@ -1,8 +1,42 @@
-<?php get_header(); ?>
+<?php get_header();
 
+$harbors = new WP_Query(array(
+    'post_type' => 'harbor'
+));
+
+$harborsArray = $harbors->posts; 
+
+$imgUrl = "";
+
+    foreach ($harborsArray as $value) {
+        // echo var_dump($_SESSION['hamn']);
+        // echo var_dump($value->post_title);
+    if(strtolower($_SESSION['hamn']) === strtolower($value->post_title)){
+        // echo var_dump($value);
+        $stuff = get_post_thumbnail_id( $value->ID );
+        // echo var_dump(get_the_post_thumbnail(  ));
+        $imgUrl = get_the_post_thumbnail_url($value->ID, "backgroundImage");
+        }}
+        // echo var_dump($imgUrl); ?>
+    
     <h1>Det här är page-events.php</h1>
+<!-- --------Header-------- -->
+    <div class="Events">
+        <div class="Events__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
+         <div class="Events__TitleWrapper">
+            <h1 class="Events__Title">
+               Events
+            </h1>
+        </div>
+    </div>
+<!-- --------Header slut---------- -->
     <div class="container">
+
+
+    
     <?php
+
+
 
     $today = date('Ymd');
 
@@ -37,7 +71,9 @@
         
             <ul class="Events__List">
                 <li class="Events__ListItem">
-                    <h1 class="Events__Title">
+<!-- -------- Placera event-bilden för just detta event här?! ---------- -->
+                    
+                    <h1 class="Events__ListTitle">
                         <?php the_title(); ?>
                     </h1>
                     <?php the_content(); the_excerpt(); 

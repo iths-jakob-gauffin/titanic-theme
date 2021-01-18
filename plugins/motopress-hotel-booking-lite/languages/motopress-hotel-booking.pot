@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Hotel Booking plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hotel Booking 3.9.0\n"
+"Project-Id-Version: Hotel Booking 3.9.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/motopress-hotel-booking\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-11-24T18:54:19+03:00\n"
+"POT-Creation-Date: 2020-12-21T16:49:08+03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.3.0\n"
 "X-Domain: motopress-hotel-booking\n"
@@ -342,12 +342,12 @@ msgid "Remove gallery"
 msgstr ""
 
 #: includes/admin/fields/multiple-checkbox-field.php:82
-#: template-functions.php:873
+#: template-functions.php:871
 msgid "Select all"
 msgstr ""
 
 #: includes/admin/fields/multiple-checkbox-field.php:86
-#: template-functions.php:875
+#: template-functions.php:873
 msgid "Unselect all"
 msgstr ""
 
@@ -417,7 +417,7 @@ msgstr ""
 #: includes/views/booking-view.php:84
 #: includes/views/edit-booking/checkout-view.php:149
 #: includes/views/shortcodes/checkout-view.php:177
-#: template-functions.php:595
+#: template-functions.php:593
 #: templates/create-booking/search/search-form.php:88
 #: templates/shortcodes/search/search-form.php:72
 #: assets/blocks/blocks.js:60
@@ -467,7 +467,7 @@ msgstr ""
 #: includes/admin/sync-logs-list-table.php:70
 #: includes/admin/sync-rooms-list-table.php:120
 #: includes/bundles/export-bundle.php:19
-#: template-functions.php:773
+#: template-functions.php:771
 #: templates/edit-booking/edit-reserved-rooms.php:46
 msgid "Status"
 msgstr ""
@@ -556,7 +556,7 @@ msgstr ""
 #: includes/views/booking-view.php:86
 #: includes/views/edit-booking/checkout-view.php:149
 #: includes/views/shortcodes/checkout-view.php:179
-#: template-functions.php:597
+#: template-functions.php:595
 #: templates/shortcodes/search/search-form.php:74
 msgid "Guests"
 msgstr ""
@@ -681,7 +681,7 @@ msgstr ""
 #: includes/views/booking-view.php:174
 #: includes/views/booking-view.php:192
 #: includes/views/booking-view.php:208
-#: template-functions.php:774
+#: template-functions.php:772
 msgid "Amount"
 msgstr ""
 
@@ -800,7 +800,7 @@ msgstr ""
 #: includes/admin/manage-cpt-pages/room-type-manage-cpt-page.php:66
 #: includes/views/loop-room-type-view.php:116
 #: includes/views/single-room-type-view.php:203
-#: template-functions.php:718
+#: template-functions.php:716
 #: templates/create-booking/results/reserve-rooms.php:51
 #: templates/widgets/rooms/room-content.php:76
 #: templates/widgets/search-availability/search-form.php:71
@@ -810,7 +810,7 @@ msgstr ""
 #: includes/admin/manage-cpt-pages/room-type-manage-cpt-page.php:67
 #: includes/views/loop-room-type-view.php:131
 #: includes/views/single-room-type-view.php:218
-#: template-functions.php:723
+#: template-functions.php:721
 #: templates/create-booking/results/reserve-rooms.php:52
 #: templates/widgets/rooms/room-content.php:89
 #: templates/widgets/search-availability/search-form.php:96
@@ -2865,8 +2865,8 @@ msgstr ""
 #: includes/ajax.php:1030
 #: includes/emails/templaters/email-templater.php:123
 #: includes/post-types/booking-cpt.php:45
-#: template-functions.php:571
-#: template-functions.php:575
+#: template-functions.php:569
+#: template-functions.php:573
 #: templates/create-booking/search/search-form.php:48
 #: templates/edit-booking/edit-dates.php:33
 #: templates/shortcodes/search/search-form.php:37
@@ -2878,8 +2878,8 @@ msgstr ""
 #: includes/ajax.php:1034
 #: includes/emails/templaters/email-templater.php:127
 #: includes/post-types/booking-cpt.php:52
-#: template-functions.php:580
-#: template-functions.php:584
+#: template-functions.php:578
+#: template-functions.php:582
 #: templates/create-booking/search/search-form.php:67
 #: templates/edit-booking/edit-dates.php:42
 #: templates/shortcodes/search/search-form.php:56
@@ -4949,7 +4949,7 @@ msgstr ""
 
 #: includes/csv/bookings/bookings-parser.php:182
 #: includes/views/edit-booking/checkout-view.php:261
-#: template-functions.php:735
+#: template-functions.php:733
 msgid "x %d guest"
 msgid_plural "x %d guests"
 msgstr[0] ""
@@ -4958,7 +4958,7 @@ msgstr[1] ""
 #: includes/csv/bookings/bookings-parser.php:186
 #: includes/views/edit-booking/checkout-view.php:265
 #: includes/views/reserved-room-view.php:29
-#: template-functions.php:738
+#: template-functions.php:736
 msgid "x %d time"
 msgid_plural "x %d times"
 msgstr[0] ""
@@ -7351,7 +7351,7 @@ msgstr ""
 
 #: includes/shortcodes/search-results-shortcode.php:670
 #: includes/shortcodes/search-results-shortcode.php:836
-#: template-functions.php:649
+#: template-functions.php:647
 msgid "Confirm Reservation"
 msgstr ""
 
@@ -7408,8 +7408,8 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: includes/shortcodes/search-results-shortcode.php:835
-#: template-functions.php:474
-#: template-functions.php:485
+#: template-functions.php:472
+#: template-functions.php:483
 msgid "Book"
 msgstr ""
 
@@ -7540,13 +7540,13 @@ msgid "Original Booking Details"
 msgstr ""
 
 #: includes/views/edit-booking/checkout-view.php:120
-#: template-functions.php:700
+#: template-functions.php:698
 msgid "Accommodation:"
 msgstr ""
 
 #: includes/views/edit-booking/checkout-view.php:160
 #: includes/views/shortcodes/checkout-view.php:200
-#: template-functions.php:614
+#: template-functions.php:612
 #: templates/create-booking/search/search-form.php:105
 #: templates/shortcodes/search/search-form.php:97
 msgid "Children %s"
@@ -7601,7 +7601,7 @@ msgstr ""
 
 #: includes/views/loop-room-type-view.php:187
 #: includes/views/single-room-type-view.php:274
-#: template-functions.php:645
+#: template-functions.php:643
 #: templates/widgets/rooms/room-content.php:213
 msgid "Prices start at:"
 msgstr ""
@@ -7656,7 +7656,7 @@ msgid "Your Information"
 msgstr ""
 
 #: includes/views/shortcodes/checkout-view.php:439
-#: template-functions.php:561
+#: template-functions.php:559
 #: templates/widgets/search-availability/search-form.php:19
 msgid "Required fields are followed by %s"
 msgstr ""
@@ -7803,12 +7803,12 @@ msgstr ""
 msgid "Prices start at: %s"
 msgstr ""
 
-#: template-functions.php:503
+#: template-functions.php:501
 msgid "View Details"
 msgstr ""
 
-#: template-functions.php:572
-#: template-functions.php:581
+#: template-functions.php:570
+#: template-functions.php:579
 #: templates/create-booking/search/search-form.php:39
 #: templates/create-booking/search/search-form.php:58
 #: templates/edit-booking/edit-dates.php:30
@@ -7821,44 +7821,44 @@ msgctxt "Date format tip"
 msgid "Formatted as %s"
 msgstr ""
 
-#: template-functions.php:627
+#: template-functions.php:625
 #: templates/edit-booking/edit-dates.php:46
 msgid "Check Availability"
 msgstr ""
 
-#: template-functions.php:638
+#: template-functions.php:636
 msgid "Reserve %1$s of %2$s available accommodations."
 msgstr ""
 
-#: template-functions.php:641
+#: template-functions.php:639
 msgid "%s is available for selected dates."
 msgstr ""
 
-#: template-functions.php:709
+#: template-functions.php:707
 msgid "Rate:"
 msgstr ""
 
-#: template-functions.php:728
+#: template-functions.php:726
 msgid "Services:"
 msgstr ""
 
-#: template-functions.php:750
+#: template-functions.php:748
 msgid "Guest:"
 msgstr ""
 
-#: template-functions.php:772
+#: template-functions.php:770
 msgid "Payment ID"
 msgstr ""
 
-#: template-functions.php:802
+#: template-functions.php:800
 msgid "Total Paid"
 msgstr ""
 
-#: template-functions.php:806
+#: template-functions.php:804
 msgid "To Pay"
 msgstr ""
 
-#: template-functions.php:830
+#: template-functions.php:828
 msgid "Add Payment Manually"
 msgstr ""
 

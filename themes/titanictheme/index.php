@@ -20,21 +20,22 @@
         }
         // echo var_dump($imgUrl);
 
-    global $query_string;
+    // global $query_string;
     // echo var_dump($query_string);
     
-    $test = wp_parse_str( $query_string, $search_query );
-    echo var_dump($search_query);
-    $search = new WP_Query( $search_query );
+    // $test = wp_parse_str( $query_string, $search_query );
+    // echo var_dump($search_query);
+    // $search = new WP_Query( $search_query );
     ?>
     
-    <h1>Det hääär är Index.php</h1>
+   
     <!-- --------Header-------- -->
     <div class="Blog">
-        <div class="Blog__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
+        <div class="Blog__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')"> 
+        <h1>Det hääär är Index.php</h1>
         ¨<div class="Blog__TitleWrapper">
             <h1 class="Blog__Title">
-               Blogg
+            <?php echo ucfirst($_SESSION['hamn']);?> Blogg
             </h1>
         </div>
     </div>
@@ -45,8 +46,8 @@
     while(have_posts()){
         the_post();
         $hamnen = get_field("hamn")[0]->post_title;
-        echo var_dump($hamnen);
-        echo var_dump($_SESSION['hamn']);
+        // echo var_dump($hamnen);
+        // echo var_dump($_SESSION['hamn']);
 
         if (strtolower($hamnen) === strtolower($_SESSION['hamn'])){
         ?>
@@ -54,9 +55,6 @@
             <main class="Blog">
                 <article class="Blog__Post">
                     <a href="<?php the_permalink(); ?>" class="Blog__PostLink"></a>
-
-
-                    <!-- här gör vi en container, bestäm storlek i scccen-->
                     <div class="Blog__ImageContainer">
                         <img src="<?php echo get_the_post_thumbnail_url();?>" class="Blog__Image">
                     </div>
@@ -67,7 +65,7 @@
                         <?php 
                             
                             $text = get_the_content();
-                            echo wp_trim_words($text, 15);
+                            echo wp_trim_words($text, 50);
                             
                             ?>
                     </div>
