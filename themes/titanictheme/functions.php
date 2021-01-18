@@ -39,6 +39,8 @@ add_filter('use_block_editor_for_post', '__return_false', 10);
 
 function titanic_post_types(){
     register_post_type('event', array(
+        'capability_type' => 'event',
+        'map_meta_cap' => 'true',
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
         'public' => true,
         'labels' => array(
@@ -53,6 +55,8 @@ function titanic_post_types(){
     ));
 
     register_post_type('harbor', array(
+        'capability_type' => 'harbor',
+        'map_meta_cap' => 'true',
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
         'taxonomies' => array('topics','category'),
         'public' => true,
@@ -68,6 +72,8 @@ function titanic_post_types(){
     ));
 
     register_post_type('gallery', array(
+        'capability_type' => 'gallary',
+        'map_meta_cap' => 'true',
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
         'taxonomies' => array('topics','category'),
         'public' => true,
