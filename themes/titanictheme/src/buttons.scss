@@ -6,6 +6,7 @@ button{
     border: none;
     cursor: pointer;
     transition: all $transition;
+    @include p;
 
     &:hover{
         background-color: $PrimaryDark;
@@ -13,6 +14,7 @@ button{
 }
 
 .mphb-reserve-btn.button{
+    @include p;
     border: 2px solid $Primary;
     background-color: $White;
     padding: .8rem 4rem;
@@ -27,6 +29,7 @@ button{
 }
 
 .button.mphb-button.mphb-confirm-reservation{
+    @include p;
     background-color: $Primary;
     padding: .8rem 4rem;
     color: $White;
@@ -38,4 +41,11 @@ button{
     &:hover{
         background-color: $PrimaryDark;
     }
+}
+
+.Search__Button{
+    @include p;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: .8rem 2rem .8rem 1.2rem;
 }

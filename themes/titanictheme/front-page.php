@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
     <h1>Det här är front-page.php</h1>
+    <?php echo get_current_user(); ?>
 
     <?php
 
@@ -18,7 +19,7 @@
         ?>
         <div class="container">
             <div class="Frontpage__Hero" style="background: url('<?php echo $imageUrl; ?>')" ></div>
-            <div class="FrontPage__Container" >
+            <div class="FrontPage">
                 <h1 class="FrontPage__Title">
                     <?php the_title(); ?>
                 </h1>

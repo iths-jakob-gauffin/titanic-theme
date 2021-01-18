@@ -46,6 +46,9 @@
         }
     }
     wp_reset_postdata();
+
+    global $post;
+    echo var_dump($post);
 ?>
 
     <div class="BackgroundImageWrapper">
@@ -110,8 +113,17 @@
     
             $test = checkIfUrlContainsString($currentUrl, 'visby');
 
+            // global $post;
+            // echo var_dump($post);
+
+            $rooms = new WP_Query(array(
+                'post_type' => 'mphb_room_type'
+            ));
+            // echo var_dump($rooms->posts);
+
             while(have_posts()){
                 the_post(); 
+
             ?>
             
             <div class="SingleMRT__FormWrapper"><?php the_content(); ?></div>
