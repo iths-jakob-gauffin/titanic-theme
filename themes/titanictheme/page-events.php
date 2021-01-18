@@ -64,19 +64,26 @@ $imgUrl = "";
         $time = new DateTime(get_field('event_time'));
         $fixedTime = $time->format('H : i');
         $hamnen = get_field('hamn')[0]->post_title;            
-
+        $eventImage = get_field('event_image');
 
         if(strtolower($hamnen) === strtolower($_SESSION['hamn'])){
             ?>
         
             <ul class="Events__List">
                 <li class="Events__ListItem">
-<!-- -------- Placera event-bilden för just detta event här?! ---------- -->
+<!-- -------- Placera event-bilden för just detta event här! ---------- -->
+                    <img src="<?php echo get_the_post_thumbnail_url();?>" alt="">
+
+                    <img src="<?php echo $eventImage;?>" alt="">
+                    
+                    <div class="Events__BackgroundImage" style="background: url('<?php echo $eventImage; ?>')"></div>
+
+                    <div><?php echo var_dump($eventImage); ?></div>
                     
                     <h1 class="Events__ListTitle">
                         <?php the_title(); ?>
                     </h1>
-                    <?php the_content(); the_excerpt(); 
+                    <?php the_content(); the_excerpt();
                     ?>
                     <h2><?php echo $fixedDate . ", kl: " . $fixedTime; ?></h2>
                 </li>
