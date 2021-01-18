@@ -49,7 +49,7 @@
     }
 
     .mphb-room-type {
-        padding: $spacingXs $spacingS $spacingS;
+        padding: $spacingXs $spacingS $spacingXl;
         // border: 2px solid $Primary;
         margin-top: 0 !important;
         max-width: 45%;
@@ -58,8 +58,6 @@
         margin-bottom: $spacingL;
         border-radius: .5rem;
         @include bgColorOpacity($Lightgray, .4);
-        // background-color: $Lightgray;
-        // margin: 0 $spacingL $spacingL;
     }
     
     .flexslider{
@@ -81,7 +79,7 @@
     }
 
     .mphb-room-type-title{
-        @include h3;
+        @include h2;
         color: $Primary;
         margin-bottom: $spacingXxs;
     }
@@ -113,4 +111,72 @@
         }
     
     }
+
+    .mphb-room-type-images{
+        margin-bottom: $spacingS;
+    }
+    
+    .mphb-rooms-quantity-wrapper{
+        
+        
+    }
+
+    input{
+        margin-bottom: $spacingS;
+        
+    }
+    
+    .mphb-rooms-quantity-wrapper.mphb-rooms-quantity-multiple{
+        @include p;
+        margin-bottom: $spacingM;
+    }
+
+    select{
+        // padding: 0 $spacingXxs;
+        border-radius: .4rem;
+    }
+
+    .detailFlexWrapper{
+        display: flex;
+        margin-bottom: $spacingS;
+    }
+
+    .button{
+        background-color: $Primary;
+        padding: .8rem 4rem;
+        color: $White;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        transition: all $transition;
+
+        &:hover{
+            background-color: $PrimaryDark;
+        }
+    }
+
+    .detailToFlex{
+        flex: 1 1 40%;
+        @include p;
+        margin-right: $spacingL; 
+        
+        &:first-child{
+            margin-right: $spacingL; 
+            flex: 1 1 60%;
+        }
+
+        .priceString{
+            align-self: flex-end;
+            text-align: right;
+            width: 100%;
+            margin-right: 5rem;
+            @include h3;
+            font-weight: 500;
+            color: $Primary;
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+
 }

@@ -1,26 +1,46 @@
 .Booking {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid red;
+    // flex-direction: column;
+    // align-items: center;
+    // border: 1px solid red;
+    padding: $spacingL;
+    background-color: $White;
+
+
 
     &__FormWrapper {
-        width: 70rem;
-        border: 1px solid blue;
+        // width: 100%;
+        // border: 1px solid blue;
         background: white;
         text-align: left;
+        flex: 1 1 85%;
+        margin-right: $spacingL;
 
         * {
             @include font();
             font-size: 1.8rem;
         }
 
+        .mphb-booking-details-title,
+        .mphb-customer-details-title{
+            color: $Primary;
+            @include h2;
+            margin-bottom: $spacingXs;
+
+        }
+
         h3 {
             font-size: 2.3rem;
+
+            .Booking__ConfirmationHarbor{
+                @include h1;
+                color: $Primary;
+                margin-bottom: $spacingM;
+            }
         }
 
         .mphb-check-out-date {
-            margin-bottom: 5rem;
+            margin-bottom: 3rem;
         }
 
         .mphb-room-details > p {
@@ -34,7 +54,318 @@
         .mphb-price-breakdown-group > tr {
             margin-bottom: 2rem;
             display: block;
-            border: 1px solid red;
+            // border: 1px solid red;
         }
+    }
+
+    &__Aside{
+        flex: 1 1 25%;
+        // background-color: green;
+    }
+
+    &__Amenities{
+        flex: 1 1 15%;
+        // border: 1px solid red;
+       
+    }
+
+    &__AmenitieTitle{
+        padding: $spacingXxs;
+        padding-left: $spacingS;
+        display: block;
+        @include label;
+        background-color: $Primary;
+        color: $White;
+    }
+    &__AmenitieList{
+        background-color: $Lightgray;
+        list-style: none;
+        padding: $spacingXs;
+        
+    }
+    &__AmenitieListItem{
+        display: flex;
+        align-items: center;
+        @include listItem;
+        margin-bottom: $spacingXxs;
+
+        i{
+            margin-right: $spacingXs;
+            font-size: 1.2rem;
+            width: 2rem;
+            display: inline-block;
+            text-align: center;
+        }
+    }
+
+    .bookDetail{
+        padding: $spacingXs 0 $spacingM $spacingXs;
+        border-radius: .5rem;
+        @include bgColorOpacity($Lightgray, .4);
+        flex: 1 1 60%;
+        
+        &:first-child{
+            padding: 0;
+            padding-top: $spacingXs;
+            margin-right: $spacingL * 2;
+            background: none;
+            flex: 1 1 40%;
+        }
+        
+    }
+
+    .bookDetails{
+        // border: 1px solid red;
+        display: flex;
+        margin-bottom: $spacingL;
+    }
+
+    
+    .mphb-room-type-title,
+    .mphb-guest-name-wrapper{
+        display: none;
+    }
+
+    .mphb-price-breakdown-title,
+    .mphb-price-breakdown-total{
+        @include h2;
+        color: $Primary;
+        th, span{
+            @include h2;
+        }
+    }
+
+    .mphb-price-breakdown-subtotal{
+        margin-bottom: $spacingXxs;
+    }
+
+    .mphb-price-breakdown-title{
+        margin-bottom: $spacingS;
+    }
+
+    .mphb-price-breakdown tr>td{
+        display: inline-block;
+        // width: 26rem !important;
+    }
+
+    .mphb-price-breakdown-services{
+        margin-top: $spacingM;
+        // display: inline-block;
+    }
+
+    tr.mphb-price-breakdown-nights,
+    tr.mphb-price-breakdown-accommodation-subtotal,
+    tr.mphb-price-breakdown-services-subtotal{
+        margin-bottom: $spacingS;
+    }
+
+    tbody, tfoot{
+        width: 55rem !important;
+        // width: 100% !important;
+        display: block;
+        // margin-right: $spacingM;
+    }
+    tfoot th{
+        width: 100% !important;
+    }
+
+    thead,
+    tfoot tr,
+    tbody tr{
+    display: table;
+    width: 100%;
+    }
+
+    th:first-child,
+    td:first-child{
+        width: 90% !important;
+        // width: 30% !important;
+    }
+
+
+    th:last-child,
+    td:last-child{
+        width: 10% !important;
+    }
+
+
+    tr.mphb-price-breakdown-date td{
+        // float: left;
+        display: inline-block;
+        width: 26rem !important;
+    }
+    tr.mphb-price-breakdown-date td+.mphb-table-price-column{
+        float: right;
+        font-weight: 700;
+        width: 10% !important;
+    }
+
+    th.mphb-price-breakdown-service-name,
+    td.mphb-price-breakdown-service-name{
+        width: 18rem !important;
+        display: inline-block;
+        
+    }
+    
+    th.mphb-price-breakdown-service-details,
+    td.mphb-price-breakdown-service-details{
+        display: inline-block;
+        // width: 100% !important;
+        width: auto !important;
+    }
+    td.mphb-price-breakdown-service-details+.mphb-table-price-column{
+        float: right;
+        font-weight: 700;
+    }
+    
+    .mphb-price-breakdown-rate{
+        display: none;
+    }
+    
+    .mphb-price-breakdown-booking.mphb-price-breakdown-group{
+        margin-bottom: $spacingS;
+        .mphb-table-price-column{
+            display: none;
+        }
+    }
+    // th{
+    //     width: 26rem;
+    //     display: block;
+    // }
+    // tr, td, th{
+        
+    //     width: 26rem;
+    // }
+
+    &__CustomerAndQuestionWrapper{
+        display: flex;
+        margin-bottom: $spacingL;
+    }
+
+    &__CustomerFormWrapper{
+        flex: 1 1 50%;
+        display: flex;
+        // border: 1px solid red;    
+        // padding-left: $spacingXs;
+
+        &:last-child{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // width: 100%;
+            // height: 100%;
+        }
+    }
+    
+    // &__CustomerAndQuestionWrapper{
+    //     display: flex;
+    // }
+
+
+    &__AnyQuestionsTitle{
+        font-size: 4rem !important; 
+        margin-bottom: $spacingXs;
+        color: $Primary;
+        
+    }
+    &__AnyQuestionsText{
+        @include h1;
+    }
+    
+    &__QuestionTextWrapper{
+        // position: absolute;
+        position: relative;
+        z-index: 10;
+        // border: 1px solid red;
+        margin-bottom: $spacingL * 3;
+    }
+
+    &__IconWrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // border: 1px solid green;
+        opacity: .4;
+
+        // i{
+        //     margin-right: 1rem;
+        //     font-size: 1.2rem;
+        //     width: 2rem;
+        //     display: inline-block;
+        //     text-align: center;
+        // }
+        svg{
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            height: 90% !important;
+            width: 90% !important;
+            // height: 25rem !important;
+            // width: 25rem !important;
+        }
+    }
+
+    .mphb-customer-details{
+        label{
+            display: inline-block;
+            margin-bottom: $spacingXxs;
+            @include label;
+        }
+        p{
+            margin-bottom: $spacingS;
+        }
+        .mphb-required-fields-tip{
+            margin-bottom: $spacingXs;
+            small{
+                @include label;
+                color: $Secondary;
+            }
+        }
+
+        input, textarea{
+            padding: $spacingXxs;
+            min-width: 25rem;
+        }
+    }
+
+    .mphb-total-price{
+        padding-left: $spacingS;
+        margin-bottom: $spacingS;
+        output, span{
+            @include h1;
+            color: $Primary;
+        }
+    }
+    .mphb_sc_checkout-submit-wrapper{
+        display: flex;
+        justify-content: center;
+        margin-bottom: $spacingL * 2;
+        input{
+            background-color: $Primary;
+            padding: .8rem 4rem;
+            color: $White;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: all $transition;
+
+            &:hover{
+                background-color: $PrimaryDark;
+            }
+        }
+    }
+
+    &__ConfirmationTitle{
+        @include h1;
+        margin-bottom: $spacingS;
+        color: $Primary;
+    }
+
+    &__ConfirmationText{
+        @include p;
     }
 }

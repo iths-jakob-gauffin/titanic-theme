@@ -108,17 +108,24 @@ a {
 }
 
 .Header {
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 4rem;
+  padding: 0rem 5rem;
+  background-color: white;
+  height: 8rem;
+  overflow: hidden;
 }
 
 .Header__Logo {
-  font-size: 3rem;
-  background-color: tan;
+  width: 15%;
+  height: 100%;
+}
+
+.Header__Logo img {
+  width: 100%;
+  height: 100%;
 }
 
 .Header__LogoLink {
@@ -127,23 +134,136 @@ a {
 }
 
 .Header__Nav {
-  border: 1px solid blue;
+  height: 100%;
 }
 
 .Header__NavList {
-  border: 1px solid red;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   list-style: none;
+  height: 100%;
+  width: 100%;
 }
 
 .Header__ListItem {
-  font-size: 2rem;
-  background-color: yellowgreen;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
-.Header__ListItem:not(:last-child) {
-  margin-right: 2rem;
+.Header__Link {
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #1070A8;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.Header__Link--Active {
+  color: white;
+  background-color: #1070A8;
+}
+
+.Header__LinkText {
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.Header__Link:hover .Header__LinkText {
+  transform: translateY(-1rem);
+}
+
+.Header__Link--Active .Header__LinkText {
+  transform: translateY(-1rem);
+}
+
+.Header__LinkIconWrapper {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.Header__Link:hover .Header__LinkIconWrapper {
+  transform: translate(-50%, -60%);
+}
+
+.Header__LinkIconWrapper img {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: red !important;
+}
+
+.Header__LinkIconWrapper--Active {
+  transform: translate(-50%, -60%);
+}
+
+.Header__SearchField {
+  padding: 0.5rem;
+  min-width: 25rem;
+}
+
+.Header__SearchAndUserWrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.Header__SearchWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.Header__UserWrapper {
+  display: flex;
+  align-items: center;
+  height: 4.5rem;
+  padding-left: 1.5rem;
+  margin-left: 1.5rem;
+  border-left: 3px solid #1070A8;
+}
+
+.Header__UserIcon {
+  height: 4rem;
+  width: 4rem;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.Header__UserIcon img {
+  width: 100%;
+  height: 100%;
+}
+
+.Header__UserNameAndLogoutWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.Header__UserName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1070A8;
+  border-bottom: 2px solid #1070A8;
+}
+
+.Header__Logout {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #1070A8;
 }
 
 .container {
@@ -280,6 +400,11 @@ a {
   font-weight: 400;
 }
 
+.SingleBlog__Text img {
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   padding: 0rem 5rem;
   position: relative;
@@ -307,7 +432,7 @@ a {
   border: 1px solid blue;
 }
 
-.FrontPage__Container {
+.FrontPage {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -404,22 +529,61 @@ a {
   left: 0;
 }
 
-* {
+.FrontPage .mphb_sc_search-form * {
+  font-size: 1.5rem;
+}
+
+.FrontPage .mphb_sc_search-form label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.FrontPage .mphb_sc_search-form input {
+  padding: 0.5rem;
+  min-width: 25rem;
+  min-width: 100%;
+}
+
+.FrontPage .mphb_sc_search-form .button {
+  background-color: #1070A8;
+  padding: 0.8rem 4rem;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.5rem;
+}
+
+.FrontPage .mphb_sc_search-form .button:hover {
+  background-color: #0b4e75;
+}
+
+.datepick-popup * {
+  font-size: 1.5rem;
+}
+
+.datepick-popup .datepick.datepick-multi.mphb-datepick-popup {
+  width: 50rem !important;
+}
+
+body {
   font-family: "Montserrat", sans-serif;
 }
 
 .Booking {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid red;
+  padding: 2.5rem;
+  background-color: white;
 }
 
 .Booking__FormWrapper {
-  width: 70rem;
-  border: 1px solid blue;
   background: white;
   text-align: left;
+  flex: 1 1 85%;
+  margin-right: 2.5rem;
 }
 
 .Booking__FormWrapper * {
@@ -427,12 +591,25 @@ a {
   font-size: 1.8rem;
 }
 
+.Booking__FormWrapper .mphb-booking-details-title,
+.Booking__FormWrapper .mphb-customer-details-title {
+  color: #1070A8;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
 .Booking__FormWrapper h3 {
   font-size: 2.3rem;
 }
 
+.Booking__FormWrapper h3 .Booking__ConfirmationHarbor {
+  font-size: 3rem;
+  color: #1070A8;
+  margin-bottom: 2rem;
+}
+
 .Booking__FormWrapper .mphb-check-out-date {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .Booking__FormWrapper .mphb-room-details > p {
@@ -446,7 +623,292 @@ a {
 .Booking__FormWrapper .mphb-price-breakdown-group > tr {
   margin-bottom: 2rem;
   display: block;
-  border: 1px solid red;
+}
+
+.Booking__Aside {
+  flex: 1 1 25%;
+}
+
+.Booking__Amenities {
+  flex: 1 1 15%;
+}
+
+.Booking__AmenitieTitle {
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: #1070A8;
+  color: white;
+}
+
+.Booking__AmenitieList {
+  background-color: #D8E3EC;
+  list-style: none;
+  padding: 1rem;
+}
+
+.Booking__AmenitieListItem {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.Booking__AmenitieListItem i {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  width: 2rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.Booking .bookDetail {
+  padding: 1rem 0 2rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(216, 227, 236, 0.4);
+  flex: 1 1 60%;
+}
+
+.Booking .bookDetail:first-child {
+  padding: 0;
+  padding-top: 1rem;
+  margin-right: 5rem;
+  background: none;
+  flex: 1 1 40%;
+}
+
+.Booking .bookDetails {
+  display: flex;
+  margin-bottom: 2.5rem;
+}
+
+.Booking .mphb-room-type-title,
+.Booking .mphb-guest-name-wrapper {
+  display: none;
+}
+
+.Booking .mphb-price-breakdown-title,
+.Booking .mphb-price-breakdown-total {
+  font-size: 2.5rem;
+  color: #1070A8;
+}
+
+.Booking .mphb-price-breakdown-title th,
+.Booking .mphb-price-breakdown-title span,
+.Booking .mphb-price-breakdown-total th,
+.Booking .mphb-price-breakdown-total span {
+  font-size: 2.5rem;
+}
+
+.Booking .mphb-price-breakdown-subtotal {
+  margin-bottom: 0.5rem;
+}
+
+.Booking .mphb-price-breakdown-title {
+  margin-bottom: 1.5rem;
+}
+
+.Booking .mphb-price-breakdown tr > td {
+  display: inline-block;
+}
+
+.Booking .mphb-price-breakdown-services {
+  margin-top: 2rem;
+}
+
+.Booking tr.mphb-price-breakdown-nights,
+.Booking tr.mphb-price-breakdown-accommodation-subtotal,
+.Booking tr.mphb-price-breakdown-services-subtotal {
+  margin-bottom: 1.5rem;
+}
+
+.Booking tbody,
+.Booking tfoot {
+  width: 55rem !important;
+  display: block;
+}
+
+.Booking tfoot th {
+  width: 100% !important;
+}
+
+.Booking thead,
+.Booking tfoot tr,
+.Booking tbody tr {
+  display: table;
+  width: 100%;
+}
+
+.Booking th:first-child,
+.Booking td:first-child {
+  width: 90% !important;
+}
+
+.Booking th:last-child,
+.Booking td:last-child {
+  width: 10% !important;
+}
+
+.Booking tr.mphb-price-breakdown-date td {
+  display: inline-block;
+  width: 26rem !important;
+}
+
+.Booking tr.mphb-price-breakdown-date td + .mphb-table-price-column {
+  float: right;
+  font-weight: 700;
+  width: 10% !important;
+}
+
+.Booking th.mphb-price-breakdown-service-name,
+.Booking td.mphb-price-breakdown-service-name {
+  width: 18rem !important;
+  display: inline-block;
+}
+
+.Booking th.mphb-price-breakdown-service-details,
+.Booking td.mphb-price-breakdown-service-details {
+  display: inline-block;
+  width: auto !important;
+}
+
+.Booking td.mphb-price-breakdown-service-details + .mphb-table-price-column {
+  float: right;
+  font-weight: 700;
+}
+
+.Booking .mphb-price-breakdown-rate {
+  display: none;
+}
+
+.Booking .mphb-price-breakdown-booking.mphb-price-breakdown-group {
+  margin-bottom: 1.5rem;
+}
+
+.Booking .mphb-price-breakdown-booking.mphb-price-breakdown-group .mphb-table-price-column {
+  display: none;
+}
+
+.Booking__CustomerAndQuestionWrapper {
+  display: flex;
+  margin-bottom: 2.5rem;
+}
+
+.Booking__CustomerFormWrapper {
+  flex: 1 1 50%;
+  display: flex;
+}
+
+.Booking__CustomerFormWrapper:last-child {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Booking__AnyQuestionsTitle {
+  font-size: 4rem !important;
+  margin-bottom: 1rem;
+  color: #1070A8;
+}
+
+.Booking__AnyQuestionsText {
+  font-size: 3rem;
+}
+
+.Booking__QuestionTextWrapper {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 7.5rem;
+}
+
+.Booking__IconWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.Booking__IconWrapper svg {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  height: 90% !important;
+  width: 90% !important;
+}
+
+.Booking .mphb-customer-details label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.Booking .mphb-customer-details p {
+  margin-bottom: 1.5rem;
+}
+
+.Booking .mphb-customer-details .mphb-required-fields-tip {
+  margin-bottom: 1rem;
+}
+
+.Booking .mphb-customer-details .mphb-required-fields-tip small {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #313131;
+}
+
+.Booking .mphb-customer-details input,
+.Booking .mphb-customer-details textarea {
+  padding: 0.5rem;
+  min-width: 25rem;
+}
+
+.Booking .mphb-total-price {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.Booking .mphb-total-price output,
+.Booking .mphb-total-price span {
+  font-size: 3rem;
+  color: #1070A8;
+}
+
+.Booking .mphb_sc_checkout-submit-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.Booking .mphb_sc_checkout-submit-wrapper input {
+  background-color: #1070A8;
+  padding: 0.8rem 4rem;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.Booking .mphb_sc_checkout-submit-wrapper input:hover {
+  background-color: #0b4e75;
+}
+
+.Booking__ConfirmationTitle {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #1070A8;
+}
+
+.Booking__ConfirmationText {
+  font-size: 1.5rem;
 }
 
 .SearchResults {
@@ -488,7 +950,7 @@ a {
 }
 
 .SearchResults .mphb-room-type {
-  padding: 1rem 1.5rem 1.5rem;
+  padding: 1rem 1.5rem 3rem;
   margin-top: 0 !important;
   max-width: 45%;
   min-width: 32rem;
@@ -516,7 +978,7 @@ a {
 }
 
 .SearchResults .mphb-room-type-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #1070A8;
   margin-bottom: 0.5rem;
 }
@@ -548,6 +1010,65 @@ a {
 .SearchResults .mphb-flexslider.mphb-gallery-slider:first-child a.flex-next,
 .SearchResults .mphb-flexslider.mphb-gallery-slider:first-child a.flex-prev {
   font-size: 0;
+}
+
+.SearchResults .mphb-room-type-images {
+  margin-bottom: 1.5rem;
+}
+
+.SearchResults input {
+  margin-bottom: 1.5rem;
+}
+
+.SearchResults .mphb-rooms-quantity-wrapper.mphb-rooms-quantity-multiple {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.SearchResults select {
+  border-radius: 0.4rem;
+}
+
+.SearchResults .detailFlexWrapper {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.SearchResults .button {
+  background-color: #1070A8;
+  padding: 0.8rem 4rem;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.SearchResults .button:hover {
+  background-color: #0b4e75;
+}
+
+.SearchResults .detailToFlex {
+  flex: 1 1 40%;
+  font-size: 1.5rem;
+  margin-right: 2.5rem;
+}
+
+.SearchResults .detailToFlex:first-child {
+  margin-right: 2.5rem;
+  flex: 1 1 60%;
+}
+
+.SearchResults .detailToFlex .priceString {
+  align-self: flex-end;
+  text-align: right;
+  width: 100%;
+  margin-right: 5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1070A8;
+  display: block;
+  margin-bottom: 1.5rem;
 }
 
 .fullWrapper {
@@ -634,6 +1155,43 @@ a {
 .Gallery__CardTitle {
   padding: 0;
   color: #1070A8;
+}
+
+.Gallery__StaffBox {
+  background-color: #D8E3EC;
+  padding: 2rem 5rem 2rem 4rem;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 5rem;
+}
+
+.Gallery__StaffTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #1070A8;
+}
+
+.Gallery__Button {
+  background-color: #1070A8;
+  padding: 0.8rem 4rem;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.5rem;
+  font-size: 2rem;
+}
+
+.Gallery__Button:hover {
+  background-color: #0b4e75;
+}
+
+.Gallery__Button:not(:last-child) {
+  margin-right: 1rem;
 }
 
 .container {
@@ -805,6 +1363,7 @@ button {
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  font-size: 1.5rem;
 }
 
 button:hover {
@@ -812,6 +1371,7 @@ button:hover {
 }
 
 .mphb-reserve-btn.button {
+  font-size: 1.5rem;
   border: 2px solid #1070A8;
   background-color: white;
   padding: 0.8rem 4rem;
@@ -826,6 +1386,7 @@ button:hover {
 }
 
 .button.mphb-button.mphb-confirm-reservation {
+  font-size: 1.5rem;
   background-color: #1070A8;
   padding: 0.8rem 4rem;
   color: white;
@@ -837,6 +1398,13 @@ button:hover {
 
 .button.mphb-button.mphb-confirm-reservation:hover {
   background-color: #0b4e75;
+}
+
+.Search__Button {
+  font-size: 1.5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 0.8rem 2rem 0.8rem 1.2rem;
 }
 
 .container {
@@ -952,6 +1520,10 @@ button:hover {
   border: 0;
 }
 
+.SingleMRT .mphb-rooms-quantity-wrapper.mphb-rooms-quantity-single {
+  margin-bottom: 1.5rem;
+}
+
 .SingleMRT .bookingWrapper {
   padding-bottom: 1rem;
   margin-bottom: 2rem;
@@ -1054,5 +1626,58 @@ button:hover {
 
 .SingleMRT .mphb-regular-price {
   display: none;
+}
+
+.Footer {
+  background-color: #D9D9D9;
+  padding: 5rem 0 10rem;
+}
+
+.Footer__SectionsWrapper {
+  padding: 0 7.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Footer__Section {
+  flex: 1 1 25%;
+}
+
+.Footer__SectionTitle {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.Footer__LocationList,
+.Footer__ContactList,
+.Footer__LinkList {
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.Footer__LocationList {
+  margin-bottom: 1.5rem;
+}
+
+.Footer__LocationListItem {
+  margin-bottom: 0.5rem;
+}
+
+.Footer__LocationListText {
+  font-weight: 700;
+}
+
+.Footer__ContactListItem {
+  margin-bottom: 0.5rem;
+}
+
+.Footer__LinkListItem {
+  margin-bottom: 1.5rem;
+}
+
+.Footer__Link {
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
 }
 
