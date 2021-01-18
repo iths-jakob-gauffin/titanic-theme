@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
     <h1>Det här är front-page.php</h1>
+    <?php echo get_current_user(); ?>
 
     <?php
 
@@ -18,7 +19,7 @@
         ?>
         <div class="container">
             <div class="Frontpage__Hero" style="background: url('<?php echo $imageUrl; ?>')" ></div>
-            <div class="FrontPage__Container" >
+            <div class="FrontPage">
                 <h1 class="FrontPage__Title">
                     <?php the_title(); ?>
                 </h1>
@@ -26,6 +27,10 @@
                 <?php echo do_shortcode('[mphb_availability_search class="is-style-horizontal-form"]'); ?>
 
                 <?php echo do_shortcode('[mphb_rooms gallery="false" excerpt="false" details="false" price="false" view_button="false" class="FrontPage__FlexWrapper"]'); ?>
+
+                <div class="map">
+                    <?php echo do_shortcode('[wpgmza id="1"]'); ?>
+                </div>    
             </div>
         </div>
     <?php

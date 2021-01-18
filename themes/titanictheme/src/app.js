@@ -1,9 +1,12 @@
 // import jQuery from "jquery";
 import SearchResult from "./searchResult";
-import accommodationSingle from "./accommodationSingle";
 
-const searchResult = new SearchResult();
+// const searchResult = new SearchResult();
+SearchResult();
 
-accommodationSingle();
 
-// searchResult();
+// import accommodationSingle from "./accommodationSingle";
+
+
+// accommodationSingle();
+

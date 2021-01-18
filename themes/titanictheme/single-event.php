@@ -14,7 +14,11 @@
 
             <div class="Single__Title"><?php the_title(); ?></div>
             <div class="Single__FormWrapper"><?php the_content(); ?></div>
+<<<<<<< HEAD
+            <img src="<?php echo get_the_post_thumbnail_url();?>" alt="">
+=======
             <img src="<?php echo get_the_post_thumbnail_url('backgroundImage');?>" alt="">
+>>>>>>> suriyan
 
             <?php
         }

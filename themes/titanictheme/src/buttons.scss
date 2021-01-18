@@ -1,0 +1,51 @@
+button{
+    background-color: $Primary;
+    padding: .8rem 4rem;
+    color: $White;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all $transition;
+    @include p;
+
+    &:hover{
+        background-color: $PrimaryDark;
+    }
+}
+
+.mphb-reserve-btn.button{
+    @include p;
+    border: 2px solid $Primary;
+    background-color: $White;
+    padding: .8rem 4rem;
+    color: $Primary;
+    cursor: pointer;
+    transition: all $transition;
+    font-weight: 900;
+
+    &:hover{
+        color: $PrimaryDark;
+    }
+}
+
+.button.mphb-button.mphb-confirm-reservation{
+    @include p;
+    background-color: $Primary;
+    padding: .8rem 4rem;
+    color: $White;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all $transition;
+
+    &:hover{
+        background-color: $PrimaryDark;
+    }
+}
+
+.Search__Button{
+    @include p;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: .8rem 2rem .8rem 1.2rem;
+}

@@ -32,7 +32,11 @@ $imgUrl = "";
 <!-- --------Header slut---------- -->
     <div class="container">
 
+
+    
     <?php
+
+
 
     $today = date('Ymd');
 
@@ -67,7 +71,7 @@ $imgUrl = "";
         
             <ul class="Events__List">
                 <li class="Events__ListItem">
-<!-- -------- Placera event-bilden för just detta event här?! ---------- -->
+<!-- -------- Placera event-bilden för just detta event här! ---------- -->
                     <img src="<?php echo get_the_post_thumbnail_url();?>" alt="">
 
                     <img src="<?php echo $eventImage;?>" alt="">

@@ -1,0 +1,58 @@
+.Footer{
+    background-color: $Gray;
+    padding: $spacingL * 2 0 $spacingL * 4;
+    
+    &__SectionsWrapper{
+        padding: 0 $spacingL *3 ;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__Section{
+        // border: 1px solid red;
+        flex: 1 1 25%;
+    }
+    &__SectionTitle{
+        @include h4;
+        margin-bottom: $spacingM;
+
+    }
+    &__LocationList, &__ContactList, &__LinkList{
+        list-style: none;
+        @include p;
+    }
+
+    &__LocationList{
+        margin-bottom: $spacingS;
+    }
+    
+    &__LocationListItem{
+        margin-bottom: $spacingXxs;
+    }
+    
+    &__LocationListText{
+        font-weight: 700;
+    }
+    &__ContactList{
+        
+    }
+    &__ContactListItem{
+        margin-bottom: $spacingXxs;
+    }
+    &__ContactText{
+
+    }
+    &__LinkList{
+
+    }
+    &__LinkListItem{
+        margin-bottom: $spacingS;
+        
+    }
+    &__Link{
+        font-weight: 500;
+        color: $Black;
+        text-decoration: none;
+    }
+
+}

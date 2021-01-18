@@ -20,13 +20,15 @@ const accommodationSingle = () => {
         $(".rightConfirmWrapper").wrapAll('<div class="confirmWrapper"></div>');
 
         let test = document.querySelector('.mphb-price').innerText;
+        console.log("🚀 ~ file: booking.js ~ line 23 ~ accommodationSingle ~ test", test)
         let test2 = document.querySelector('.mphb-price-period').innerText;
 
         let sum = test.split("kr").join("");
 
         let currency = test.slice(0,2);
 
-        let priceString = sum + " " + currency + " " + test2;
+        // let priceString = sum + " " + currency + " " + test2;
+        let priceString = test + " " + test2;
 
         let place = document.querySelector('#special');
 
@@ -50,4 +52,4 @@ const accommodationSingle = () => {
     })(jQuery);
 };
 
-export default accommodationSingle;
+accommodationSingle();

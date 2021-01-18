@@ -35,6 +35,35 @@ $primary: steelblue;
 @mixin p {
     font-size: 1.5rem;
 }
+@mixin label {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+@mixin listItem {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+@mixin input{
+    padding: $spacingXxs;
+    min-width: 25rem;
+}
+
+@mixin button{
+    background-color: $Primary;
+    padding: .8rem 4rem;
+    color: $White;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all $transition;
+    @include p;
+
+    &:hover{
+        background-color: $PrimaryDark;
+    }
+}
 
 // SPACINGS
 $spacingXxs: 0.5rem;
@@ -47,10 +76,16 @@ $spacingXl: 3rem;
 // COLORS
 $White: white;
 $Primary: #1070A8;
+$PrimaryDark: #0b4e75;
 $Secondary: #313131;
 $Lightgray: #D8E3EC;
+$Gray: #D9D9D9;
 $Darkgray: #687580;
+$Black: #000;
 
+
+//transitions
+$transition: .2s ease-in-out;
 
 // MEDIA-QUERIES
 // Small tablets and large smartphones (landscape view)

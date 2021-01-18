@@ -1,0 +1,276 @@
+@import "./variables.scss";
+
+.SingleMRT {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // border: 1px solid red;
+    padding: $spacingL;
+    
+    &__EntryInfoWrapper{
+        display: flex;
+        margin-bottom: $spacingL;
+    }
+
+    &__RichText{
+        flex: 1 1 75%;
+        margin-right: $spacingL;
+
+        h2{
+            color: $Primary;
+            @include h2;
+            margin-bottom: $spacingS;
+        }
+    
+        p{
+            @include p;
+        }
+    }
+
+    &__Amenities{
+        flex: 1 1 25%;
+        // border: 1px solid red;
+        background-color: $Lightgray;
+    }
+
+    &__AmenitieTitle{
+        padding: $spacingXxs;
+        padding-left: $spacingS;
+        display: block;
+        @include label;
+        background-color: $Primary;
+        color: $White;
+    }
+    &__AmenitieList{
+        list-style: none;
+        padding: $spacingXs;
+        
+    }
+    &__AmenitieListItem{
+        display: flex;
+        align-items: center;
+        @include listItem;
+        margin-bottom: $spacingXxs;
+
+        i{
+            margin-right: $spacingXs;
+            font-size: 1.2rem;
+            width: 2rem;
+            display: inline-block;
+            text-align: center;
+        }
+    }
+
+    
+
+
+    // &__Post {
+    //     padding: 0 2rem;
+    //     background: mediumseagreen;
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     font-size: 2rem;
+    //     font-weight: 700;
+    //     margin-bottom: 3rem;
+    //     position: relative;
+    // }
+
+    &__Title {
+        font-size: 2.5rem;
+        border: 1px solid black;
+    }
+
+    &__Text {
+        font-size: 2rem;
+    }
+
+    &__FormWrapper {
+        width: 75%;
+        display: flex;
+        flex-direction: column-reverse;
+        // border: 1px solid blue;
+        h2{
+            display: none;
+            // color: $Primary;
+            // @include h2;
+        }
+        p{
+            @include p;
+        }
+
+        .mphb-room-type-gallery-wrapper{
+            display: flex;
+            flex-direction: column-reverse;
+
+            h3{
+                @include h3;
+                color: $Primary;
+            }
+        }
+
+        #gallery-1{
+            margin: 0;
+
+            .gallery-item{
+                text-align: left;
+            }
+
+            img{
+                border: 0;
+            }
+        }
+    }
+
+    .mphb-rooms-quantity-wrapper.mphb-rooms-quantity-single{
+        margin-bottom: $spacingS;
+    }
+
+    .bookingWrapper{
+        padding-bottom: $spacingXs;
+        margin-bottom: $spacingM;
+        border-bottom: 1px solid $Primary;
+
+        .leftWrapper:nth-child(2){
+            margin-bottom: $spacingM;
+        }
+
+        #special{
+            display: flex !important;
+            margin-bottom: $spacingM;
+            small{
+                display: none;
+            }
+            .priceString{
+                align-self: flex-end;
+                text-align: right;
+                width: 100%;
+                margin-right: $spacingM;
+                @include h3;
+                font-weight: 500;
+                color: $Primary;
+                display: inline-block;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        
+
+
+        .datepick{
+            width: 100% !important;
+            // display: flex;
+        }
+
+        .datepick-nav a{
+            font-size: 1.5rem;
+        }
+
+        .datepick-month{
+            width: 50%;
+            // color: $White;
+
+            span{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            
+
+            .datepick-month-header{
+                font-size: 1.5rem;
+            }
+            
+            // .mphb-past-date{
+            //     // span{
+            //         background-color: $Primary;
+            //         color: black;
+            //         opacity: .4;
+
+            //     // }
+            // }
+            // .mphb-available-date{
+            //     background: $Primary;
+            //     color: $White;
+            //     font-weight: 900;
+            //     // font-size: 2rem;
+
+            //     // span{
+            //     // }
+            // }
+        }
+        .datepick-month-row{
+            display: flex;
+
+            td{
+                height: 3rem;
+                width: calc(100% / 7)
+            }
+        }
+
+        // .mphb-booked-date.mphb-date-check-in{
+        //     background: linear-gradient(to bottom right,$Primary 0,$Primary 50%,#ee8767 50%,#ee8767 100%) !important;
+        //     color: $Black;
+        //     font-weight: 900;
+        // }
+
+        // .mphb-available-date.mphb-date-check-out{
+        //     background: linear-gradient(to bottom right,#ee8767 0,#ee8767 50%,$Primary 50%,$Primary 100%) !important;
+        //     color: $Black !important;
+        //     font-weight: 900;
+        // }
+
+        // .mphb-booked-date{
+        //     color: $Black !important;
+        //     font-weight: 900;
+        // }
+    }
+
+    .dateWrapper{
+        display: flex;
+        margin-bottom: $spacingL;
+
+        label{
+            display: inline-block;
+            margin-bottom: $spacingXxs;
+        }
+        input{
+            padding: $spacingXxs;
+            border-radius: .4rem;
+            border: 1px solid black;
+        }
+    }
+    
+    .checkWrapper{
+        margin-right: $spacingL;
+    }
+
+    .capacityWrapper{
+        display: flex;
+    }
+    
+    .rightConfirmWrapper{
+
+        input{
+            margin-bottom: $spacingS;
+            
+        }
+        
+        .mphb-rooms-quantity-wrapper.mphb-rooms-quantity-multiple{
+            margin-bottom: $spacingS;
+        }
+
+        select{
+            // padding: 0 $spacingXxs;
+            border-radius: .4rem;
+        }
+    }
+    .mphb-regular-price{
+        display: none;
+    }
+}
+
+
