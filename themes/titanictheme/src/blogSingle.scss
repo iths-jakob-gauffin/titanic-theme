@@ -2,7 +2,7 @@
 
 .SingleBlog {
   &__Post {
-      padding: 0 9rem;
+      padding: 0 40rem;
       // background: mediumseagreen;
       display: flex;
       flex-direction: column;
@@ -31,8 +31,6 @@
   }
 
   &__ImageContainer {
-      height: 40rem;
-      width: 100%;
       padding-top: 4rem;
   }
   

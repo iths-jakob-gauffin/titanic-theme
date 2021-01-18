@@ -62,16 +62,19 @@
                             <?php the_title(); ?>
                         </h2>
                         <h3 class="Blog__PostDate">
-                            <?php  echo get_the_date(); ?>
+                           Skrivet av  <?php  echo get_the_author(); ?> , <?php  echo get_the_date(); ?>
                         </h3>
+                       
                     <div class="Blog__Text">
                         <?php 
                             
                             $text = get_the_content();
                             echo wp_trim_words($text, 50);
                             
-                            ?>
+                            ?> 
+                           
                     </div>
+              
                 </article>
             </main>
         </div>

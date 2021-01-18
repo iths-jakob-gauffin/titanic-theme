@@ -28,7 +28,7 @@
         ¨<div class="Blog__TitleWrapper">
             <h1 class="Blog__Title">
                 <!-- här vill man göra Stor första bokstav -->
-               <?php echo ucfirst($_SESSION['hamn']);?> Inlägg
+               <?php echo ucfirst($_SESSION['hamn']);?> Blogginlägg
             </h1>
         </div>
     </div>
@@ -45,7 +45,7 @@
                             <?php the_title(); ?>
                         </h2>
                         <h3 class="SingleBlog__PostDate">
-                            <?php the_date(); ?>
+                        Skrivet av  <?php  echo get_the_author(); ?> , <?php the_date(); ?>
                         </h3>
                         <div class="SingleBlog__Text">
                             <?php the_content(); ?>

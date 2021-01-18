@@ -2,7 +2,7 @@
 
 .Blog {
     &__Post {
-        padding: 0 9rem;
+        padding: 0 40rem;
         // background: mediumseagreen;
         display: flex;
         flex-direction: column;
@@ -21,7 +21,7 @@
     }
 
     &__PostDate {
-        padding: $spacingM;
+        padding: 0 0 3rem 0;
     }
 
     &__PostLink {

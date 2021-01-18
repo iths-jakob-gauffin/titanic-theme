@@ -272,7 +272,7 @@ a {
 }
 
 .Blog__Post {
-  padding: 0 9rem;
+  padding: 0 40rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -287,7 +287,7 @@ a {
 }
 
 .Blog__PostDate {
-  padding: 2rem;
+  padding: 0 0 3rem 0;
 }
 
 .Blog__PostLink {
@@ -342,7 +342,7 @@ a {
 }
 
 .SingleBlog__Post {
-  padding: 0 9rem;
+  padding: 0 40rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -368,8 +368,6 @@ a {
 }
 
 .SingleBlog__ImageContainer {
-  height: 40rem;
-  width: 100%;
   padding-top: 4rem;
 }
 
