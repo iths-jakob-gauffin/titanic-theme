@@ -8,6 +8,7 @@
     background-color: $White;
     height: 8rem;
     overflow: hidden;
+    position: relative;
 
     &__Logo {
         width: 15%;
@@ -25,9 +26,10 @@
     }
 
     &__Nav {
-        // border: 1px solid blue;
         height: 100%;
-        // width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     &__NavList {
