@@ -41,9 +41,12 @@
             <div class="container">
                 <main class="SingleBlog">
                     <article class="SingleBlog__Post">
-                        <div class="SingleBlog__PostTitle">
+                        <h2 class="SingleBlog__PostTitle">
                             <?php the_title(); ?>
-                        </div>
+                        </h2>
+                        <h3 class="SingleBlog__PostDate">
+                            <?php the_date(); ?>
+                        </h3>
                         <div class="SingleBlog__Text">
                             <?php the_content(); ?>
                         </div>
@@ -56,6 +59,7 @@
 
         <?php 
     }
+    wp_reset_postdata();
     ?>
      
 

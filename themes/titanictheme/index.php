@@ -61,6 +61,9 @@
                         <h2 class="Blog__PostTitle">
                             <?php the_title(); ?>
                         </h2>
+                        <h3 class="Blog__PostDate">
+                            <?php  echo get_the_date(); ?>
+                        </h3>
                     <div class="Blog__Text">
                         <?php 
                             
@@ -75,6 +78,7 @@
         <?php
         }
     }
+    wp_reset_postdata();
     ?>
 
 <?php get_footer(); ?>

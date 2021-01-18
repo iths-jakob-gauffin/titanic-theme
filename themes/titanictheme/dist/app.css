@@ -166,6 +166,10 @@ a {
   padding: 3rem;
 }
 
+.Blog__PostDate {
+  padding: 2rem;
+}
+
 .Blog__PostLink {
   position: absolute;
   top: 0;
@@ -210,7 +214,6 @@ a {
   font-size: 4rem;
   padding: 1.5rem 5rem 1.5rem 5rem;
   margin: 0;
-  font-weight: 400;
 }
 
 .container {
@@ -231,6 +234,10 @@ a {
 .SingleBlog__PostTitle {
   font-size: 2.5rem;
   padding: 3rem;
+}
+
+.SingleBlog__PostDate {
+  padding: 2rem;
 }
 
 .SingleBlog__Image {
