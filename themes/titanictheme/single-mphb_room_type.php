@@ -47,8 +47,8 @@
     }
     wp_reset_postdata();
 
-    global $post;
-    echo var_dump($post);
+    // global $post;
+    // echo var_dump($post);
 ?>
 
     <div class="BackgroundImageWrapper">

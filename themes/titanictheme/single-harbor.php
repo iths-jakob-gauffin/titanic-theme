@@ -1,21 +1,64 @@
-<?php get_header(); ?>
+<?php get_header(); 
 
+$harbors = new WP_Query(array(
+    'post_type' => 'harbor'
+));
+
+$harborsArray = $harbors->posts;
+
+$specificHarbor = [];
+    foreach($harbors->posts as $harbor){
+        if(strtolower($harbor->post_title) === strtolower($_SESSION['hamn'])){
+            array_push($specificHarbor, $harbor);
+        }
+    }
+
+    $cats = wp_get_post_categories($specificHarbor[0]->ID);
+    foreach($cats as $cat){
+        $name = get_cat_name( $cat );
+        // echo var_dump($name);
+    }
+
+    $imgUrl = "";
+
+    foreach ($harborsArray as $value) {
+        if(strtolower($_SESSION['hamn']) === strtolower($value->post_title)){
+            $stuff = get_post_thumbnail_id( $value->ID );
+            $imgUrl = get_the_post_thumbnail_url($value->ID, "backgroundImage");
+        }
+    }
+    wp_reset_postdata();
+    ?>
+
+
+    <div class="BackgroundImageWrapper">
+        <div class="Search__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
+            <div class="Search__TitleWrapper">
+                <h1 class="Search__Title">
+                <?php echo ucfirst($_SESSION['hamn']); ?>s gästhamn
+                </h1>
+                <p style="font-size: 3rem; color: white;">Single-harbor.php</p>
+            </div>
+        </div>  
+    </div>  
     <div class="container">
-        <main class="Single">
-            <h1 class="Single__Title">
-                Single-harbor.php
-            </h1>
-
+        <main class="SingleHarbor">
             <?php while(have_posts()){
                 the_post();
                 ?> 
-                    <h2><?php the_title(); ?></h2>
-                    <h2><?php the_content(); ?></h2>
-                    <h2><?php the_excerpt(); ?></h2>    
+                    <div class="SingleHarbor__RichTextAndMapWrapper">
+                        <section class="SingleHarbor__RichText">
+                            <?php the_content(); ?>
+                        <a href="<?php echo esc_url(site_url("accommodation/" . strtolower($_SESSION['hamn']))); ?>" class="SingleHarbor__BookingButton" >Till bokningen</a>
+                        </section>
+                        <div class="SingleHarbor__MapWrapper">
+                            <?php echo get_field("map_url"); ?>
+                        </div>
+                    </div>
                 <?php
             }; 
             ?>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32962.146389033776!2d17.910816208137916!3d58.91240958663116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f587fa432eff5%3A0x400fef341e48d00!2sNyn%C3%A4shamn!5e0!3m2!1sen!2sse!4v1610613478475!5m2!1sen!2sse" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            
         </main>
     </div>
 
