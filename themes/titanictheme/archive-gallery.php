@@ -56,7 +56,12 @@
 
             // echo var_dump($staff);
 
-            $image = get_field('gallery_image')['sizes']['medium'];
+            // $image = get_field('gallery_image')['sizes']['medium'];
+            $image = get_field('gallery_image');
+            $galleryName = get_field('gallery_name');
+            $galleryTitle =get_field('gallery_title');
+            $galleryContactEmail =get_field('gallery_contactemail');
+            $galleryContactNumber =get_field('gallery_contactnumber');
 
             if(strtolower($staff) === strtolower($_SESSION['hamn'])){
                 ?>
@@ -68,15 +73,24 @@
                             </div>
 
                             <h2 class="Gallery__CardTitle">
-                                <?php the_title(); ?>
+                                <?php  echo $galleryName;?>
                             </h2>
 
                             <h3 class="Gallery__CardExcerpt">
-                            <?php the_excerpt(); ?>
+                            <!-- <?php the_excerpt(); ?> -->
+                            <?php echo $galleryTitle; ?>
                             </h3>   
 
                             <h3 class="Gallery__CardContent">
-                            <?php the_content(); ?>
+                            <!-- <?php the_content(); ?> -->
+                            Email: 
+                            <?php echo $galleryContactEmail;  ?>
+
+                            </h3>   
+                            <h3 class="Gallery__CardContent">
+                            <!-- <?php the_content(); ?> -->
+                            Tel: 
+                            <?php echo $galleryContactNumber;  ?>
                             </h3>   
                         </li>
                     </ul>    
