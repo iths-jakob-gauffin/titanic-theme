@@ -18,17 +18,17 @@
     }
     // echo var_dump($imgUrl);
 ?>
-  
+  <h1 class="SingleBlog__Title">
+                Single.php
+            </h1>
     <!-- --------Header-------- -->
     <div class="Blog">
         <div class="Blog__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
-        <h1 class="SingleBlog__Title">
-                Single.php
-            </h1>
+        
         ¨<div class="Blog__TitleWrapper">
             <h1 class="Blog__Title">
                 <!-- här vill man göra Stor första bokstav -->
-               <?php echo ucfirst($_SESSION['hamn']);?> Inlägg
+               <?php echo ucfirst($_SESSION['hamn']);?> Blogginlägg
             </h1>
         </div>
     </div>
@@ -41,21 +41,28 @@
             <div class="container">
                 <main class="SingleBlog">
                     <article class="SingleBlog__Post">
-                        <div class="SingleBlog__PostTitle">
+                        <h2 class="SingleBlog__PostTitle">
                             <?php the_title(); ?>
-                        </div>
+                        </h2>
+                        <h5 class="SingleBlog__PostDate">
+                        Skrivet av  <?php  echo get_the_author(); ?> , <?php the_date(); ?>
+                        </h5>
                         <div class="SingleBlog__Text">
                             <?php the_content(); ?>
                         </div>
                         <div class="SingleBlog__ImageContainer">
                             <img src="<?php echo get_the_post_thumbnail_url();?>"class="Blog__Image">
                         </div>  
+                        <a href="/blog/"><button class="SingleBlog__Button">Tillbaka till bloggen</button></a>
+                        
+                        
                     </article> 
                 </main>
             </div>
 
         <?php 
     }
+    wp_reset_postdata();
     ?>
      
 

@@ -2,7 +2,7 @@
 
 .SingleBlog {
   &__Post {
-      padding: 0 9rem;
+      padding: 0 40rem;
       // background: mediumseagreen;
       display: flex;
       flex-direction: column;
@@ -17,9 +17,16 @@
   &__PostTitle {
       @include h2;
       // border: 1px solid black;
-      padding: $spacingXl;
+      padding: 5rem 0 0.5rem 0;
   }
 
+  &__PostText {
+    padding: 5rem 0;
+}
+
+  &__PostDate {
+     padding: 0 0 3rem 0;
+  }
 
   &__Image {
       height: 100%;
@@ -28,9 +35,8 @@
   }
 
   &__ImageContainer {
-      height: 40rem;
+      padding: 4rem 0 4rem 0;
       width: 100%;
-      padding-top: 4rem;
   }
   
   &__BackgroundImage {
@@ -61,16 +67,20 @@
       
   }
 
+  
   &__Text{
+     width: 100%;
       img{
           width: 100%;
-          height: 100%;
+          height: 100%; 
       }
 
-    //   .specialKlass{
-    //     width: 55rem;
-    //     height: 55rem;
-    //   }
+   &__Button {
+       @include button;
+       text-decoration: none !important;
+       color: white !important;
+       
+   }
   }
  
 

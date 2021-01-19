@@ -28,11 +28,11 @@
     // $search = new WP_Query( $search_query );
     ?>
     
-   
+    <h1>Det hääär är Index.php</h1>
     <!-- --------Header-------- -->
     <div class="Blog">
         <div class="Blog__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')"> 
-        <h1>Det hääär är Index.php</h1>
+       
         ¨<div class="Blog__TitleWrapper">
             <h1 class="Blog__Title">
             <?php echo ucfirst($_SESSION['hamn']);?> Blogg
@@ -41,8 +41,12 @@
     </div>
 <!-- --------Header slut---------- -->
 
-    <?php
+    
 
+
+    <div class="container">
+    <main class="Blog">
+<?php
     while(have_posts()){
         the_post();
         $hamnen = get_field("hamn")[0]->post_title;
@@ -51,8 +55,7 @@
 
         if (strtolower($hamnen) === strtolower($_SESSION['hamn'])){
         ?>
-        <div class="container">
-            <main class="Blog">
+        
                 <article class="Blog__Post">
                     <a href="<?php the_permalink(); ?>" class="Blog__PostLink"></a>
                     <div class="Blog__ImageContainer">
@@ -61,20 +64,26 @@
                         <h2 class="Blog__PostTitle">
                             <?php the_title(); ?>
                         </h2>
+                        <h5 class="Blog__PostDate">
+                           Skrivet av  <?php  echo get_the_author(); ?> , <?php  echo get_the_date(); ?>
+                        </h5>
+                       
                     <div class="Blog__Text">
-                        <?php 
-                            
-                            $text = get_the_content();
-                            echo wp_trim_words($text, 50);
-                            
-                            ?>
-                    </div>
-                </article>
-            </main>
-        </div>
+                        <?php $text = get_the_content(); echo wp_trim_words($text, 50); ?>                            
+                    </div>    
+                                   
+                </article> 
+                    <div class="Blog__HrLine">
+                        <hr>
+                    </div>    
+        
+        
         <?php
         }
     }
-    ?>
+    wp_reset_postdata();
+    ?>   
+        </main>
+        </div>
 
 <?php get_footer(); ?>

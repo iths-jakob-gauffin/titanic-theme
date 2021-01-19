@@ -1,8 +1,12 @@
 @import "./variables.scss";
 
 .Blog {
+
+    padding-bottom: 5rem;
+
+
     &__Post {
-        padding: 0 9rem;
+        padding: 0 40rem;
         // background: mediumseagreen;
         display: flex;
         flex-direction: column;
@@ -10,14 +14,21 @@
         @include p;
         // font-size: 2rem;
         // font-weight: 700;
-        margin-bottom: 3rem;
         position: relative;
     }
 
     &__PostTitle {
         @include h2;
         // border: 1px solid black;
-        padding: $spacingXl;
+        padding: 5rem 0 0.5rem 0;
+    }
+
+    &__PostText {
+        padding: 5rem 0;
+    }
+
+    &__PostDate {
+        padding: 0 0 3rem 0;
     }
 
     &__PostLink {
@@ -64,11 +75,19 @@
         @include pageTitle;
         padding: 1.5rem 5rem 1.5rem 5rem;
         margin: 0;
-        font-weight: 400;
+        // font-weight: 400;
         
     }
 
- 
+    &__HrLine {
+        padding: 5rem 5rem;
 
+        &:last-of-type {
+            display: none;
+        }
+
+    }
+   
+   
 }
 

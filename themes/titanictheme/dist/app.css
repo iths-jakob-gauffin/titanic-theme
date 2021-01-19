@@ -43,39 +43,31 @@ a {
   background-color: turquoise;
   border: 1px solid red;
 }
-
 .Index__Title {
   color: steelblue;
 }
-
 .Index__Title--Green {
   color: green;
 }
-
 .Index__Button {
   font-size: 3rem;
 }
-
 .Index__Button--Purple {
   font-size: 3rem;
   color: purple;
   transition: all 0.5s ease-in-out;
 }
-
 .Index:hover .Index__Button--Purple {
   background-color: yellow;
 }
-
 .Index:hover .Index__Button--Purple:hover {
   background-color: grey;
 }
-
 .Index__TextContainer {
   width: 50%;
   border: 1px solid black;
   padding: 2rem;
 }
-
 .Index__Text {
   color: green;
 }
@@ -83,7 +75,6 @@ a {
 .Text__Paragraph {
   color: hotpink;
 }
-
 .Text__Paragraph--Blue {
   color: blue;
 }
@@ -96,11 +87,9 @@ a {
   background-size: cover;
   background-position: center;
 }
-
 .Page__Container p {
   font-size: 4rem;
 }
-
 .Page__Container img {
   width: 100%;
   height: 100%;
@@ -116,27 +105,30 @@ a {
   background-color: white;
   height: 8rem;
   overflow: hidden;
+  position: relative;
 }
-
 .Header__Logo {
   width: 15%;
   height: 100%;
 }
-
 .Header__Logo img {
   width: 100%;
   height: 100%;
 }
-
 .Header__LogoLink {
   color: steelblue;
   text-transform: uppercase;
 }
-
 .Header__Nav {
   height: 100%;
 }
-
+@media (min-width: 1500px) {
+  .Header__Nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 .Header__NavList {
   display: flex;
   align-items: center;
@@ -145,14 +137,12 @@ a {
   height: 100%;
   width: 100%;
 }
-
 .Header__ListItem {
   display: flex;
   align-items: center;
   height: 100%;
   width: 100%;
 }
-
 .Header__Link {
   font-size: 1.6rem;
   font-weight: 900;
@@ -168,25 +158,20 @@ a {
   padding: 0 1.5rem;
   position: relative;
 }
-
 .Header__Link--Active {
   color: white;
   background-color: #1070A8;
 }
-
 .Header__LinkText {
   position: relative;
   transition: transform 0.2s ease-in-out;
 }
-
 .Header__Link:hover .Header__LinkText {
   transform: translateY(-1rem);
 }
-
 .Header__Link--Active .Header__LinkText {
   transform: translateY(-1rem);
 }
-
 .Header__LinkIconWrapper {
   position: absolute;
   top: 85%;
@@ -194,37 +179,30 @@ a {
   transform: translate(-50%, 50%);
   transition: transform 0.2s ease-in-out;
 }
-
 .Header__Link:hover .Header__LinkIconWrapper {
   transform: translate(-50%, -60%);
 }
-
 .Header__LinkIconWrapper img {
   width: 2.5rem;
   height: 2.5rem;
   fill: red !important;
 }
-
 .Header__LinkIconWrapper--Active {
   transform: translate(-50%, -60%);
 }
-
 .Header__SearchField {
   padding: 0.5rem;
   min-width: 25rem;
 }
-
 .Header__SearchAndUserWrapper {
   display: flex;
   align-items: center;
   height: 100%;
 }
-
 .Header__SearchWrapper {
   display: flex;
   align-items: center;
 }
-
 .Header__UserWrapper {
   display: flex;
   align-items: center;
@@ -233,33 +211,28 @@ a {
   margin-left: 1.5rem;
   border-left: 3px solid #1070A8;
 }
-
 .Header__UserIcon {
   height: 4rem;
   width: 4rem;
   display: inline-block;
   margin-right: 1rem;
 }
-
 .Header__UserIcon img {
   width: 100%;
   height: 100%;
 }
-
 .Header__UserNameAndLogoutWrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
-
 .Header__UserName {
   font-size: 2rem;
   font-weight: 700;
   color: #1070A8;
   border-bottom: 2px solid #1070A8;
 }
-
 .Header__Logout {
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -271,21 +244,29 @@ a {
   position: relative;
 }
 
+.Blog {
+  padding-bottom: 5rem;
+}
+
 .Blog__Post {
-  padding: 0 9rem;
+  padding: 0 40rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.5rem;
-  margin-bottom: 3rem;
   position: relative;
 }
-
 .Blog__PostTitle {
   font-size: 2.5rem;
-  padding: 3rem;
+  padding: 5rem 0 0.5rem 0;
 }
 
+.Blog__PostText {
+  padding: 5rem 0;
+}
+.Blog__PostDate {
+  padding: 0 0 3rem 0;
+}
 .Blog__PostLink {
   position: absolute;
   top: 0;
@@ -293,19 +274,16 @@ a {
   width: 100%;
   height: 100%;
 }
-
 .Blog__Image {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .Blog__ImageContainer {
   height: 40rem;
   width: 100%;
 }
-
 .Blog__BackgroundImage {
   position: relative;
   height: 30rem;
@@ -315,7 +293,6 @@ a {
   background-repeat: no-repeat !important;
   margin-bottom: 5rem;
 }
-
 .Blog__TitleWrapper {
   position: absolute;
   background-color: rgba(16, 112, 168, 0.7);
@@ -323,14 +300,20 @@ a {
   top: 44%;
   left: 0;
 }
-
 .Blog__Title {
   position: relative;
   color: white;
   font-size: 4rem;
   padding: 1.5rem 5rem 1.5rem 5rem;
   margin: 0;
-  font-weight: 400;
+}
+
+.Blog__HrLine {
+  padding: 5rem 5rem;
+}
+
+.Blog__HrLine:last-of-type {
+  display: none;
 }
 
 .container {
@@ -339,7 +322,7 @@ a {
 }
 
 .SingleBlog__Post {
-  padding: 0 9rem;
+  padding: 0 40rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -347,25 +330,27 @@ a {
   margin-bottom: 3rem;
   position: relative;
 }
-
 .SingleBlog__PostTitle {
   font-size: 2.5rem;
-  padding: 3rem;
+  padding: 5rem 0 0.5rem 0;
 }
 
+.SingleBlog__PostText {
+  padding: 5rem 0;
+}
+.SingleBlog__PostDate {
+  padding: 0 0 3rem 0;
+}
 .SingleBlog__Image {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .SingleBlog__ImageContainer {
-  height: 40rem;
+  padding: 4rem 0 4rem 0;
   width: 100%;
-  padding-top: 4rem;
 }
-
 .SingleBlog__BackgroundImage {
   position: relative;
   height: 30rem;
@@ -375,7 +360,6 @@ a {
   background-repeat: no-repeat !important;
   margin-bottom: 5rem;
 }
-
 .SingleBlog__TitleWrapper {
   position: absolute;
   background-color: rgba(16, 112, 168, 0.7);
@@ -383,7 +367,6 @@ a {
   top: 44%;
   left: 0;
 }
-
 .SingleBlog__Title {
   position: relative;
   color: white;
@@ -393,9 +376,30 @@ a {
   font-weight: 400;
 }
 
+.SingleBlog__Text {
+  width: 100%;
+}
+
 .SingleBlog__Text img {
   width: 100%;
   height: 100%;
+}
+
+.SingleBlog__Text__Button {
+  background-color: #1070A8;
+  padding: 0.8rem 4rem;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.5rem;
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.SingleBlog__Text__Button:hover {
+  background-color: #0b4e75;
 }
 
 .container {
@@ -410,16 +414,13 @@ a {
   align-items: center;
   border: 1px solid red;
 }
-
 .Single__Title {
   font-size: 2.5rem;
   border: 1px solid black;
 }
-
 .Single__Text {
   font-size: 2rem;
 }
-
 .Single__FormWrapper {
   width: 70rem;
   border: 1px solid blue;
@@ -433,19 +434,16 @@ a {
   background-position: center;
   position: relative;
 }
-
 .FrontPage__FlexWrapper {
   display: flex;
   width: 100%;
   margin: 2rem 0 4rem 0;
 }
-
 .FrontPage__FlexWrapper .post-thumbnail {
   height: 20rem;
   margin-bottom: 1rem;
   position: relative;
 }
-
 .FrontPage__FlexWrapper .post-thumbnail::after {
   content: "";
   position: absolute;
@@ -456,7 +454,6 @@ a {
   background-color: rgba(255, 255, 255, 0.3);
   transition: all 0.2s ease-in-out;
 }
-
 .FrontPage__FlexWrapper .post-thumbnail img {
   width: 100%;
   height: 100%;
@@ -465,13 +462,11 @@ a {
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
 }
-
 .FrontPage__FlexWrapper .testwrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .FrontPage__FlexWrapper .innerwrapper {
   background-color: white;
   display: flex;
@@ -480,31 +475,24 @@ a {
   min-width: 25rem;
   margin-right: 2rem;
 }
-
 .FrontPage__FlexWrapper .innerwrapper:hover .post-thumbnail::after {
   background: none;
 }
-
 .FrontPage__FlexWrapper .innerwrapper:last-child {
   margin-right: 0;
 }
-
 .FrontPage__FlexWrapper .innerwrapper h2 {
   font-size: 2.5rem;
   margin-left: 1.5rem;
   margin-bottom: 1.3rem;
 }
-
-.FrontPage__FlexWrapper .innerwrapper a,
-.FrontPage__FlexWrapper .innerwrapper a:visited {
+.FrontPage__FlexWrapper .innerwrapper a, .FrontPage__FlexWrapper .innerwrapper a:visited {
   color: #1070A8;
 }
-
 .FrontPage__FlexWrapper .innerwrapper button {
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
 }
-
 .FrontPage__FlexWrapper .mphb_sc_rooms-wrapper,
 .FrontPage__FlexWrapper .mphb-room-type:not(:first-of-type),
 .FrontPage__FlexWrapper .mphb_sc_search_results-wrapper,
@@ -513,7 +501,6 @@ a {
 .FrontPage__FlexWrapper .mphb-service:not(:first-of-type) {
   margin-top: 0px !important;
 }
-
 .FrontPage__Hero {
   width: 100%;
   height: 50rem;
@@ -521,24 +508,20 @@ a {
   top: 0;
   left: 0;
 }
-
 .FrontPage .mphb_sc_search-form * {
   font-size: 1.5rem;
 }
-
 .FrontPage .mphb_sc_search-form label {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
   display: inline-block;
 }
-
 .FrontPage .mphb_sc_search-form input {
   padding: 0.5rem;
   min-width: 25rem;
   min-width: 100%;
 }
-
 .FrontPage .mphb_sc_search-form .button {
   background-color: #1070A8;
   padding: 0.8rem 4rem;
@@ -549,7 +532,6 @@ a {
   transition: all 0.2s ease-in-out;
   font-size: 1.5rem;
 }
-
 .FrontPage .mphb_sc_search-form .button:hover {
   background-color: #0b4e75;
 }
@@ -557,7 +539,6 @@ a {
 .datepick-popup * {
   font-size: 1.5rem;
 }
-
 .datepick-popup .datepick.datepick-multi.mphb-datepick-popup {
   width: 50rem !important;
 }
@@ -571,61 +552,49 @@ body {
   padding: 2.5rem;
   background-color: white;
 }
-
 .Booking__FormWrapper {
   background: white;
   text-align: left;
   flex: 1 1 85%;
   margin-right: 2.5rem;
 }
-
 .Booking__FormWrapper * {
   font-family: "Montserrat", sans-serif;
   font-size: 1.8rem;
 }
-
 .Booking__FormWrapper .mphb-booking-details-title,
 .Booking__FormWrapper .mphb-customer-details-title {
   color: #1070A8;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
-
 .Booking__FormWrapper h3 {
   font-size: 2.3rem;
 }
-
 .Booking__FormWrapper h3 .Booking__ConfirmationHarbor {
   font-size: 3rem;
   color: #1070A8;
   margin-bottom: 2rem;
 }
-
 .Booking__FormWrapper .mphb-check-out-date {
   margin-bottom: 3rem;
 }
-
 .Booking__FormWrapper .mphb-room-details > p {
   margin-bottom: 2rem;
 }
-
 .Booking__FormWrapper .mphb_checkout-services-list > li {
   margin-bottom: 2rem;
 }
-
 .Booking__FormWrapper .mphb-price-breakdown-group > tr {
   margin-bottom: 2rem;
   display: block;
 }
-
 .Booking__Aside {
   flex: 1 1 25%;
 }
-
 .Booking__Amenities {
   flex: 1 1 15%;
 }
-
 .Booking__AmenitieTitle {
   padding: 0.5rem;
   padding-left: 1.5rem;
@@ -635,13 +604,11 @@ body {
   background-color: #1070A8;
   color: white;
 }
-
 .Booking__AmenitieList {
   background-color: #D8E3EC;
   list-style: none;
   padding: 1rem;
 }
-
 .Booking__AmenitieListItem {
   display: flex;
   align-items: center;
@@ -649,7 +616,6 @@ body {
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
-
 .Booking__AmenitieListItem i {
   margin-right: 1rem;
   font-size: 1.2rem;
@@ -657,14 +623,12 @@ body {
   display: inline-block;
   text-align: center;
 }
-
 .Booking .bookDetail {
   padding: 1rem 0 2rem 1rem;
   border-radius: 0.5rem;
   background-color: rgba(216, 227, 236, 0.4);
   flex: 1 1 60%;
 }
-
 .Booking .bookDetail:first-child {
   padding: 0;
   padding-top: 1rem;
@@ -672,152 +636,121 @@ body {
   background: none;
   flex: 1 1 40%;
 }
-
 .Booking .bookDetails {
   display: flex;
   margin-bottom: 2.5rem;
 }
-
 .Booking .mphb-room-type-title,
 .Booking .mphb-guest-name-wrapper {
   display: none;
 }
-
 .Booking .mphb-price-breakdown-title,
 .Booking .mphb-price-breakdown-total {
   font-size: 2.5rem;
   color: #1070A8;
 }
-
-.Booking .mphb-price-breakdown-title th,
-.Booking .mphb-price-breakdown-title span,
+.Booking .mphb-price-breakdown-title th, .Booking .mphb-price-breakdown-title span,
 .Booking .mphb-price-breakdown-total th,
 .Booking .mphb-price-breakdown-total span {
   font-size: 2.5rem;
 }
-
 .Booking .mphb-price-breakdown-subtotal {
   margin-bottom: 0.5rem;
 }
-
 .Booking .mphb-price-breakdown-title {
   margin-bottom: 1.5rem;
 }
-
 .Booking .mphb-price-breakdown tr > td {
   display: inline-block;
 }
-
 .Booking .mphb-price-breakdown-services {
   margin-top: 2rem;
 }
-
 .Booking tr.mphb-price-breakdown-nights,
 .Booking tr.mphb-price-breakdown-accommodation-subtotal,
 .Booking tr.mphb-price-breakdown-services-subtotal {
   margin-bottom: 1.5rem;
 }
-
-.Booking tbody,
-.Booking tfoot {
+.Booking tbody, .Booking tfoot {
   width: 55rem !important;
   display: block;
 }
-
 .Booking tfoot th {
   width: 100% !important;
 }
-
 .Booking thead,
 .Booking tfoot tr,
 .Booking tbody tr {
   display: table;
   width: 100%;
 }
-
 .Booking th:first-child,
 .Booking td:first-child {
   width: 90% !important;
 }
-
 .Booking th:last-child,
 .Booking td:last-child {
   width: 10% !important;
 }
-
 .Booking tr.mphb-price-breakdown-date td {
   display: inline-block;
   width: 26rem !important;
 }
-
 .Booking tr.mphb-price-breakdown-date td + .mphb-table-price-column {
   float: right;
   font-weight: 700;
   width: 10% !important;
 }
-
 .Booking th.mphb-price-breakdown-service-name,
 .Booking td.mphb-price-breakdown-service-name {
   width: 18rem !important;
   display: inline-block;
 }
-
 .Booking th.mphb-price-breakdown-service-details,
 .Booking td.mphb-price-breakdown-service-details {
   display: inline-block;
   width: auto !important;
 }
-
 .Booking td.mphb-price-breakdown-service-details + .mphb-table-price-column {
   float: right;
   font-weight: 700;
 }
-
 .Booking .mphb-price-breakdown-rate {
   display: none;
 }
-
 .Booking .mphb-price-breakdown-booking.mphb-price-breakdown-group {
   margin-bottom: 1.5rem;
 }
-
 .Booking .mphb-price-breakdown-booking.mphb-price-breakdown-group .mphb-table-price-column {
   display: none;
 }
-
 .Booking__CustomerAndQuestionWrapper {
   display: flex;
   margin-bottom: 2.5rem;
 }
-
 .Booking__CustomerFormWrapper {
   flex: 1 1 50%;
   display: flex;
 }
-
 .Booking__CustomerFormWrapper:last-child {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .Booking__AnyQuestionsTitle {
   font-size: 4rem !important;
   margin-bottom: 1rem;
   color: #1070A8;
 }
-
 .Booking__AnyQuestionsText {
   font-size: 3rem;
 }
-
 .Booking__QuestionTextWrapper {
   position: relative;
   z-index: 10;
   margin-bottom: 7.5rem;
 }
-
 .Booking__IconWrapper {
   position: absolute;
   top: 0;
@@ -826,7 +759,6 @@ body {
   height: 100%;
   opacity: 0.4;
 }
-
 .Booking__IconWrapper svg {
   position: absolute;
   top: 50%;
@@ -835,51 +767,40 @@ body {
   height: 90% !important;
   width: 90% !important;
 }
-
 .Booking .mphb-customer-details label {
   display: inline-block;
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
   font-weight: 500;
 }
-
 .Booking .mphb-customer-details p {
   margin-bottom: 1.5rem;
 }
-
 .Booking .mphb-customer-details .mphb-required-fields-tip {
   margin-bottom: 1rem;
 }
-
 .Booking .mphb-customer-details .mphb-required-fields-tip small {
   font-size: 1.5rem;
   font-weight: 500;
   color: #313131;
 }
-
-.Booking .mphb-customer-details input,
-.Booking .mphb-customer-details textarea {
+.Booking .mphb-customer-details input, .Booking .mphb-customer-details textarea {
   padding: 0.5rem;
   min-width: 25rem;
 }
-
 .Booking .mphb-total-price {
   padding-left: 1.5rem;
   margin-bottom: 1.5rem;
 }
-
-.Booking .mphb-total-price output,
-.Booking .mphb-total-price span {
+.Booking .mphb-total-price output, .Booking .mphb-total-price span {
   font-size: 3rem;
   color: #1070A8;
 }
-
 .Booking .mphb_sc_checkout-submit-wrapper {
   display: flex;
   justify-content: center;
   margin-bottom: 5rem;
 }
-
 .Booking .mphb_sc_checkout-submit-wrapper input {
   background-color: #1070A8;
   padding: 0.8rem 4rem;
@@ -889,17 +810,14 @@ body {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-
 .Booking .mphb_sc_checkout-submit-wrapper input:hover {
   background-color: #0b4e75;
 }
-
 .Booking__ConfirmationTitle {
   font-size: 3rem;
   margin-bottom: 1.5rem;
   color: #1070A8;
 }
-
 .Booking__ConfirmationText {
   font-size: 1.5rem;
 }
@@ -910,38 +828,31 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
 .SearchResults__Title {
   font-size: 2.5rem;
   border: 1px solid black;
 }
-
 .SearchResults__Text {
   font-size: 2rem;
 }
-
 .SearchResults__FormWrapper {
   width: 100%;
 }
-
 .SearchResults .testwrapper {
   display: flex;
   flex-wrap: wrap;
 }
-
 .SearchResults .innerwrapper {
   flex: 1 1 40%;
   max-width: 50%;
   margin: 0 2rem;
 }
-
 .SearchResults .mphb_sc_search_results-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 1.5rem;
 }
-
 .SearchResults .mphb-room-type {
   padding: 1rem 1.5rem 3rem;
   margin-top: 0 !important;
@@ -952,81 +863,64 @@ body {
   border-radius: 0.5rem;
   background-color: rgba(216, 227, 236, 0.4);
 }
-
 .SearchResults .flexslider {
   border: 4px solid rgba(216, 227, 236, 0.4);
   background-color: rgba(216, 227, 236, 0.4);
 }
-
 .SearchResults .mphb-room-type-details-title {
   display: none;
 }
-
 .SearchResults .mphb_sc_search_results-info {
   display: none;
 }
-
 .SearchResults .mphb-view-details-button-wrapper {
   display: none;
 }
-
 .SearchResults .mphb-room-type-title {
   font-size: 2.5rem;
   color: #1070A8;
   margin-bottom: 0.5rem;
 }
-
 .SearchResults .mphb-reservation-cart {
   display: none;
 }
-
 .SearchResults .mphb-flexslider ul.slides img {
   width: 100% !important;
 }
-
 .SearchResults .mphb-flexslider.mphb-gallery-slider:first-child {
   height: 25rem !important;
   overflow: hidden;
 }
-
 .SearchResults .mphb-flexslider.mphb-gallery-slider:first-child * {
   height: 100% !important;
 }
-
 .SearchResults .mphb-flexslider.mphb-gallery-slider:first-child img {
   -o-object-fit: cover !important;
      object-fit: cover !important;
   -o-object-position: center !important;
      object-position: center !important;
 }
-
 .SearchResults .mphb-flexslider.mphb-gallery-slider:first-child a.flex-next,
 .SearchResults .mphb-flexslider.mphb-gallery-slider:first-child a.flex-prev {
   font-size: 0;
 }
-
 .SearchResults .mphb-room-type-images {
   margin-bottom: 1.5rem;
 }
-
 .SearchResults input {
   margin-bottom: 1.5rem;
 }
-
 .SearchResults .mphb-rooms-quantity-wrapper.mphb-rooms-quantity-multiple {
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
-
 .SearchResults select {
   border-radius: 0.4rem;
 }
-
 .SearchResults .detailFlexWrapper {
   display: flex;
   margin-bottom: 1.5rem;
 }
-
 .SearchResults .button {
   background-color: #1070A8;
   padding: 0.8rem 4rem;
@@ -1036,22 +930,18 @@ body {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-
 .SearchResults .button:hover {
   background-color: #0b4e75;
 }
-
 .SearchResults .detailToFlex {
   flex: 1 1 40%;
   font-size: 1.5rem;
   margin-right: 2.5rem;
 }
-
 .SearchResults .detailToFlex:first-child {
   margin-right: 2.5rem;
   flex: 1 1 60%;
 }
-
 .SearchResults .detailToFlex .priceString {
   align-self: flex-end;
   text-align: right;
@@ -1086,7 +976,6 @@ body {
   background-repeat: no-repeat !important;
   margin-bottom: 5rem;
 }
-
 .Gallery__TitleWrapper {
   position: absolute;
   background-color: rgba(16, 112, 168, 0.7);
@@ -1094,7 +983,6 @@ body {
   top: 44%;
   left: 0;
 }
-
 .Gallery__Title {
   position: relative;
   color: white;
@@ -1103,53 +991,44 @@ body {
   margin: 0;
   font-weight: 400;
 }
-
 .Gallery__CardImageWrapper {
   height: 25rem;
   width: 100%;
   border: 1px solid green;
 }
-
 .Gallery__Image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .Gallery__List {
   display: flex;
   list-style: none;
   border: 1px solid red;
   justify-content: space-between;
 }
-
 .Gallery__ListItem {
   width: 100%;
   max-width: 30%;
   margin-right: 4rem;
 }
-
 .Gallery__ListItem:not(last-of-type) {
   margin-right: 0rem;
 }
-
 .Gallery__CardListItem {
   flex: 1 1 30%;
   border: 1px solid blue;
 }
-
 .Gallery__CardList {
   list-style: none;
   display: flex;
   flex-direction: column;
 }
-
 .Gallery__CardTitle {
   padding: 0;
   color: #1070A8;
 }
-
 .Gallery__StaffBox {
   background-color: #D8E3EC;
   padding: 2rem 5rem 2rem 4rem;
@@ -1159,14 +1038,12 @@ body {
   right: 0;
   border-top-left-radius: 5rem;
 }
-
 .Gallery__StaffTitle {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
   color: #1070A8;
 }
-
 .Gallery__Button {
   background-color: #1070A8;
   padding: 0.8rem 4rem;
@@ -1178,11 +1055,9 @@ body {
   font-size: 1.5rem;
   font-size: 2rem;
 }
-
 .Gallery__Button:hover {
   background-color: #0b4e75;
 }
-
 .Gallery__Button:not(:last-child) {
   margin-right: 1rem;
 }
@@ -1201,7 +1076,6 @@ body {
   background-repeat: no-repeat !important;
   margin-bottom: 5rem;
 }
-
 .Events__TitleWrapper {
   position: absolute;
   background-color: rgba(16, 112, 168, 0.7);
@@ -1209,7 +1083,6 @@ body {
   top: 44%;
   left: 0;
 }
-
 .Events__Title {
   position: relative;
   color: white;
@@ -1224,7 +1097,6 @@ body {
   width: 100%;
   border: 1px solid red;
 }
-
 .Search__BackgroundImage {
   position: relative;
   height: 20rem;
@@ -1233,7 +1105,6 @@ body {
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
-
 .Search__Title {
   position: absolute;
   color: white;
@@ -1245,15 +1116,12 @@ body {
   top: 44%;
   left: 0;
 }
-
 .Search__QueryString {
   font-size: 2.5rem;
 }
-
 .Search__ResultCardsWrapper {
   width: 100%;
 }
-
 .Search__ResultCard {
   background-color: white;
   padding: 1.5rem 1.5rem 2rem;
@@ -1262,53 +1130,43 @@ body {
   min-width: 35rem;
   flex: 1 1 45%;
 }
-
 .Search__ResultLink {
   border-bottom: 1px solid #1070A8;
   display: inline-block;
 }
-
 .Search__ResultTitle {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #313131;
 }
-
 .Search__ResultCardWrapper {
   margin-left: 4rem;
   margin-bottom: 2rem;
 }
-
 .Search__ResultText {
   font-size: 3.5rem;
   color: #1070A8;
   margin-bottom: 1rem;
 }
-
 .Search__LabelWrapper {
   display: flex;
   align-items: center;
   margin-bottom: 0.6rem;
 }
-
 .Search__LabelWrapper * {
   color: #313131;
 }
-
 .Search__ResultPostType {
   font-size: 1.5rem;
 }
-
 .Search__ResultHarbor {
   font-size: 1.5rem;
 }
-
 .Search__Slash {
   font-size: 1.5rem;
   font-weight: 900;
   margin: 0 0.6rem;
 }
-
 .Search__Amenities {
   border: 1px solid red;
   flex: 1 1 55%;
@@ -1316,12 +1174,10 @@ body {
   background-color: white;
   margin-bottom: 3rem;
 }
-
 .Search__AmenitieTitle {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
-
 .Search__AmenitieList {
   list-style: none;
   margin-left: 4rem;
@@ -1330,7 +1186,6 @@ body {
   display: inline-block;
   padding-bottom: 0.6rem;
 }
-
 .Search__AmenitieLink {
   font-size: 3.5rem;
   color: #1070A8;
@@ -1358,7 +1213,6 @@ button {
   transition: all 0.2s ease-in-out;
   font-size: 1.5rem;
 }
-
 button:hover {
   background-color: #0b4e75;
 }
@@ -1373,7 +1227,6 @@ button:hover {
   transition: all 0.2s ease-in-out;
   font-weight: 900;
 }
-
 .mphb-reserve-btn.button:hover {
   color: #0b4e75;
 }
@@ -1388,7 +1241,6 @@ button:hover {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-
 .button.mphb-button.mphb-confirm-reservation:hover {
   background-color: #0b4e75;
 }
@@ -1411,32 +1263,26 @@ button:hover {
   flex-direction: column;
   padding: 2.5rem;
 }
-
 .SingleMRT__EntryInfoWrapper {
   display: flex;
   margin-bottom: 2.5rem;
 }
-
 .SingleMRT__RichText {
   flex: 1 1 75%;
   margin-right: 2.5rem;
 }
-
 .SingleMRT__RichText h2 {
   color: #1070A8;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
-
 .SingleMRT__RichText p {
   font-size: 1.5rem;
 }
-
 .SingleMRT__Amenities {
   flex: 1 1 25%;
   background-color: #D8E3EC;
 }
-
 .SingleMRT__AmenitieTitle {
   padding: 0.5rem;
   padding-left: 1.5rem;
@@ -1446,12 +1292,10 @@ button:hover {
   background-color: #1070A8;
   color: white;
 }
-
 .SingleMRT__AmenitieList {
   list-style: none;
   padding: 1rem;
 }
-
 .SingleMRT__AmenitieListItem {
   display: flex;
   align-items: center;
@@ -1459,7 +1303,6 @@ button:hover {
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
-
 .SingleMRT__AmenitieListItem i {
   margin-right: 1rem;
   font-size: 1.2rem;
@@ -1467,75 +1310,59 @@ button:hover {
   display: inline-block;
   text-align: center;
 }
-
 .SingleMRT__Title {
   font-size: 2.5rem;
   border: 1px solid black;
 }
-
 .SingleMRT__Text {
   font-size: 2rem;
 }
-
 .SingleMRT__FormWrapper {
   width: 75%;
   display: flex;
   flex-direction: column-reverse;
 }
-
 .SingleMRT__FormWrapper h2 {
   display: none;
 }
-
 .SingleMRT__FormWrapper p {
   font-size: 1.5rem;
 }
-
 .SingleMRT__FormWrapper .mphb-room-type-gallery-wrapper {
   display: flex;
   flex-direction: column-reverse;
 }
-
 .SingleMRT__FormWrapper .mphb-room-type-gallery-wrapper h3 {
   font-size: 2rem;
   color: #1070A8;
 }
-
 .SingleMRT__FormWrapper #gallery-1 {
   margin: 0;
 }
-
 .SingleMRT__FormWrapper #gallery-1 .gallery-item {
   text-align: left;
 }
-
 .SingleMRT__FormWrapper #gallery-1 img {
   border: 0;
 }
-
 .SingleMRT .mphb-rooms-quantity-wrapper.mphb-rooms-quantity-single {
   margin-bottom: 1.5rem;
 }
-
 .SingleMRT .bookingWrapper {
   padding-bottom: 1rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid #1070A8;
 }
-
 .SingleMRT .bookingWrapper .leftWrapper:nth-child(2) {
   margin-bottom: 2rem;
 }
-
 .SingleMRT .bookingWrapper #special {
   display: flex !important;
   margin-bottom: 2rem;
 }
-
 .SingleMRT .bookingWrapper #special small {
   display: none;
 }
-
 .SingleMRT .bookingWrapper #special .priceString {
   align-self: flex-end;
   text-align: right;
@@ -1547,19 +1374,15 @@ button:hover {
   display: inline-block;
   margin-bottom: 1.5rem;
 }
-
 .SingleMRT .bookingWrapper .datepick {
   width: 100% !important;
 }
-
 .SingleMRT .bookingWrapper .datepick-nav a {
   font-size: 1.5rem;
 }
-
 .SingleMRT .bookingWrapper .datepick-month {
   width: 50%;
 }
-
 .SingleMRT .bookingWrapper .datepick-month span {
   height: 100%;
   display: flex;
@@ -1567,56 +1390,44 @@ button:hover {
   align-items: center;
   justify-content: center;
 }
-
 .SingleMRT .bookingWrapper .datepick-month .datepick-month-header {
   font-size: 1.5rem;
 }
-
 .SingleMRT .bookingWrapper .datepick-month-row {
   display: flex;
 }
-
 .SingleMRT .bookingWrapper .datepick-month-row td {
   height: 3rem;
   width: calc(100% / 7);
 }
-
 .SingleMRT .dateWrapper {
   display: flex;
   margin-bottom: 2.5rem;
 }
-
 .SingleMRT .dateWrapper label {
   display: inline-block;
   margin-bottom: 0.5rem;
 }
-
 .SingleMRT .dateWrapper input {
   padding: 0.5rem;
   border-radius: 0.4rem;
   border: 1px solid black;
 }
-
 .SingleMRT .checkWrapper {
   margin-right: 2.5rem;
 }
-
 .SingleMRT .capacityWrapper {
   display: flex;
 }
-
 .SingleMRT .rightConfirmWrapper input {
   margin-bottom: 1.5rem;
 }
-
 .SingleMRT .rightConfirmWrapper .mphb-rooms-quantity-wrapper.mphb-rooms-quantity-multiple {
   margin-bottom: 1.5rem;
 }
-
 .SingleMRT .rightConfirmWrapper select {
   border-radius: 0.4rem;
 }
-
 .SingleMRT .mphb-regular-price {
   display: none;
 }
@@ -1625,52 +1436,230 @@ button:hover {
   background-color: #D9D9D9;
   padding: 5rem 0 10rem;
 }
-
 .Footer__SectionsWrapper {
   padding: 0 7.5rem;
   display: flex;
   justify-content: space-between;
 }
-
 .Footer__Section {
   flex: 1 1 25%;
 }
-
 .Footer__SectionTitle {
   font-size: 1.8rem;
   margin-bottom: 2rem;
 }
-
-.Footer__LocationList,
-.Footer__ContactList,
-.Footer__LinkList {
+.Footer__LocationList, .Footer__ContactList, .Footer__LinkList {
   list-style: none;
   font-size: 1.5rem;
 }
-
 .Footer__LocationList {
   margin-bottom: 1.5rem;
 }
-
 .Footer__LocationListItem {
   margin-bottom: 0.5rem;
 }
-
 .Footer__LocationListText {
   font-weight: 700;
 }
-
 .Footer__ContactListItem {
   margin-bottom: 0.5rem;
 }
-
 .Footer__LinkListItem {
   margin-bottom: 1.5rem;
 }
-
 .Footer__Link {
   font-weight: 500;
   color: #000;
   text-decoration: none;
 }
 
+.container {
+  padding: 0rem 5rem;
+  position: relative;
+}
+
+.login {
+  position: relative;
+  background-image: url("image/hav.jpg") !important;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.login h1 {
+  position: relative;
+  z-index: 9;
+  padding-top: 9rem;
+  margin-bottom: 3rem;
+}
+.login h1::before {
+  position: absolute;
+  content: "";
+  background: url("icons/anchor_square.svg");
+  background-size: cover;
+  height: 4rem;
+  width: 4rem;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: block;
+}
+.login a {
+  padding: 0;
+  margin: 0;
+}
+.login form {
+  border: none;
+}
+.login h1,
+.login #loginform,
+.login #nav,
+.login #backtoblog,
+.login .message.register,
+.login #registerform {
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+.login #loginform {
+  padding-bottom: 0;
+}
+.login #loginform label {
+  margin-bottom: 1rem;
+  color: #1070A8;
+}
+.login #loginform input {
+  margin-bottom: 2.5rem;
+}
+.login #loginform #user_pass {
+  margin-bottom: 0.5rem;
+}
+.login #loginform .forgetmenot {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+.login #loginform .forgetmenot input, .login #loginform .forgetmenot label {
+  margin-bottom: 0;
+}
+.login #loginform .forgetmenot label {
+  display: inline-block;
+}
+.login #loginform .forgetmenot #rememberme {
+  transform: scale(1.5);
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.login #loginform .forgetmenot #rememberme + label {
+  padding-left: 0.5rem;
+}
+.login #loginform .submit {
+  width: 100%;
+  display: block;
+  margin-bottom: 2.5rem;
+}
+.login #loginform .submit input {
+  display: block;
+  width: 100%;
+  background-color: #1070A8;
+  padding: 0.8rem 4rem;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.5rem;
+  font-size: 2rem;
+  padding: 0;
+}
+.login #loginform .submit input:hover {
+  background-color: #0b4e75;
+}
+.login #nav {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 5rem;
+}
+.login #nav a {
+  color: #1070A8;
+  transition: color 0.2s ease-in-out;
+}
+.login #nav a:hover {
+  color: #0b4e75;
+}
+.login #backtoblog {
+  display: none;
+}
+.login #registerform {
+  margin: 0;
+  padding-bottom: 0;
+}
+.login #registerform label {
+  margin-bottom: 1rem;
+  color: #1070A8;
+}
+.login #registerform input {
+  margin-bottom: 2.5rem;
+}
+.login #registerform #user_pass {
+  margin-bottom: 0.5rem;
+}
+.login #registerform .forgetmenot {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+.login #registerform .forgetmenot input, .login #registerform .forgetmenot label {
+  margin-bottom: 0;
+}
+.login #registerform .forgetmenot label {
+  display: inline-block;
+}
+.login #registerform .forgetmenot #rememberme {
+  transform: scale(1.5);
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.login #registerform .forgetmenot #rememberme + label {
+  padding-left: 0.5rem;
+}
+.login #registerform {
+  padding-top: 1.5rem;
+}
+.login .message.register {
+  margin: 0;
+  border: none;
+  font-size: 2rem;
+  color: #1070A8;
+  padding: 0 2.4rem;
+  padding-top: 2.5rem;
+}
+.login #wp-submit {
+  display: block;
+  width: 100%;
+  background-color: #1070A8;
+  padding: 0.8rem 4rem;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.5rem;
+  font-size: 2rem;
+  padding: 0;
+}
+.login #wp-submit:hover {
+  background-color: #0b4e75;
+}
+
+#login .message {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 2.4rem;
+  font-size: 1.5rem;
+  border-left: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
