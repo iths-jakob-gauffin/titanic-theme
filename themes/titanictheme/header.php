@@ -14,7 +14,7 @@
     <header class="Header">
         
         <?php 
-
+        echo $_SESSION['hamn'];
         
         function checkIfUrlContainsString($url, $string){
             if (strpos($url, $string) !== false) {
@@ -59,7 +59,7 @@
             };
             
         }
-            
+        echo $_SESSION['hamn'];
 
         ?>
         <div class="Header__Logo">

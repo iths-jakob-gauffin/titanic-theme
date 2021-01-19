@@ -32,11 +32,7 @@ $imgUrl = "";
 <!-- --------Header slut---------- -->
     <div class="container">
 
-
-    
     <?php
-
-
 
     $today = date('Ymd');
 
