@@ -44,7 +44,7 @@
         }
         elseif ($hamn && !is_search() && !is_post_type_archive('gallery') && !is_home()){
             //Osäker på varför det här villkoret behövs....
-            echo "nu kollar den hamn";
+            // echo "nu kollar den hamn";
             $_SESSION['hamn'] = $hamn[0]->post_name;
         }
         else {

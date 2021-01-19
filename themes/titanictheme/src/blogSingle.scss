@@ -1,18 +1,30 @@
 @import "./variables.scss";
 
 .SingleBlog {
-  &__Post {
-      padding: 0 40rem;
-      // background: mediumseagreen;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      @include p;
-      // font-size: 2rem;
-      // font-weight: 700;
-      margin-bottom: 3rem;
-      position: relative;
-  }
+    padding-bottom: 5rem;
+
+    &__Post {
+
+        padding: 0 5rem;
+        font-size: 1.5rem;
+
+        @include xxl {
+            padding: 0 10rem;
+        }
+
+        @include xxxl {
+        padding: 0 40rem;
+        // background: mediumseagreen;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include p;
+        // font-size: 2rem;
+        // font-weight: 700;
+        position: relative;
+        }
+      
+    }
 
   &__PostTitle {
       @include h2;

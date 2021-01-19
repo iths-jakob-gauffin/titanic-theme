@@ -28,7 +28,7 @@
     // $search = new WP_Query( $search_query );
     ?>
     
-    <h1>Det hääär är Index.php</h1>
+    <!-- <h1>Det hääär är Index.php</h1> -->
     <!-- --------Header-------- -->
     <div class="Blog">
         <div class="Blog__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')"> 
