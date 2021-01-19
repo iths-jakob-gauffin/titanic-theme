@@ -271,19 +271,26 @@ a {
   position: relative;
 }
 
+.Blog {
+  padding-bottom: 5rem;
+}
+
 .Blog__Post {
   padding: 0 40rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.5rem;
-  margin-bottom: 3rem;
   position: relative;
 }
 
 .Blog__PostTitle {
   font-size: 2.5rem;
-  padding: 3rem;
+  padding: 5rem 0 0.5rem 0;
+}
+
+.Blog__PostText {
+  padding: 5rem 0;
 }
 
 .Blog__PostDate {
@@ -336,6 +343,14 @@ a {
   margin: 0;
 }
 
+.Blog__HrLine {
+  padding: 5rem 5rem;
+}
+
+.Blog__HrLine:last-of-type {
+  display: none;
+}
+
 .container {
   padding: 0rem 5rem;
   position: relative;
@@ -353,11 +368,15 @@ a {
 
 .SingleBlog__PostTitle {
   font-size: 2.5rem;
-  padding: 3rem;
+  padding: 5rem 0 0.5rem 0;
+}
+
+.SingleBlog__PostText {
+  padding: 5rem 0;
 }
 
 .SingleBlog__PostDate {
-  padding: 2rem;
+  padding: 0 0 3rem 0;
 }
 
 .SingleBlog__Image {
@@ -368,7 +387,8 @@ a {
 }
 
 .SingleBlog__ImageContainer {
-  padding-top: 4rem;
+  padding: 4rem 0 4rem 0;
+  width: 100%;
 }
 
 .SingleBlog__BackgroundImage {
@@ -398,9 +418,30 @@ a {
   font-weight: 400;
 }
 
+.SingleBlog__Text {
+  width: 100%;
+}
+
 .SingleBlog__Text img {
   width: 100%;
   height: 100%;
+}
+
+.SingleBlog__Text__Button {
+  background-color: #1070A8;
+  padding: 0.8rem 4rem;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.5rem;
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.SingleBlog__Text__Button:hover {
+  background-color: #0b4e75;
 }
 
 .container {

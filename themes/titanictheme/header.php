@@ -43,7 +43,8 @@
                 }
             }
         }
-        elseif ($hamn && !is_search()){
+        elseif ($hamn && !is_search() && !is_post_type_archive('gallery') && !is_home()){
+            // $hamnVilkoret = get_field('hamn')
             $_SESSION['hamn'] = $hamn[0]->post_name;
         }
         else {

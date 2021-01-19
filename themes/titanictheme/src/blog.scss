@@ -1,6 +1,10 @@
 @import "./variables.scss";
 
 .Blog {
+
+    padding-bottom: 5rem;
+
+
     &__Post {
         padding: 0 40rem;
         // background: mediumseagreen;
@@ -10,14 +14,17 @@
         @include p;
         // font-size: 2rem;
         // font-weight: 700;
-        margin-bottom: 3rem;
         position: relative;
     }
 
     &__PostTitle {
         @include h2;
         // border: 1px solid black;
-        padding: $spacingXl;
+        padding: 5rem 0 0.5rem 0;
+    }
+
+    &__PostText {
+        padding: 5rem 0;
     }
 
     &__PostDate {
@@ -72,7 +79,15 @@
         
     }
 
- 
+    &__HrLine {
+        padding: 5rem 5rem;
 
+        &:last-of-type {
+            display: none;
+        }
+
+    }
+   
+   
 }
 
