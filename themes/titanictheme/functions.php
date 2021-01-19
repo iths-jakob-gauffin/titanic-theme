@@ -123,7 +123,14 @@ function navList($harbor){
     $currentUrl = home_url( add_query_arg( null, null ));
     if($harbor === "NOLLSTÄLLD"){
         ?>
-        <nav class="Header__Nav">
+        <nav class="<?php 
+        
+        if(is_user_logged_in() ){
+            echo "Header__Nav Header__Nav--LoggedIn";
+        }else{
+            echo "Header__Nav";
+        }
+        ?>">
             <ul class="Header__NavList">
                 <li class="Header__ListItem">
                     <a href="<?php echo esc_url(site_url('harbor')); ?>" class="<?php 
@@ -336,6 +343,43 @@ function searchResult($result, $withHarbor = false){
 <?php            
 }
 
+//Ändrar loggan på login-sidan
+function my_login_logo() { 
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap', false);
+
+    wp_register_style('titanicCss', get_template_directory_uri() . '/dist/app.css', [], 1, 'all');
+    wp_enqueue_style('titanicCss');
+
+    
+
+    ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/dist/icons/Ankra_Logo2.svg);
+            height:35px;
+            width:300px;
+            background-size: 200px 35px;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-bottom: 0;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+
+function loginTitle(){
+    return get_bloginfo("name");
+}
+add_filter('login_headertitle', "loginTitle");
+
+
+function logoLoginUrl(){
+    return esc_url(site_url("/"));
+}
+
+
+add_filter("login_headerurl", "logoLoginUrl");
 
 function redirect_after_logout(){
     wp_redirect( '/' );
@@ -343,3 +387,24 @@ function redirect_after_logout(){
 }
 
 add_action('wp_logout','redirect_after_logout');
+
+function redirectToFrontend(){
+    $ourMember = wp_get_current_user();
+
+    if(count($ourMember->roles) == 1 AND $ourMember->roles[0] == 'subscriber'){
+        wp_redirect(site_url('/'));
+        exit;
+    }
+}
+add_action('admin_init', 'redirectToFrontend');
+
+function noAdminBarForSubs(){
+    $ourMember = wp_get_current_user();
+
+    if(count($ourMember->roles) == 1 && $ourMember->roles[0] == "subscriber"){
+        show_admin_bar( false );
+    }
+}
+
+add_action("wp_loaded", "noAdminBarForSubs");
+

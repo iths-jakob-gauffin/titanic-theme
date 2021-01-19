@@ -23,7 +23,9 @@
 ?>
 
     <h1>Det här är archive-gallery.php</h1>
-
+    <?php 
+    
+    ?>
     <div class="Gallery">
         <div class="Gallery__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
         ¨<div class="Gallery__TitleWrapper">
@@ -47,7 +49,12 @@
         while(have_posts()){    
             the_post();
 
+            // $hamnIVillkoret = get_field("hamn");
+            // echo var_dump($hamnIVillkoret);
+
             $staff = get_field('hamn')[0]->post_title;  
+
+            // echo var_dump($staff);
 
             $image = get_field('gallery_image')['sizes']['medium'];
 
