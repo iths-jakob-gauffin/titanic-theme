@@ -121,9 +121,13 @@ a {
 }
 .Header__Nav {
   height: 100%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+}
+@media (min-width: 1500px) {
+  .Header__Nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .Header__NavList {
   display: flex;

@@ -13,8 +13,7 @@
 
     <header class="Header">
         
-        <?php 
-
+        <?php
         
         function checkIfUrlContainsString($url, $string){
             if (strpos($url, $string) !== false) {
@@ -43,7 +42,9 @@
                 }
             }
         }
-        elseif ($hamn && !is_search()){
+        elseif ($hamn && !is_search() && !is_post_type_archive('gallery') && !is_home()){
+            //Osäker på varför det här villkoret behövs....
+            echo "nu kollar den hamn";
             $_SESSION['hamn'] = $hamn[0]->post_name;
         }
         else {
@@ -59,7 +60,6 @@
             };
             
         }
-            
 
         ?>
         <div class="Header__Logo">

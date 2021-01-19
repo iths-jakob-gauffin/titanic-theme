@@ -123,7 +123,14 @@ function navList($harbor){
     $currentUrl = home_url( add_query_arg( null, null ));
     if($harbor === "NOLLSTÄLLD"){
         ?>
-        <nav class="Header__Nav">
+        <nav class="<?php 
+        
+        if(is_user_logged_in() ){
+            echo "Header__Nav Header__Nav--LoggedIn";
+        }else{
+            echo "Header__Nav";
+        }
+        ?>">
             <ul class="Header__NavList">
                 <li class="Header__ListItem">
                     <a href="<?php echo esc_url(site_url('harbor')); ?>" class="<?php 
