@@ -41,9 +41,6 @@
     </div>
 <!-- --------Header slut---------- -->
 
-    
-
-
     <div class="container">
     <main class="Blog">
 <?php

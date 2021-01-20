@@ -25,15 +25,13 @@ $imgUrl = "";
         <div class="Events__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
          <div class="Events__TitleWrapper">
             <h1 class="Events__Title">
-               Events
+            <?php echo ucfirst($_SESSION['hamn']);?> Events
             </h1>
         </div>
     </div>
 <!-- --------Header slut---------- -->
-    <div class="container">
-
+    <main class="Events">
     <?php
-
     $today = date('Ymd');
 
     $events = new WP_Query(array(
@@ -67,14 +65,16 @@ $imgUrl = "";
         
             <ul class="Events__List">
                 <li class="Events__ListItem">
-<!-- -------- Placera event-bilden för just detta event här! ---------- -->
-                    <img src="<?php echo get_the_post_thumbnail_url();?>" alt="">
 
-                    <img src="<?php echo $eventImage;?>" alt="">
-                    
-                    <div class="Events__BackgroundImage" style="background: url('<?php echo $eventImage; ?>')"></div>
+                <div class="Events_ImageContainer">
+                    <img src="<?php echo get_the_post_thumbnail_url();?>" class="Event_Image">
+                </div>
+                <div class="Events_CustomFieldImageContainer">
+                    <img src="<?php echo $eventImage;?>" class="Events_CustomFieldImage">
+                </div>  
+                    <!-- <div class="Events__BackgroundImage" style="background: url('<?php echo $eventImage; ?>')"></div> -->
 
-                    <div><?php echo var_dump($eventImage); ?></div>
+                    <!-- <div><?php echo var_dump($eventImage); ?></div> -->
                     
                     <h1 class="Events__ListTitle">
                         <?php the_title(); ?>
@@ -93,6 +93,6 @@ $imgUrl = "";
     }
     wp_reset_postdata();
     ?>
-    </div>
+    </main>
 
 <?php get_footer(); ?>
