@@ -88,9 +88,9 @@
       }
 
    &__Button {
-       @include button;
-       text-decoration: none !important;
-       color: white !important;
+        @include button;
+    //    text-decoration: none !important;
+    //    color: white !important;
        
    }
   }

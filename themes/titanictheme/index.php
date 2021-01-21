@@ -69,7 +69,9 @@
                         </h5>
                        
                     <div class="Blog__Text">
-                        <?php $text = get_the_content(); echo wp_trim_words($text, 50); ?>                            
+                        <?php $text = get_the_content();?>
+                        
+                        <?php echo wp_trim_words($text, 50); ?> 
                     </div>    
                                    
                 </article> 

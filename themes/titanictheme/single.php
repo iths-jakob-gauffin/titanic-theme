@@ -54,7 +54,7 @@
                             <img src="<?php echo get_the_post_thumbnail_url();?>"class="Blog__Image">
                         </div>  
                         <a href="/blog/"><button class="SingleBlog__Button">Tillbaka till bloggen</button></a>
-                        
+                        <!-- <a href="/blog/" class="SingleBlog__Button">Tillbaka till bloggen</a> -->
                         
                     </article> 
                
@@ -64,7 +64,7 @@
     wp_reset_postdata();
     ?>
             </main>
-        </div>
+            </div>
 
 
 

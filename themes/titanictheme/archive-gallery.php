@@ -39,8 +39,9 @@
             <a href="<?php echo wp_registration_url();?>" class="Gallery__Button">Skapa konto</a>
         </div>
     </div>
-    <div class="container">
-        
+
+
+    <div class="container">    
     <ul class="Gallery__List">
         
         <?php
@@ -72,26 +73,28 @@
                                 <img src="<?php echo $image; ?>" class="Gallery__Image" alt="">
                             </div>
 
-                            <h2 class="Gallery__CardTitle">
+                            <div class="Gallery__ContentWrapper">
+                            <h1 class="Gallery__CardTitle">
                                 <?php  echo $galleryName;?>
-                            </h2>
+                            </h1>
 
-                            <h3 class="Gallery__CardExcerpt">
+                            <h2 class="Gallery__CardExcerpt">
                             <!-- <?php the_excerpt(); ?> -->
                             <?php echo $galleryTitle; ?>
-                            </h3>   
+                            </h2>   
 
-                            <h3 class="Gallery__CardContent">
+                            <h2 class="Gallery__CardContent">
                             <!-- <?php the_content(); ?> -->
                             Email: 
                             <?php echo $galleryContactEmail;  ?>
 
-                            </h3>   
-                            <h3 class="Gallery__CardContent">
+                            </h2>   
+                            <h2 class="Gallery__CardContent">
                             <!-- <?php the_content(); ?> -->
                             Tel: 
                             <?php echo $galleryContactNumber;  ?>
-                            </h3>   
+                            </h2>   
+                            </div>
                         </li>
                     </ul>    
                 </li>
