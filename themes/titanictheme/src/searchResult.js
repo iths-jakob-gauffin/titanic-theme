@@ -50,7 +50,7 @@ const searchResult = () => {
             console.log("🚀 ~ file: searchResult.js ~ line 50 ~ searchResult ~ period", period)
             console.log("rummet: ", room);
             let priceDOM = room.querySelector(".mphb-regular-price.detailToFlex");
-            let priceString = amount + " " + currency + " " + period + ".";
+            let priceString = cost + " " + period + ".";
             let priceParagraph = document.createElement("p");
             priceParagraph.innerText = priceString;
             priceParagraph.className = "priceString";

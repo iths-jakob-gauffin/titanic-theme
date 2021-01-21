@@ -162,7 +162,7 @@ var searchResult = function searchResult() {
       console.log("🚀 ~ file: searchResult.js ~ line 50 ~ searchResult ~ period", period);
       console.log("rummet: ", room);
       var priceDOM = room.querySelector(".mphb-regular-price.detailToFlex");
-      var priceString = amount + " " + currency + " " + period + ".";
+      var priceString = cost + " " + period + ".";
       var priceParagraph = document.createElement("p");
       priceParagraph.innerText = priceString;
       priceParagraph.className = "priceString"; // priceDOM.innerHTML = amount + " " + currency + " " + period + ".";

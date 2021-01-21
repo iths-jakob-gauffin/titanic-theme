@@ -28,10 +28,15 @@
         }
     }
 
+    &__Carousel{
+        // width: 100%;
+        // border: 1px solid lightgreen;
+    }
+
     &__Amenities{
         flex: 1 1 25%;
         // border: 1px solid red;
-        background-color: $Lightgray;
+        
     }
 
     &__AmenitieTitle{
@@ -45,6 +50,7 @@
     &__AmenitieList{
         list-style: none;
         padding: $spacingXs;
+        background-color: $Lightgray;
         
     }
     &__AmenitieListItem{

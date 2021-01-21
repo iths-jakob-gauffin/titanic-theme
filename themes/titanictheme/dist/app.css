@@ -1272,7 +1272,6 @@ button:hover {
 }
 .SingleMRT__Amenities {
   flex: 1 1 25%;
-  background-color: #D8E3EC;
 }
 .SingleMRT__AmenitieTitle {
   padding: 0.5rem;
@@ -1286,6 +1285,7 @@ button:hover {
 .SingleMRT__AmenitieList {
   list-style: none;
   padding: 1rem;
+  background-color: #D8E3EC;
 }
 .SingleMRT__AmenitieListItem {
   display: flex;
@@ -1665,15 +1665,14 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2.5rem;
-  border: 1px solid red;
+  padding: 2.5rem 2.5rem 7.5rem 2.5rem;
 }
 .SingleHarbor__Title {
   font-size: 2.5rem;
-  border: 1px solid black;
 }
 .SingleHarbor__RichTextAndMapWrapper {
   display: flex;
+  margin-bottom: 7.5rem;
 }
 .SingleHarbor__RichText {
   flex: 1 1 50%;
@@ -1702,6 +1701,13 @@ button:hover {
 .SingleHarbor__BookingButton:hover {
   background-color: #0b4e75;
 }
+.SingleHarbor__BookingButton--Large {
+  font-size: 2.5rem;
+  display: block;
+  text-align: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
 .SingleHarbor__MapWrapper {
   flex: 1 1 50%;
   min-height: 45rem;
@@ -1710,4 +1716,183 @@ button:hover {
 .SingleHarbor__MapWrapper iframe:first-of-type {
   width: 100% !important;
   height: 100% !important;
+}
+.SingleHarbor__ExtraInfoSection {
+  display: flex;
+  width: 100%;
+  margin-bottom: 7.5rem;
+}
+.SingleHarbor__Amenities {
+  margin-right: 1.5rem;
+}
+.SingleHarbor__Amenities:last-child {
+  margin-right: 0;
+}
+.SingleHarbor__Amenities--Amenities {
+  flex: 0 1 20%;
+}
+.SingleHarbor__Amenities--Events {
+  flex: 1 1 30%;
+}
+.SingleHarbor__Amenities--Posts {
+  flex: 1 1 50%;
+}
+.SingleHarbor__AmenitieTitle {
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: #1070A8;
+  color: white;
+}
+.SingleHarbor__AmenitieList {
+  background-color: #D8E3EC;
+  list-style: none;
+  padding: 1rem;
+}
+.SingleHarbor__AmenitieListItem {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.SingleHarbor__AmenitieListItem i {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  width: 2rem;
+  display: inline-block;
+  text-align: center;
+}
+.SingleHarbor__EventListItem {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 1rem 1rem 2rem;
+  border-bottom: 1px solid #1070A8;
+}
+.SingleHarbor__EventListItem:last-child {
+  border-bottom: none;
+}
+.SingleHarbor__DateAndEventTitleWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.SingleHarbor__EventDay {
+  font-size: 2rem;
+}
+.SingleHarbor__EventMonth {
+  font-size: 2rem;
+}
+.SingleHarbor__EventTitle {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.SingleHarbor__EventThumbnailWrapper {
+  display: flex;
+  align-items: center;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.SingleHarbor__EventThumbnail {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.SingleHarbor__EventTitle {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.SingleHarbor__PostListItem {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 1rem 1rem 2rem;
+  border-bottom: 1px solid #1070A8;
+}
+.SingleHarbor__PostListItem:last-child {
+  border-bottom: none;
+}
+.SingleHarbor__PostTextWrapper {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 7.5rem);
+  margin-right: 1.5rem;
+}
+.SingleHarbor__PostTitle {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+.SingleHarbor__PostContent {
+  font-size: 1.5rem;
+}
+.SingleHarbor__PostThumbnailWrapper {
+  display: flex;
+  align-items: center;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.SingleHarbor__PostThumbnail {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.SingleHarbor__AmenitieLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.SingleHarbor__EventList, .SingleHarbor__PostList {
+  list-style: none;
+}
+.SingleHarbor__PostListItem, .SingleHarbor__EventListItem {
+  background-color: #D8E3EC;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+.SingleHarbor__PostListItem:hover, .SingleHarbor__EventListItem:hover {
+  background-color: white;
+}
+.SingleHarbor__PostListItem:hover::after, .SingleHarbor__EventListItem:hover::after {
+  border-left: 3px solid #1070A8;
+}
+.SingleHarbor__PostListItem::after, .SingleHarbor__EventListItem::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.SingleHarbor__Carousel {
+  width: 100%;
+  margin: 0 0 7.5rem 0;
+}
+.SingleHarbor__Carousel img {
+  width: 100% !important;
+  height: 35rem !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.SingleHarbor__SectionHeader {
+  font-size: 2.5rem;
+  color: #1070A8;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  align-self: flex-start;
 }
