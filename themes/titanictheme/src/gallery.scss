@@ -9,7 +9,7 @@
         background-size: cover !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
-        margin-bottom: 5rem;
+        // margin-bottom: 5rem;
     }
 
     &__TitleWrapper{
@@ -41,7 +41,6 @@
         height: 100%;
         object-fit: cover;
         border-radius: 40px 0px 0px 0px;
-        
 
     }
 
@@ -55,6 +54,8 @@
         list-style: none;
         // border: 1px solid red;
         justify-content: space-between;
+        padding: 5rem 5rem 10rem 5rem;
+        background-color: white;
         // justify-content: space-evenly;
         
     }

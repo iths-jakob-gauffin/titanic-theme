@@ -22,16 +22,16 @@
                 Single.php
             </h1> -->
     <!-- --------Header-------- -->
-    <div class="Blog">
+    <!-- <div class="Blog"> -->
         <div class="Blog__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
-        
-        ¨<div class="Blog__TitleWrapper">
-            <h1 class="Blog__Title">
-                <!-- här vill man göra Stor första bokstav -->
-               <?php echo ucfirst($_SESSION['hamn']);?> Blogginlägg
-            </h1>
+            <div class="Blog__TitleWrapper">
+                <h1 class="Blog__Title">
+                    <!-- här vill man göra Stor första bokstav -->
+                <?php echo ucfirst($_SESSION['hamn']);?> Blogginlägg
+                </h1>
+            </div>
         </div>
-    </div>
+    <!-- </div> -->
 <!-- --------Header slut---------- -->
         <div class="container">
             <main class="SingleBlog">

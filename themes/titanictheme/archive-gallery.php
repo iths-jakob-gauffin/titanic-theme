@@ -41,7 +41,8 @@
     </div>
 
 
-    <div class="container">    
+    <div class="container"> 
+    <!-- <div class="blogcontainer">       -->
     <ul class="Gallery__List">
         
         <?php
@@ -58,7 +59,7 @@
             // echo var_dump($staff);
 
             // $image = get_field('gallery_image')['sizes']['medium'];
-            $image = get_field('gallery_image');
+            $image = get_field('gallery_image')['sizes']['pizza'];
             $galleryName = get_field('gallery_name');
             $galleryTitle =get_field('gallery_title');
             $galleryContactEmail =get_field('gallery_contactemail');

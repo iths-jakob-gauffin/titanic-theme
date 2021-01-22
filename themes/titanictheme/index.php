@@ -30,7 +30,7 @@
     
     <!-- <h1>Det hääär är Index.php</h1> -->
     <!-- --------Header-------- -->
-    <div class="Blog">
+    <!-- <div class="Blog"> -->
         <div class="Blog__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')"> 
             <div class="Blog__TitleWrapper">
                 <h1 class="Blog__Title">
@@ -38,7 +38,7 @@
                 </h1>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 <!-- --------Header slut---------- -->
 
     <div class="container">
