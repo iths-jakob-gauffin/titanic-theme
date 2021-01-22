@@ -63,8 +63,8 @@
     }
     wp_reset_postdata();
     ?>
-            </main>
-            </div>
+        </main>
+        </div>
 
 
 
