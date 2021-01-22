@@ -6,6 +6,15 @@
 
 
     &__Post {
+
+        padding: 0 5rem;
+        font-size: 1.5rem;
+
+        @include xxl {
+            padding: 0 10rem;
+        }
+
+        @include xxxl {
         padding: 0 40rem;
         // background: mediumseagreen;
         display: flex;
@@ -15,6 +24,8 @@
         // font-size: 2rem;
         // font-weight: 700;
         position: relative;
+        }
+      
     }
 
     &__PostTitle {

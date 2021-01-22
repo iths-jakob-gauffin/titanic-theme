@@ -18,9 +18,9 @@
     }
     // echo var_dump($imgUrl);
 ?>
-  <h1 class="SingleBlog__Title">
+  <!-- <h1 class="SingleBlog__Title">
                 Single.php
-            </h1>
+            </h1> -->
     <!-- --------Header-------- -->
     <div class="Blog">
         <div class="Blog__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
@@ -33,13 +33,13 @@
         </div>
     </div>
 <!-- --------Header slut---------- -->
+        <div class="container">
+            <main class="SingleBlog">
     <?php
 
     while(have_posts()){
         the_post(); 
             ?>
-            <div class="container">
-                <main class="SingleBlog">
                     <article class="SingleBlog__Post">
                         <h2 class="SingleBlog__PostTitle">
                             <?php the_title(); ?>
@@ -54,17 +54,17 @@
                             <img src="<?php echo get_the_post_thumbnail_url();?>"class="Blog__Image">
                         </div>  
                         <a href="/blog/"><button class="SingleBlog__Button">Tillbaka till bloggen</button></a>
-                        
+                        <!-- <a href="/blog/" class="SingleBlog__Button">Tillbaka till bloggen</a> -->
                         
                     </article> 
-                </main>
-            </div>
+               
 
         <?php 
     }
     wp_reset_postdata();
     ?>
-     
+            </main>
+            </div>
 
 
 

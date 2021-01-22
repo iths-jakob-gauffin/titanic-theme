@@ -39,8 +39,9 @@
             <a href="<?php echo wp_registration_url();?>" class="Gallery__Button">Skapa konto</a>
         </div>
     </div>
-    <div class="container">
-        
+
+
+    <div class="container">    
     <ul class="Gallery__List">
         
         <?php
@@ -56,7 +57,12 @@
 
             // echo var_dump($staff);
 
-            $image = get_field('gallery_image')['sizes']['medium'];
+            // $image = get_field('gallery_image')['sizes']['medium'];
+            $image = get_field('gallery_image');
+            $galleryName = get_field('gallery_name');
+            $galleryTitle =get_field('gallery_title');
+            $galleryContactEmail =get_field('gallery_contactemail');
+            $galleryContactNumber =get_field('gallery_contactnumber');
 
             if(strtolower($staff) === strtolower($_SESSION['hamn'])){
                 ?>
@@ -67,17 +73,28 @@
                                 <img src="<?php echo $image; ?>" class="Gallery__Image" alt="">
                             </div>
 
-                            <h2 class="Gallery__CardTitle">
-                                <?php the_title(); ?>
-                            </h2>
+                            <div class="Gallery__ContentWrapper">
+                            <h1 class="Gallery__CardTitle">
+                                <?php  echo $galleryName;?>
+                            </h1>
 
-                            <h3 class="Gallery__CardExcerpt">
-                            <?php the_excerpt(); ?>
-                            </h3>   
+                            <h2 class="Gallery__CardExcerpt">
+                            <!-- <?php the_excerpt(); ?> -->
+                            <?php echo $galleryTitle; ?>
+                            </h2>   
 
-                            <h3 class="Gallery__CardContent">
-                            <?php the_content(); ?>
-                            </h3>   
+                            <h2 class="Gallery__CardContent">
+                            <!-- <?php the_content(); ?> -->
+                            Email: 
+                            <?php echo $galleryContactEmail;  ?>
+
+                            </h2>   
+                            <h2 class="Gallery__CardContent">
+                            <!-- <?php the_content(); ?> -->
+                            Tel: 
+                            <?php echo $galleryContactNumber;  ?>
+                            </h2>   
+                            </div>
                         </li>
                     </ul>    
                 </li>
