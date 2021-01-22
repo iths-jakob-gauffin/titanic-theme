@@ -49,6 +49,10 @@ $imgUrl = "";
         )
     ));
 
+    ?> <ul class="Events__OuterList">
+    
+    <?php
+
     while($events->have_posts()){    
         $events->the_post();
         $date = new DateTime(get_field('event_date'));
@@ -58,17 +62,16 @@ $imgUrl = "";
         $time = new DateTime(get_field('event_time'));
         $fixedTime = $time->format('H : i');
         $hamnen = get_field('hamn')[0]->post_title;            
-        $eventImage = get_field('event_image');
+        $eventImage = get_field('event_image')['sizes']['pizza'];
+        // echo var_dump($eventImage['sizes']['pizza']);
 
         if(strtolower($hamnen) === strtolower($_SESSION['hamn'])){
             ?>
-        
+            <li class="Events__OuterListItem">
+            <a class="Events__Link" href="<?php the_permalink(); ?>">
             <ul class="Events__List">
                 <li class="Events__ListItem">
 
-                <div class="Events_ImageContainer">
-                    <img src="<?php echo get_the_post_thumbnail_url();?>" class="Event_Image">
-                </div>
                 <div class="Events_CustomFieldImageContainer">
                     <img src="<?php echo $eventImage;?>" class="Events_CustomFieldImage">
                 </div>  
@@ -84,7 +87,8 @@ $imgUrl = "";
                     <h2><?php echo $fixedDate . ", kl: " . $fixedTime; ?></h2>
                 </li>
             </ul>
-        
+            </a>
+            </li>
         <?php
 
         }
@@ -93,6 +97,7 @@ $imgUrl = "";
     }
     wp_reset_postdata();
     ?>
+    </ul>
     </main>
 
 <?php get_footer(); ?>

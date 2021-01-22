@@ -1112,10 +1112,8 @@ body {
 }
 
 .Events_CustomFieldImageContainer {
-  height: 25%;
-  width: 25%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 25rem;
+  width: 25rem;
   border: 1px solid blue;
 }
 
