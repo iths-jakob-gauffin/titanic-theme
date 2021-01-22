@@ -21,8 +21,8 @@
     }
     // echo var_dump($imgUrl);
 ?>
-
-    <h1>Det här är archive-gallery.php</h1>
+<!-- 
+    <h1>Det här är archive-gallery.php</h1> -->
     <?php 
     
     ?>
