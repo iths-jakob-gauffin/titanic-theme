@@ -32,11 +32,11 @@
     <!-- --------Header-------- -->
     <div class="Blog">
         <div class="Blog__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')"> 
-       
-        ¨<div class="Blog__TitleWrapper">
-            <h1 class="Blog__Title">
-            <?php echo ucfirst($_SESSION['hamn']);?> Blogg
-            </h1>
+            <div class="Blog__TitleWrapper">
+                <h1 class="Blog__Title">
+                <?php echo ucfirst($_SESSION['hamn']);?> Blogg
+                </h1>
+            </div>
         </div>
     </div>
 <!-- --------Header slut---------- -->
@@ -83,6 +83,6 @@
     wp_reset_postdata();
     ?>   
         </main>
-        </div>
+    </div>
 
 <?php get_footer(); ?>
