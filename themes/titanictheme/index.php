@@ -30,12 +30,13 @@
     
     <!-- <h1>Det hääär är Index.php</h1> -->
     <!-- --------Header-------- -->
-<div class="Blog">
-    <div class="Blog__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
-        <div class="Blog__TitleWrapper">
-            <h1 class="Blog__Title">
+    <div class="Blog">
+        <div class="Blog__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')"> 
+            <div class="Blog__TitleWrapper">
+                <h1 class="Blog__Title">
                 <?php echo ucfirst($_SESSION['hamn']);?> Blogg
-            </h1>
+                </h1>
+            </div>
         </div>
     </div>
 <!-- --------Header slut---------- -->
@@ -71,7 +72,7 @@
     }
     wp_reset_postdata();
     ?>   
-    </main>
+        </main>
     </div>
 
 <?php get_footer(); ?>

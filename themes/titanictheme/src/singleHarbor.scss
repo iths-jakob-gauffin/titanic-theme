@@ -1,0 +1,275 @@
+@import "./variables.scss";
+
+.SingleHarbor {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacingL $spacingL $spacingL * 3 $spacingL;
+    // border: 1px solid red;
+
+    &__Title {
+        font-size: 2.5rem;
+        // border: 1px solid black;
+    }
+    
+    &__RichTextAndMapWrapper{
+        display: flex;
+        margin-bottom: $spacingL * 3;
+    }
+
+    &__RichText{
+        flex: 1 1 50%;
+        margin-right: $spacingL;
+
+        h2{
+            color: $Primary;
+            @include h2;
+            margin-bottom: $spacingS;
+        }
+    
+        p{
+            @include p;
+        }
+    }
+
+    &__BookingButton{
+        margin-top: $spacingS;
+        @include button;
+        display: inline-block;
+
+        &--Large{
+            // width: 100%;
+            @include h2;
+            display: block;
+            text-align: center;
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+    }
+
+    &__MapWrapper{
+        flex: 1 1 50%;
+        min-height: 45rem;
+        max-height: 65rem;
+
+        iframe:first-of-type{
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+
+    &__ExtraInfoSection{
+        display: flex;
+        width: 100%;
+        margin-bottom: $spacingL * 3;
+        // border: 1px solid red;
+    }
+
+    &__Amenities{
+        margin-right: $spacingS;
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        &--Amenities{
+            flex: 0 1 20%;
+
+            
+        }
+        &--Events{
+            flex: 1 1 30%;
+
+        }
+        &--Posts{
+            flex: 1 1 50%;
+        }
+    }
+
+    &__AmenitieTitle{
+        padding: $spacingXxs;
+        padding-left: $spacingS;
+        display: block;
+        @include label;
+        background-color: $Primary;
+        color: $White;
+    }
+    &__AmenitieList{
+        background-color: $Lightgray;
+        list-style: none;
+        padding: $spacingXs;
+        
+    }
+
+    &__AmenitieListItem{
+        display: flex;
+        align-items: center;
+        @include listItem;
+        margin-bottom: $spacingXxs;
+
+        i{
+            margin-right: $spacingXs;
+            font-size: 1.2rem;
+            width: 2rem;
+            display: inline-block;
+            text-align: center;
+        }
+    }
+
+    &__EventListItem{
+        position: relative;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        @include listItem;
+        // margin-bottom: $spacingXs;
+        padding: $spacingXs $spacingXs $spacingXs $spacingM;
+        // padding-bottom: $spacingXs;
+        border-bottom: 1px solid $Primary;
+        
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+
+    &__DateAndEventTitleWrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    &__EventDay{
+        @include h3;
+    }
+    &__EventMonth{
+        @include h3;
+
+    }
+    &__EventTitle{
+        @include h3;
+        text-transform: uppercase;
+
+    }
+    &__EventThumbnailWrapper{
+        display: flex;
+        align-items: center;
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+    &__EventThumbnail{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__EventTitle{
+        @include h3;
+        text-transform: uppercase;
+    }
+
+    &__PostListItem{
+        position: relative;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        @include listItem;
+        padding: $spacingXs $spacingXs $spacingXs $spacingM;
+        border-bottom: 1px solid $Primary;
+        
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+
+    &__PostTextWrapper{
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 7.5rem);
+        margin-right: $spacingS;
+    }
+    &__PostTitle{
+        margin-bottom: $spacingXxs;
+        @include h4;
+    }
+    &__PostContent{
+        @include p;
+    }
+
+    &__PostThumbnailWrapper{
+        display: flex;
+        align-items: center;
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+    &__PostThumbnail{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__AmenitieLink{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    &__EventList,
+    &__PostList{
+        list-style: none;
+    }
+
+    &__PostListItem,
+    &__EventListItem{
+        background-color: $Lightgray;
+        transition: all $transition;
+        position: relative;
+
+        &:hover{
+            background-color: $White;
+            
+            &::after{
+                border-left: 3px solid $Primary;
+            }
+        }
+
+        &::after{
+            content: "";
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: 0;
+        }
+    }
+
+    &__Carousel{
+        // border: 1px solid red;
+        width: 100%;
+        margin: 0 0 $spacingL* 3 0;
+
+        img{
+            width: 100% !important;
+            height: 35rem !important;
+            object-fit: cover;
+        }
+    }
+
+    &__SectionHeader{
+        @include h2;
+        color: $Primary;
+        margin-bottom: $spacingL;
+        text-align: left;
+        align-self: flex-start;
+    }
+
+
+
+
+
+}
+

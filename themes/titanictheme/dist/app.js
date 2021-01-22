@@ -162,7 +162,7 @@ var searchResult = function searchResult() {
       console.log("🚀 ~ file: searchResult.js ~ line 50 ~ searchResult ~ period", period);
       console.log("rummet: ", room);
       var priceDOM = room.querySelector(".mphb-regular-price.detailToFlex");
-      var priceString = amount + " " + currency + " " + period + ".";
+      var priceString = cost + " " + period + ".";
       var priceParagraph = document.createElement("p");
       priceParagraph.innerText = priceString;
       priceParagraph.className = "priceString"; // priceDOM.innerHTML = amount + " " + currency + " " + period + ".";
@@ -239,8 +239,8 @@ var searchResult = function searchResult() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\jenni\Local Sites\newtitanictheme\app\public\wp-content\themes\titanictheme\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! C:\Users\jenni\Local Sites\newtitanictheme\app\public\wp-content\themes\titanictheme\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! C:\Users\Jakob\Local Sites\titanicny\app\public\wp-content\themes\themes\titanictheme\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Jakob\Local Sites\titanicny\app\public\wp-content\themes\themes\titanictheme\src\app.scss */"./src/app.scss");
 
 
 /***/ })
