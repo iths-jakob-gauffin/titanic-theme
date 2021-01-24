@@ -3,23 +3,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // border: 1px solid red;
-    // padding: 0 4rem;
-    // &__Post {
-    //     padding: 0 2rem;
-    //     background: mediumseagreen;
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     font-size: 2rem;
-    //     font-weight: 700;
-    //     margin-bottom: 3rem;
-    //     position: relative;
-    // }
+    padding: $spacingL*2 $spacingL*2 $spacingL * 4 $spacingL*2;
 
     &__Title {
         font-size: 2.5rem;
         border: 1px solid black;
+    }
+
+    &__QueryTitle{
+        @include h2;
+        color: $Primary;
+        margin-bottom: $spacingL*2;
     }
 
     &__Text {
@@ -28,15 +22,12 @@
 
     &__FormWrapper {
         width: 100%;
-        // border: 1px solid blue;
     }
     .testwrapper {
         display: flex;
         flex-wrap: wrap;
     }
     .innerwrapper {
-        // width: 50%;
-        // padding: 2rem 4rem;
         flex: 1 1 40%;
         max-width: 50%;
         margin: 0 2rem;
@@ -50,7 +41,6 @@
 
     .mphb-room-type {
         padding: $spacingXs $spacingS $spacingXl;
-        // border: 2px solid $Primary;
         margin-top: 0 !important;
         max-width: 45%;
         min-width: 32rem;
@@ -63,7 +53,6 @@
     .flexslider{
         border: 4px solid rgba(216, 227, 236, .4);
         @include bgColorOpacity($Lightgray, .4);
-        // color: rgba(216, 227, 236, .4);
     }
 
     .mphb-room-type-details-title{
@@ -95,8 +84,7 @@
     .mphb-flexslider.mphb-gallery-slider:first-child{
         height: 25rem !important;
         overflow: hidden;
-        // border: 1px solid red;
-    
+
         *{
             height: 100% !important;
         }
@@ -116,10 +104,6 @@
         margin-bottom: $spacingS;
     }
     
-    .mphb-rooms-quantity-wrapper{
-        
-        
-    }
 
     input{
         margin-bottom: $spacingS;
@@ -132,7 +116,6 @@
     }
 
     select{
-        // padding: 0 $spacingXxs;
         border-radius: .4rem;
     }
 
@@ -177,6 +160,4 @@
             margin-bottom: 1.5rem;
         }
     }
-
-
 }

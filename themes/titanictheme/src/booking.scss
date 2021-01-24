@@ -3,14 +3,16 @@
     // flex-direction: column;
     // align-items: center;
     // border: 1px solid red;
-    padding: $spacingL;
+    // padding: $spacingL;
     background-color: $White;
+    padding: $spacingL*2 $spacingL*2 $spacingL * 4 $spacingL*2;
 
-
+    &__BackToHarborButton{
+        @include button;
+        display: inline-block;
+    }
 
     &__FormWrapper {
-        // width: 100%;
-        // border: 1px solid blue;
         background: white;
         text-align: left;
         flex: 1 1 85%;
@@ -333,7 +335,6 @@
     }
 
     .mphb-total-price{
-        padding-left: $spacingS;
         margin-bottom: $spacingS;
         output, span{
             @include h1;
@@ -342,8 +343,7 @@
     }
     .mphb_sc_checkout-submit-wrapper{
         display: flex;
-        justify-content: center;
-        margin-bottom: $spacingL * 2;
+
         input{
             background-color: $Primary;
             padding: .8rem 4rem;
@@ -364,8 +364,9 @@
         margin-bottom: $spacingS;
         color: $Primary;
     }
-
+    
     &__ConfirmationText{
         @include p;
+        margin-bottom: $spacingL;
     }
 }

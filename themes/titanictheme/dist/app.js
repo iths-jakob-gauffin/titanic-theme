@@ -96,8 +96,9 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _searchResult__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./searchResult */ "./src/searchResult.js");
+ // import Cards from "./cards";
 
-Object(_searchResult__WEBPACK_IMPORTED_MODULE_0__["default"])();
+Object(_searchResult__WEBPACK_IMPORTED_MODULE_0__["default"])(); // Cards();
 
 /***/ }),
 
@@ -150,6 +151,21 @@ var searchResult = function searchResult() {
       priceDOM.innerHTML = "";
       priceDOM.appendChild(priceParagraph);
     });
+    var answerDOM = document.querySelector('h2.SearchResults__QueryTitle');
+    var amountOfHarbors = test.length;
+    var answerString = "";
+
+    if (amountOfHarbors !== 0 && amountOfHarbors !== 1) {
+      answerString = amountOfHarbors + " hamnar";
+    } else if (amountOfHarbors === 1) {
+      answerString = amountOfHarbors + " hamn";
+    } else {
+      answerString = false;
+    }
+
+    ;
+    var string = answerString ? "Det g\xE5r att boka plats p\xE5 ".concat(answerString, " mellan dina valda datum.") : "Det finns tyv\xE4rr inga lediga platser mellan dina valda datum. F\xF6rs\xF6k igen med andra datum.";
+    answerDOM.innerText = string;
   })(jQuery);
 };
 
@@ -164,8 +180,8 @@ var searchResult = function searchResult() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\jenni\Local Sites\newtitanictheme\app\public\wp-content\themes\titanictheme\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! C:\Users\jenni\Local Sites\newtitanictheme\app\public\wp-content\themes\titanictheme\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! C:\Users\Jakob\Local Sites\titanicny\app\public\wp-content\themes\themes\titanictheme\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Jakob\Local Sites\titanicny\app\public\wp-content\themes\themes\titanictheme\src\app.scss */"./src/app.scss");
 
 
 /***/ })

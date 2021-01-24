@@ -35,6 +35,22 @@ const searchResult = () => {
         })
 
         
+        let answerDOM = document.querySelector('h2.SearchResults__QueryTitle'); 
+
+        let amountOfHarbors = test.length;
+        let answerString = "";
+        if(amountOfHarbors !== 0 && amountOfHarbors !== 1){
+            answerString = amountOfHarbors + " hamnar";
+        } else if(amountOfHarbors === 1){
+            answerString = amountOfHarbors + " hamn";
+        } else{
+            answerString = false;
+        };
+
+        let string = answerString ? `Det går att boka plats på ${answerString} mellan dina valda datum.` : `Det finns tyvärr inga lediga platser mellan dina valda datum. Försök igen med andra datum.`;
+        answerDOM.innerText = string;
+
+        
     })(jQuery);
 };
 

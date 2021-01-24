@@ -38,37 +38,26 @@
                             'tennis' => 'fas fa-baseball-ball',
                         );
             ?> 
-            <div class="ArchiveHarbor__HarborCard ArchiveHarbor__HarborCard--Drop">
-                <div class="ArchiveHarbor__HarborCardImage" style="background: url('<?php the_post_thumbnail_url(); ?>')">
-                </div>
+            <div class="ArchiveHarbor__HarborCard" style="background: url('<?php the_post_thumbnail_url(); ?>')">
                 <a class="ArchiveHarbor__HarborLink" href="<?php the_permalink(); ?>"></a>
-                <div class="ArchiveHarbor__PriceWrapper">
-                    <p class="ArchiveHarbor__Price"><?php echo get_field("price"); ?><span class="ArchiveHarbor__Price ArchiveHarbor__Price--Per"> kr</span></p>
-                    <p class="ArchiveHarbor__Price ArchiveHarbor__Price--Per">per natt</p>
-                </div>
                 <div class="ArchiveHarbor__ContentWrapper">
                     <a href="<?php the_permalink(); ?>">
                         <h2 class="ArchiveHarbor__Title"><?php the_title(); ?>s gästhamn</h2>
                     </a>
-                    <div class="ArchiveHarbor__AmenitieTitleAndAmenitieListWrapper">
-                        <h5 class="ArchiveHarbor__AmenitieTitle">Bekvämligheter</h5>
-                        <ul class="ArchiveHarbor__AmenitieList"> 
-                        <?php                        
-                        foreach($cats as $cat){
-                                $name = get_cat_name( $cat ); 
-                                ?> 
-                                <li class="ArchiveHarbor__AmenitieListItem">
-                                <i class="<?php echo $icons[mb_strtolower($name)]; ?>" aria-hidden=true></i>
-                                <?php echo $name; ?>
-                                </li>
-                            <?php
-                            }
-                        ?>
-                        </ul>
-                    </div>
-                    <div class="ArchiveHarbor__BookButtonWrapper">
-                        <a href="<?php echo site_url("accommodation/" . strtolower(get_the_title())); ?>" class="ArchiveHarbor__BookButton">Boka</a>
-                    </div>
+                    <ul class="ArchiveHarbor__AmenitieList"> 
+                    <?php                        
+                    foreach($cats as $cat){
+                            $name = get_cat_name( $cat ); 
+                            ?> 
+                            <li class="ArchiveHarbor__AmenitieListItem">
+                            <i class="<?php echo $icons[mb_strtolower($name)]; ?>" aria-hidden=true></i>
+                            <?php echo $name; ?>
+                            </li>
+                        <?php
+                        }
+                    ?>
+                    </ul>
+                    <a href="<?php echo site_url("accommodation/" . strtolower(get_the_title())); ?>" class="ArchiveHarbor__BookButton">Boka</a>
                         
                 </div>
 

@@ -6,7 +6,7 @@
     flex-direction: column;
     // align-items: center;
     // border: 1px solid red;
-    padding: $spacingL;
+    padding: $spacingL*2 $spacingL*2 $spacingL * 4 $spacingL*2;
     
     &__EntryInfoWrapper{
         display: flex;
