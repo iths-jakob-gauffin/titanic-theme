@@ -1,40 +1,5 @@
 @import "./variables.scss";
 
-.Events_List {
-    height: 100%;
-    width: 100%;
-    // padding: 0 4rem;
-    margin: 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    @include p;
-    // position: relative;
-    border: 1px solid black;
-}
-
-.Events_ListItem {
-    border: 1px solid red;
-    top: 0;
-    left: 0;
-    width: 25%;
-    height: 25%;
-    // position: relative;
-}
-
-.Events_CustomFieldImageContainer {
-    height: 25rem;
-    width: 25rem;
-    border: 1px solid blue;
-}
-
-.Events_CustomFieldImage {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border: 1px solid black;
-}
-
 .Events {
 
     // width: 100%;
@@ -76,6 +41,53 @@
 
 // <------------- EVENTS MAIN BODY START ------------->
         
+    // &__OuterListItem {
+    // height: 100%;
+    // width: 25%;
+    // // padding: 0 4rem;
+    // margin: 40px;
+    // display: flex;
+    // flex-direction: row;
+    // align-items: center;
+    // @include p;
+    // // position: relative;
+    // border: 1px solid black;
+    // }
+
+    &__List {
+    height: 100%;
+    width: 100%;
+    // padding: 0 4rem;
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include p;
+    // position: relative;
+    border: 1px solid black;
+    }
+
+    &__ListItem {
+    border: 1px solid red;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 25%;
+    // position: relative;
+    }
+
+    &__CustomFieldImageContainer {
+    height: 25rem;
+    width: 25rem;
+    border: 1px solid blue;
+    }
+
+    &__CustomFieldImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid black;
+    }
 
     &__ListTitle {
         @include h2;
@@ -85,24 +97,5 @@
         // padding: 5rem 0 0.5rem 0;
     }
 
-
-
-    // &__CustomFieldImageContainer > &__CustomFieldImage {
-    //     height: 100%;
-    //     width: 100%;
-    //     object-fit: cover;
-    // }
-
-    // &__CustomFieldImage {
-    //     height: 100%;
-    //     width: 100%;
-    //     object-fit: cover;
-    // }
-
-    &__ImageContainer {
-        height: 40rem;
-        width: 100%;
-        // object-fit: cover;
-    }
 // <------------- EVENTS MAIN BODY END ------------->
 }
