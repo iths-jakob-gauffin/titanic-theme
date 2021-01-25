@@ -40,21 +40,6 @@
         color: $Primary;
         margin-bottom: $spacingL;
     }
-    
-    &__ArchiveHarbor{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: $spacingL * 2;
-    // padding: $spacingL*2 $spacingL*2 $spacingL * 4 $spacingL*2;
-
-        @for $i from 0 through 3 {
-            :nth-child(#{$i + 1}){
-              transition-delay: .25s * $i;
-            }
-        }
-    }
 
     //Flexwrapperklassen är injectad i shortcoden på front-page.php. Den här klassen behövs för att linjera alla accommodations bredvid varandra, istället för att presenteras som en kolumn.
     &__FlexWrapper {

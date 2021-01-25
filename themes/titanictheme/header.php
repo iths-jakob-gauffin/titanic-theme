@@ -72,9 +72,9 @@
             navList($_SESSION['hamn']);
         ?>
         <div class="Header__SearchAndUserWrapper">
-            <div class='Header__SearchWrapper'>;
+            <div class='Header__SearchWrapper'>
                 <?php echo get_search_form(); ?>
-            </div>;
+            </div>
             <?php if( is_user_logged_in() ){?>
                 <div class="Header__UserWrapper">
                 <a href="<?php echo wp_login_url();?>" class="Header__UserIcon"><img src="<?php echo get_template_directory_uri() . '/dist/icons/user.svg'; ?>" alt=""></a>

@@ -1,128 +1,74 @@
 @import "./variables.scss";
 
-.SingleHarbor {
+.ArchiveHarbor {
     background-color: white;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: $spacingL*2 $spacingL*2 $spacingL * 4 $spacingL*2;
-    // border: 1px solid red;
-
-    &__Title {
-        font-size: 2.5rem;
-        // border: 1px solid black;
-    }
     
-    &__RichTextAndMapWrapper{
-        display: flex;
-        margin-bottom: $spacingL * 2;
-    }
-
-    &__RichText{
-        flex: 1 1 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    &__HarborCard{
+        position: relative;
+        height: 40rem;
+        min-width: 35rem;
+        flex: 1 1 40rem;
         margin-right: $spacingL;
-        // border: 1px solid red;
-
-        h2{
-            color: $Primary;
-            @include h2;
-            margin-bottom: $spacingS;
-        }
-    
-        p{
-            @include p;
-        }
-    }
-
-    &__RichTextWrapper{
-        // border: 1px solid blue;
-    }
-
-    &__BookingButton{
-        @include button;
-        // display: inline-flex;
-        // width: 5rem;
-        display: inline;
-        // display: inline-block;
-
-        &--Entry{
-            display: inline-block;
-            // font-size: 6rem;
-            // align-self: flex-end;
-        }
-
-        &--Large{
-            // width: 100%;
-            @include h2;
-            display: block;
-            text-align: center;
-            padding-left: 5rem;
-            padding-right: 5rem;
-        }
-    }
-
-    &__MapWrapper{
-        flex: 1 1 50%;
-        min-height: 45rem;
-        max-height: 65rem;
-
-        iframe:first-of-type{
-            width: 100% !important;
-            height: 100% !important;
-        }
-    }
-
-    &__ExtraInfoSection{
-        display: flex;
-        width: 100%;
-        margin-bottom: $spacingL * 2;
-        // border: 1px solid red;
-    }
-
-    &__Amenities{
-        margin-right: $spacingS;
-
+        background-size: cover !important;
         &:last-child{
             margin-right: 0;
         }
-
-        &--Amenities{
-            flex: 0 1 20%;
-
-            
-        }
-        &--Events{
-            flex: 1 1 30%;
-
-        }
-        &--Posts{
-            flex: 1 1 50%;
-        }
+        overflow: hidden;
     }
 
-    &__AmenitieTitle{
-        padding: $spacingXxs;
-        padding-left: $spacingS;
+    &__HarborLink{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    &__ContentWrapper{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        // height: 100%;
+        @include bgColorOpacity($White, .9);
+        padding: $spacingM;
         display: block;
-        @include label;
-        background-color: $Primary;
-        color: $White;
     }
+
+    &__Title {
+        font-size: 2.5rem;
+        color: $Primary;
+        margin-bottom: $spacingS;
+    }
+
     &__AmenitieList{
-        background-color: $Lightgray;
+        // background-color: $Lightgray;
         list-style: none;
-        padding: $spacingXs;
+        // padding: $spacingXs;
+        // border: 1px solid blue;
+        // display: block;
+        display: flex;
+        // flex-direction: row;
+        margin-right: $spacingL;
+        flex-wrap: wrap;
+        margin-bottom: $spacingS;
         
     }
 
     &__AmenitieListItem{
+        max-width: 45%;
+        flex: 1 1 50%;
         display: flex;
         align-items: center;
         @include listItem;
         margin-bottom: $spacingXxs;
+        // border: 1px solid red;
+        // display: inline-block;
 
         i{
             margin-right: $spacingXs;
@@ -132,6 +78,14 @@
             text-align: center;
         }
     }
+
+    &__BookButton{
+        @include button;
+        display: inline-block;
+        position: relative;
+        z-index: 10;
+    }
+    
 
     &__EventListItem{
         position: relative;
@@ -204,18 +158,6 @@
         width: calc(100% - 7.5rem);
         margin-right: $spacingS;
     }
-
-    &__TitleAndDateWrapper{
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__PublishedDate{
-        @include label;
-        font-weight: 700;
-        color: $Primary;
-    }
-
     &__PostTitle{
         margin-bottom: $spacingXxs;
         @include h4;
@@ -278,7 +220,7 @@
     &__Carousel{
         // border: 1px solid red;
         width: 100%;
-        margin: 0 0 $spacingL* 2 0;
+        margin: 0 0 $spacingL* 3 0;
 
         img{
             width: 100% !important;

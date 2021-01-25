@@ -34,9 +34,11 @@
             </h1>
         </div>
         <div class="Gallery__StaffBox">
-            <p class="Gallery__StaffTitle">Här kan du logga in</p>
-            <a href="<?php echo wp_login_url();?>" class="Gallery__Button">Logga in</a>
-            <a href="<?php echo wp_registration_url();?>" class="Gallery__Button">Skapa konto</a>
+            <p class="Gallery__StaffTitle">Personallogin</p>
+            <div class="Gallery__ButtonsWrapper">
+                <a href="<?php echo wp_login_url();?>" class="Gallery__Button">Logga in</a>
+                <a href="<?php echo wp_registration_url();?>" class="Gallery__Button">Skapa konto</a>
+            </div>
         </div>
     </div>
 

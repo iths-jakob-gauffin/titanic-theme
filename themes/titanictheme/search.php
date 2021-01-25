@@ -4,7 +4,7 @@
         <div class="Search__BackgroundImage" style="background: url('<?php echo get_template_directory_uri() . '/dist/image/search.jpg'; ?>')">
         ¨<div class="Search__TitleWrapper">
             <h1 class="Search__Title">
-            Sökresultat för <br> "<?php 
+            Sökresultat för "<?php 
             echo $wp_query->query['s'];
             ?>"
             </h1>
@@ -120,14 +120,14 @@
                     }
                 wp_reset_postdata();
             ?> :</h2>
-                <ul>
+                <ul class="Search__SearchList">
                 <?php foreach($harborsWithCategory->posts as $harbor){
                     ?>
                     <li class="Search__AmenitieList"><a class="Search__AmenitieLink" href="<?php the_permalink($harbor); ?>"><?php echo $harbor->post_title; ?></a></li>
-                </ul>
-                <?php
+                    <?php
                 } 
             }?>
+                </ul>
             </aside>
         </div>
     </div>

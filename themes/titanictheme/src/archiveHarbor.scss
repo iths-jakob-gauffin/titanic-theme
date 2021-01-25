@@ -1,0 +1,368 @@
+@import "./variables.scss";
+
+.ArchiveHarbor {
+    background-color: $White;
+    // background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacingL*2 $spacingL*2 $spacingL * 4 $spacingL*2;
+
+    @for $i from 0 through 3 {
+        :nth-child(#{$i + 1}){
+          transition-delay: .25s * $i;
+        }
+    }
+
+    &__HarborCard{
+        transform: translateX(0);
+        transition: all .7s ease-out;
+
+        // &:hover{
+        //     transform: translateY(-2rem);
+        // }
+
+        &--Drop{
+            transform: translateX(15rem);
+            opacity: 0;
+        }
+    }
+
+    
+    
+    &__HarborCard{
+        position: relative;
+        min-width: 35rem;
+        flex: 1 1 40rem;
+        // min-height: 60rem;
+        margin-right: $spacingL;
+        box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+        overflow: hidden;
+
+        
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        
+    }
+    
+    &__HarborCardImage{
+        position: relative;
+        background-size: cover !important;
+        padding-top: 30rem;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        // border: 1px solid red;
+        
+        &::after{
+            content: "";
+            background: url("graphics/ny1.svg");
+            background-size: contain !important;
+            background-repeat: no-repeat;
+            background-position-y: 101%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            // width: 100%;
+        }
+    }
+
+    &__HarborLink{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    &__ContentWrapper{
+        // margin-top: 20rem;
+        // position: absolute;
+        // bottom: 0;
+        // left: 0;
+        // width: 100%;
+        // height: 100%;
+        // @include bgColorOpacity($White, .9);
+        padding: $spacingM;
+        // display: block;
+        background-color: $Lightgray;
+        position: relative;
+    }
+    
+    &__Title {
+        position: absolute;
+        top: -8.5rem;
+        // @include bgColorOpacity($Primary, .6);
+        background: linear-gradient(to right, rgba(16, 112, 168, .5) 20%, rgba(16, 112, 168, .8) 100%);
+        padding: $spacingXxs $spacingS $spacingXxs $spacingM;
+        font-size: 2.5rem;
+        font-weight: 100;
+        color: $White;
+        // color: $Primary;
+        margin-left: -2rem;
+        margin-bottom: $spacingS;
+    }
+    
+    &__AmenitieTitleAndAmenitieListWrapper{
+        position: absolute;
+        top: -1rem;
+        width: 100%;
+        
+    }
+
+    &__AmenitieTitle{
+        @include h4;
+        color: $Primary;
+        margin-bottom: $spacingXs;
+    }
+
+    &__AmenitieList{
+        position: absolute;
+        // border: 1px solid red;
+        width: 100%;
+        
+        // background-color: $Lightgray;
+        // background-color: $Lightgray;
+        list-style: none;
+        // padding: $spacingXs;
+        // border: 1px solid blue;
+        // display: block;
+        display: flex;
+        // flex-direction: row;
+        margin-right: $spacingL;
+        flex-wrap: wrap;
+        margin-bottom: $spacingS;
+        
+    }
+
+    &__AmenitieListItem{
+        max-width: 45%;
+        flex: 1 1 50%;
+        display: flex;
+        align-items: center;
+        @include listItem;
+        margin-bottom: $spacingXxs;
+        // border: 1px solid red;
+        // display: inline-block;
+
+        i{
+            margin-right: $spacingXs;
+            font-size: 1.2rem;
+            width: 2rem;
+            display: inline-block;
+            text-align: center;
+        }
+    }
+
+    &__PriceWrapper{
+        position: absolute;
+        top: 3rem;
+        right: 2rem;
+        font-weight: 700;
+        color: $White;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(15deg);
+        
+        &::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $Primary;
+            width: 8.5rem;
+            height: 8.5rem;
+            border-radius: 50%;
+            z-index: 1;
+        }
+    }
+
+    &__Price{
+        position: relative;
+        z-index: 10;
+        @include h3;
+
+        &--Per{
+            @include label;
+        }
+    }
+
+    &__BookButtonWrapper{
+        padding-top: 15rem;
+        padding-bottom: $spacingS;
+    }
+
+    &__BookButton{
+        @include button;
+        display: inline-block;
+        position: relative;
+        z-index: 10;
+    }
+    
+
+    &__EventListItem{
+        position: relative;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        @include listItem;
+        // margin-bottom: $spacingXs;
+        padding: $spacingXs $spacingXs $spacingXs $spacingM;
+        // padding-bottom: $spacingXs;
+        border-bottom: 1px solid $Primary;
+        
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+
+    &__DateAndEventTitleWrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    &__EventDay{
+        @include h3;
+    }
+    &__EventMonth{
+        @include h3;
+
+    }
+    &__EventTitle{
+        @include h3;
+        text-transform: uppercase;
+
+    }
+    &__EventThumbnailWrapper{
+        display: flex;
+        align-items: center;
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+    &__EventThumbnail{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__EventTitle{
+        @include h3;
+        text-transform: uppercase;
+    }
+
+    &__PostListItem{
+        position: relative;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        @include listItem;
+        padding: $spacingXs $spacingXs $spacingXs $spacingM;
+        border-bottom: 1px solid $Primary;
+        
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+
+    &__PostTextWrapper{
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 7.5rem);
+        margin-right: $spacingS;
+    }
+    &__PostTitle{
+        margin-bottom: $spacingXxs;
+        @include h4;
+    }
+    &__PostContent{
+        @include p;
+    }
+
+    &__PostThumbnailWrapper{
+        display: flex;
+        align-items: center;
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+    &__PostThumbnail{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__AmenitieLink{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    &__EventList,
+    &__PostList{
+        list-style: none;
+    }
+
+    &__PostListItem,
+    &__EventListItem{
+        background-color: $Lightgray;
+        transition: all $transition;
+        position: relative;
+
+        &:hover{
+            background-color: $White;
+            
+            &::after{
+                border-left: 3px solid $Primary;
+            }
+        }
+
+        &::after{
+            content: "";
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: 0;
+        }
+    }
+
+    &__Carousel{
+        // border: 1px solid red;
+        width: 100%;
+        margin: 0 0 $spacingL* 3 0;
+
+        img{
+            width: 100% !important;
+            height: 35rem !important;
+            object-fit: cover;
+        }
+    }
+
+    &__SectionHeader{
+        @include h2;
+        color: $Primary;
+        margin-bottom: $spacingL;
+        text-align: left;
+        align-self: flex-start;
+    }
+
+
+
+
+
+}
+

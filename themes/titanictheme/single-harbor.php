@@ -30,14 +30,26 @@ $specificHarbor = [];
 
     // echo var_dump($specificHarbor[0]->post_title);
 
+    $today = date("Ymd");
+
     $events = new WP_Query(array(
-        'numberposts' => 5,
+        'posts_per_page' => 3,
         'post_type' => 'event',
+        'meta_key' => 'event_date',
+        'orderby' => 'meta_value_num',
+        'order' => 'ASC',
         'meta_query' => array(
+            'relation' => 'AND',
             array(
                 'key' => 'hamn',
                 'compare' => 'LIKE',
                 'value' => '"' . get_the_ID() . '"'
+            ),
+            array(
+                'key' => 'event_date',
+                'compare' => '>=',
+                'value' => $today,
+                'type' => 'numeric'
             )
         )
     ));
@@ -45,7 +57,7 @@ $specificHarbor = [];
     // echo var_dump($events->posts);
     
     $blogPosts = new WP_Query(array(
-        'numberposts' => 5,
+        'posts_per_page' => 3,
         'post_type' => 'post',
         'meta_query' => array(
             array(
@@ -55,7 +67,6 @@ $specificHarbor = [];
                 )
                 )
     ));
-    // wp_reset_postdata();
     // echo var_dump($blogPosts->posts);
     ?>
 
@@ -77,13 +88,17 @@ $specificHarbor = [];
                 ?> 
                     <div class="SingleHarbor__RichTextAndMapWrapper">
                         <section class="SingleHarbor__RichText">
-                            <?php the_content(); ?>
-                            <a href="<?php echo esc_url(site_url("accommodation/" . strtolower($_SESSION['hamn']))); ?>" class="SingleHarbor__BookingButton" >Till bokningen</a>
+                            <div class="SingleHarbor__RichTextWrapper">      
+                                <?php the_content(); ?>
+                            </div><div class="SingleHarbor__ButtonWrapper">
+                                <a href="<?php echo esc_url(site_url("accommodation/" . strtolower($_SESSION['hamn']))); ?>" class="SingleHarbor__BookingButton SingleHarbor__BookingButton--Entry" >Till bokningen</a>
+                            </div>
                         </section>
                         <div class="SingleHarbor__MapWrapper">
                             <?php echo get_field("map_url"); ?>
                         </div>
                     </div>
+                    <hr class="FrontPage__Hr FrontPage__Hr--SingleHarbor">
                     
                     <?php
                     
@@ -182,9 +197,14 @@ $specificHarbor = [];
                             <li class="SingleHarbor__PostListItem">
                                 <a href="<?php the_permalink(); ?>" class="SingleHarbor__AmenitieLink"></a>
                                 <div class="SingleHarbor__PostTextWrapper">
-                                    <h5 class="SingleHarbor__PostTitle">
-                                        <?php the_title(); ?>
-                                    </h5>
+                                    <div class="SingleHarbor__TitleAndDateWrapper">
+                                        <h5 class="SingleHarbor__PostTitle">
+                                            <?php echo mb_strimwidth(get_the_title(), 0 , 40, "..."); ?>
+                                        </h5>
+                                        <p class="SingleHarbor__PublishedDate">
+                                            <?php echo get_the_date(); ?>
+                                        </p>
+                                    </div>
                                     <p class="SingleHarbor__PostContent">
                                         <?php echo wp_trim_words(get_the_content(), 25); ?>
                                     </p>
@@ -201,6 +221,7 @@ $specificHarbor = [];
                     </ul>
                 </div>
             </section>
+            <hr class="FrontPage__Hr FrontPage__Hr--SingleHarbor">
             
                 
             <?php 

@@ -101,14 +101,14 @@
     }
 
     &__StaffBox{
-        // background-color: $White;
-        background-color: $Lightgray;
-        padding: $spacingM 5rem $spacingM $spacingM * 2; 
+        background-color: $White;
+        padding: $spacingM 5rem 0 $spacingM * 2; 
         display: inline-block;
         position: absolute;
         bottom: 0;
         right: 0;
         border-top-left-radius: 5rem;
+        margin-right: 5rem; 
 
         // a:first-child{
         //     margin-right: 5rem !important;
@@ -124,12 +124,17 @@
         // display: block;
         @include h2;
         font-weight: 700;
-        margin-bottom: $spacingS*2;
+        margin-bottom: $spacingM;
         color: $Primary;
     }
     
+    &__ButtonsWrapper{
+        border-bottom: 3px solid $Primary;
+        padding-bottom: $spacingM;
+    }
+
     &__Button{
-        // display: block;
+        display: inline-block;
         @include button;
         @include h3;
 
