@@ -2,13 +2,12 @@
 
 .ArchiveHarbor {
     background-color: $White;
-    // background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: $spacingL*2 $spacingL*2 $spacingL * 4 $spacingL*2;
 
-    @for $i from 0 through 3 {
+    @for $i from 0 through 20 {
         :nth-child(#{$i + 1}){
           transition-delay: .25s * $i;
         }
@@ -18,13 +17,18 @@
         transform: translateX(0);
         transition: all .7s ease-out;
 
-        // &:hover{
-        //     transform: translateY(-2rem);
-        // }
-
         &--Drop{
             transform: translateX(15rem);
             opacity: 0;
+        }
+        
+        &--Hover{
+            transition-delay: 0s !important;
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover.ArchiveHarbor__HarborCard--Hover{
+            transform: translateY(-1.5rem);
         }
     }
 
@@ -34,18 +38,13 @@
         position: relative;
         min-width: 35rem;
         flex: 1 1 40rem;
-        // min-height: 60rem;
         margin-right: $spacingL;
         box-shadow: 5px 5px 10px rgba(0,0,0,.5);
         overflow: hidden;
 
-        
-
         &:last-child{
             margin-right: 0;
         }
-
-        
     }
     
     &__HarborCardImage{
@@ -55,21 +54,37 @@
         width: 100%;
         height: 100%;
         z-index: 0;
-        // border: 1px solid red;
-        
+        display: block;
+
+        &::before{
+            content: "";
+            position: absolute;
+            z-index: 9;
+            @include bgColorOpacity($Black, .2);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 1;
+            transition: opacity $transition;
+
+            .ArchiveHarbor__HarborCard:hover &{
+                opacity: 0;
+            }
+        }
+
         &::after{
             content: "";
             background: url("graphics/ny1.svg");
             background-size: contain !important;
             background-repeat: no-repeat;
-            background-position-y: 101%;
+            background-position-y: 100%;
             position: absolute;
-            bottom: 0;
+            bottom: -1px;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: 10;
-            // width: 100%;
         }
     }
 
@@ -83,15 +98,7 @@
     }
 
     &__ContentWrapper{
-        // margin-top: 20rem;
-        // position: absolute;
-        // bottom: 0;
-        // left: 0;
-        // width: 100%;
-        // height: 100%;
-        // @include bgColorOpacity($White, .9);
-        padding: $spacingM;
-        // display: block;
+        padding: $spacingM;        
         background-color: $Lightgray;
         position: relative;
     }
@@ -99,13 +106,11 @@
     &__Title {
         position: absolute;
         top: -8.5rem;
-        // @include bgColorOpacity($Primary, .6);
         background: linear-gradient(to right, rgba(16, 112, 168, .5) 20%, rgba(16, 112, 168, .8) 100%);
         padding: $spacingXxs $spacingS $spacingXxs $spacingM;
         font-size: 2.5rem;
         font-weight: 100;
         color: $White;
-        // color: $Primary;
         margin-left: -2rem;
         margin-bottom: $spacingS;
     }
@@ -114,7 +119,6 @@
         position: absolute;
         top: -1rem;
         width: 100%;
-        
     }
 
     &__AmenitieTitle{
@@ -125,21 +129,12 @@
 
     &__AmenitieList{
         position: absolute;
-        // border: 1px solid red;
         width: 100%;
-        
-        // background-color: $Lightgray;
-        // background-color: $Lightgray;
         list-style: none;
-        // padding: $spacingXs;
-        // border: 1px solid blue;
-        // display: block;
         display: flex;
-        // flex-direction: row;
         margin-right: $spacingL;
         flex-wrap: wrap;
         margin-bottom: $spacingS;
-        
     }
 
     &__AmenitieListItem{
@@ -149,8 +144,6 @@
         align-items: center;
         @include listItem;
         margin-bottom: $spacingXxs;
-        // border: 1px solid red;
-        // display: inline-block;
 
         i{
             margin-right: $spacingXs;
@@ -217,9 +210,7 @@
         align-items: center;
         justify-content: space-between;
         @include listItem;
-        // margin-bottom: $spacingXs;
         padding: $spacingXs $spacingXs $spacingXs $spacingM;
-        // padding-bottom: $spacingXs;
         border-bottom: 1px solid $Primary;
         
         &:last-child{
@@ -341,7 +332,6 @@
     }
 
     &__Carousel{
-        // border: 1px solid red;
         width: 100%;
         margin: 0 0 $spacingL* 3 0;
 
@@ -359,10 +349,5 @@
         text-align: left;
         align-self: flex-start;
     }
-
-
-
-
-
 }
 
