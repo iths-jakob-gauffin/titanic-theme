@@ -31,13 +31,16 @@
     <!-- <h1>Det hääär är Index.php</h1> -->
     <!-- --------Header-------- -->
     <!-- <div class="Blog"> -->
-        <div class="Blog__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')"> 
-            <div class="Blog__TitleWrapper">
-                <h1 class="Blog__Title">
-                <?php echo ucfirst($_SESSION['hamn']);?> Blogg
+    <div class="BackgroundImageWrapper">
+        <div class="Search__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
+            <div class="Search__TitleWrapper">
+                <h1 class="Search__Title">
+                <?php echo ucfirst($_SESSION['hamn']); ?>s blogg
                 </h1>
+                <p style="font-size: 3rem; color: white;">Single-harbor.php</p>
             </div>
-        </div>
+        </div>  
+    </div> 
     <!-- </div> -->
 <!-- --------Header slut---------- -->
 
