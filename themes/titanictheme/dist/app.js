@@ -96,11 +96,9 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _searchResult__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./searchResult */ "./src/searchResult.js");
-// import jQuery from "jquery";
- // const searchResult = new SearchResult();
+ // import Cards from "./cards";
 
-Object(_searchResult__WEBPACK_IMPORTED_MODULE_0__["default"])(); // import accommodationSingle from "./accommodationSingle";
-// accommodationSingle();
+Object(_searchResult__WEBPACK_IMPORTED_MODULE_0__["default"])(); // Cards();
 
 /***/ }),
 
@@ -126,23 +124,14 @@ Object(_searchResult__WEBPACK_IMPORTED_MODULE_0__["default"])(); // import accom
 __webpack_require__.r(__webpack_exports__);
 var searchResult = function searchResult() {
   (function ($) {
-    // $(".mphb-room-type").wrapAll('<div class="testwrapper"></div>');
-    // $(".mphb-room-type").wrap('<div class="innerwrapper"></div>');
-    // $(".mphb-room-type-title").wrap('<div class="detailWrapper"></div>');
-    // $(".mphb-loop-room-type-attributes").wrap('<div class="detailWrapper"></div>');
-    // $(".detailWrapper").wrapAll('<div class="detailsWrapper"></div>');
     var test = Array.from(document.querySelectorAll('.mphb-room-type-title.entry-title'));
-    console.log("🚀 ~ file: searchResult.js ~ line 11 ~ searchResult ~ test", test);
     test.map(function (card) {
       var text = card.nextSibling.nextSibling;
-      console.log("🚀 ~ file: searchResult.js ~ line 15 ~ searchResult ~ text", text);
       text.classList.add("detailToFlex");
       var cost = text.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling;
-      console.log("🚀 ~ file: searchResult.js ~ line 19 ~ searchResult ~ cost", cost);
       cost.classList.add("detailToFlex");
     });
     var roomCards = Array.from(document.querySelectorAll('.mphb-room-type'));
-    console.log("🚀 ~ file: searchResult.js ~ line 23 ~ searchResult ~ rooms", roomCards);
     roomCards.map(function (room) {
       var stuff = Array.from(room.querySelectorAll(".detailToFlex"));
       var wrapper = document.createElement("div");
@@ -153,82 +142,34 @@ var searchResult = function searchResult() {
       var reserveStuff = room.querySelector(".mphb-reserve-room-section");
       room.insertBefore(wrapper, reserveStuff);
       var cost = room.querySelector(".mphb-price").innerText;
-      console.log("🚀 ~ file: searchResult.js ~ line 43 ~ searchResult ~ cost", cost);
-      var amount = cost.split("kr").join("");
-      var currency = cost.slice(0, 2); // let priceString = amount + " " + currency;    
-      // console.log("🚀 ~ file: searchResult.js ~ line 47 ~ searchResult ~ priceString", priceString)
-
       var period = room.querySelector('.mphb-price-period').innerText;
-      console.log("🚀 ~ file: searchResult.js ~ line 50 ~ searchResult ~ period", period);
-      console.log("rummet: ", room);
       var priceDOM = room.querySelector(".mphb-regular-price.detailToFlex");
-      var priceString = amount + " " + currency + " " + period + ".";
+      var priceString = cost + " " + period + ".";
       var priceParagraph = document.createElement("p");
       priceParagraph.innerText = priceString;
-      priceParagraph.className = "priceString"; // priceDOM.innerHTML = amount + " " + currency + " " + period + ".";
-      // priceDOM.innerHTML = priceString;
-
+      priceParagraph.className = "priceString";
       priceDOM.innerHTML = "";
       priceDOM.appendChild(priceParagraph);
-    }); // let test = document.querySelector('.mphb-price').innerText;
-    // let test2 = document.querySelector('.mphb-price-period').innerText;
-    // let sum = test.split("kr").join("");
-    // let currency = test.slice(0,2);
-    // let priceString = sum + " " + currency + " " + test2;
-    // let paragraph = test[0].nextSibling.nextSibling;
-    // paragraph.classList.add("detailToFlex");
-    // console.log("🚀 ~ file: searchResult.js ~ line 13 ~ searchResult ~ paragraph", paragraph.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling);
-    // let price = paragraph.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling;
-    // price.classList.add("detailToFlex");
-    // console.log("🚀 ~ file: searchResult.js ~ line 17 ~ searchResult ~ price", price)
-    // let rooms = Array.from(document.querySelectorAll('.mphb-room-type'));
-    // console.log("🚀 ~ file: searchResult.js ~ line 23 ~ searchResult ~ rooms", rooms)
-    // let details = rooms[0].querySelectorAll(".detailToFlex");
-    // console.log("🚀 ~ file: searchResult.js ~ line 20 ~ searchResult ~ details", details);
-    // let detailWrapper = document.createElement("div");
-    // detailWrapper.insertAdjacentElement("beforeend", details[0]);
-    // detailWrapper.insertAdjacentElement("beforeend", details[1]);
-    // detailWrapper.classList.add("detailFlexWrapper");
-    // let reserveBox = rooms[0].querySelector(".mphb-reserve-room-section");
-    // console.log("🚀 ~ file: searchResult.js ~ line 36 ~ searchResult ~ reserveBox", reserveBox)
-    // rooms[0].insertBefore(detailWrapper, reserveBox);
+    });
+    var answerDOM = document.querySelector('h2.SearchResults__QueryTitle');
+    var amountOfHarbors = test.length;
+    var answerString = "";
+
+    if (amountOfHarbors !== 0 && amountOfHarbors !== 1) {
+      answerString = amountOfHarbors + " hamnar";
+    } else if (amountOfHarbors === 1) {
+      answerString = amountOfHarbors + " hamn";
+    } else {
+      answerString = false;
+    }
+
+    ;
+    var string = answerString ? "Det g\xE5r att boka plats p\xE5 ".concat(answerString, " mellan dina valda datum.") : "Det finns tyv\xE4rr inga lediga platser mellan dina valda datum. F\xF6rs\xF6k igen med andra datum.";
+    answerDOM.innerText = string;
   })(jQuery);
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (searchResult); // const searchResult = () => {
-//     (function($) {
-//         // $(".mphb-room-type").wrapAll('<div class="testwrapper"></div>');
-//         // $(".mphb-room-type").wrap('<div class="innerwrapper"></div>');
-//         // $(".mphb-room-type-title").wrap('<div class="detailWrapper"></div>');
-//         // $(".mphb-loop-room-type-attributes").wrap('<div class="detailWrapper"></div>');
-//         // $(".detailWrapper").wrapAll('<div class="detailsWrapper"></div>');
-//         let test = Array.from(document.querySelectorAll('.mphb-room-type-title.entry-title'))
-//         // console.log("🚀 ~ file: searchResult.js ~ line 11 ~ searchResult ~ test", test[0].nextSibling.nextSibling);
-//         let paragraph = test[0].nextSibling.nextSibling;
-//         paragraph.classList.add("detailToFlex");
-//         console.log("🚀 ~ file: searchResult.js ~ line 13 ~ searchResult ~ paragraph", paragraph.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling);
-//         let price = paragraph.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling;
-//         price.classList.add("detailToFlex");
-//         console.log("🚀 ~ file: searchResult.js ~ line 17 ~ searchResult ~ price", price)
-//         let rooms = Array.from(document.querySelectorAll('.mphb-room-type'));
-//         console.log("🚀 ~ file: searchResult.js ~ line 23 ~ searchResult ~ rooms", rooms)
-//         let details = rooms[0].querySelectorAll(".detailToFlex");
-//         console.log("🚀 ~ file: searchResult.js ~ line 20 ~ searchResult ~ details", details);
-//         let detailWrapper = document.createElement("div");
-//         // detailWrapper.innerHTML = details
-//         // details.map(detail => {
-//             detailWrapper.insertAdjacentElement("beforeend", details[0]);
-//             detailWrapper.insertAdjacentElement("beforeend", details[1]);
-//             // detailWrapper.innerHTML = details[1];
-//         // })
-//         detailWrapper.classList.add("detailFlexWrapper");
-//         // console.log(detailWrapper);
-//         let reserveBox = rooms[0].querySelector(".mphb-reserve-room-section");
-//         console.log("🚀 ~ file: searchResult.js ~ line 36 ~ searchResult ~ reserveBox", reserveBox)
-//         rooms[0].insertBefore(detailWrapper, reserveBox);
-//     })(jQuery);
-// };
-// export default searchResult;
+/* harmony default export */ __webpack_exports__["default"] = (searchResult);
 
 /***/ }),
 
@@ -239,8 +180,8 @@ var searchResult = function searchResult() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\SS\Local Sites\titanictheme\app\public\wp-content\themes\titanictheme\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! C:\Users\SS\Local Sites\titanictheme\app\public\wp-content\themes\titanictheme\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! C:\Users\jenni\Local Sites\newtitanictheme\app\public\wp-content\themes\titanictheme\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! C:\Users\jenni\Local Sites\newtitanictheme\app\public\wp-content\themes\titanictheme\src\app.scss */"./src/app.scss");
 
 
 /***/ })

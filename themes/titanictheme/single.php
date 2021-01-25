@@ -22,16 +22,18 @@
                 Single.php
             </h1> -->
     <!-- --------Header-------- -->
-    <div class="Blog">
-        <div class="Blog__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
-        
-        ¨<div class="Blog__TitleWrapper">
-            <h1 class="Blog__Title">
-                <!-- här vill man göra Stor första bokstav -->
-               <?php echo ucfirst($_SESSION['hamn']);?> Blogginlägg
-            </h1>
-        </div>
-    </div>
+    <!-- <div class="Blog"> -->
+    <div class="BackgroundImageWrapper">
+        <div class="Search__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
+            <div class="Search__TitleWrapper">
+                <h1 class="Search__Title">
+                <?php echo ucfirst($_SESSION['hamn']); ?>s blogginlägg
+                </h1>
+                <p style="font-size: 3rem; color: white;">Single-harbor.php</p>
+            </div>
+        </div>  
+    </div>  
+    <!-- </div> -->
 <!-- --------Header slut---------- -->
         <div class="container">
             <main class="SingleBlog">
@@ -63,8 +65,8 @@
     }
     wp_reset_postdata();
     ?>
-            </main>
-            </div>
+        </main>
+        </div>
 
 
 

@@ -1,12 +1,6 @@
-// import jQuery from "jquery";
 import SearchResult from "./searchResult";
+// import Cards from "./cards";
 
-// const searchResult = new SearchResult();
 SearchResult();
 
-
-// import accommodationSingle from "./accommodationSingle";
-
-
-// accommodationSingle();
-
+// Cards();

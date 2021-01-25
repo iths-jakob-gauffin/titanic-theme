@@ -2,13 +2,16 @@
 
 .Blog {
 
-    padding-bottom: 5rem;
-
+    background-color: white;
+    padding: 5rem 0 10rem 0;
 
     &__Post {
 
         padding: 0 5rem;
         font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         @include xxl {
             padding: 0 10rem;
@@ -30,6 +33,7 @@
 
     &__PostTitle {
         @include h2;
+        color: $Primary;
         // border: 1px solid black;
         padding: 5rem 0 0.5rem 0;
     }
@@ -40,6 +44,7 @@
 
     &__PostDate {
         padding: 0 0 3rem 0;
+        color: $Primary;
     }
 
     &__PostLink {
@@ -69,7 +74,6 @@
         background-size: cover !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
-        margin-bottom: 5rem;
     }
 
     &__TitleWrapper {

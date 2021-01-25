@@ -21,27 +21,31 @@
     }
     // echo var_dump($imgUrl);
 ?>
-
-    <h1>Det här är archive-gallery.php</h1>
+<!-- 
+    <h1>Det här är archive-gallery.php</h1> -->
     <?php 
     
     ?>
-    <div class="Gallery">
-        <div class="Gallery__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
-        ¨<div class="Gallery__TitleWrapper">
-            <h1 class="Gallery__Title">
-                Personal
-            </h1>
+    <div class="BackgroundImageWrapper">
+        <div class="Search__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
+            <div class="Search__TitleWrapper">
+                <h1 class="Search__Title">
+                <?php echo ucfirst($_SESSION['hamn']); ?>s gästhamn
+                </h1>
+                <p style="font-size: 3rem; color: white;">Single-harbor.php</p>
+            </div>
+            <div class="Gallery__StaffBox">
+            <p class="Gallery__StaffTitle">Inloggning för personal</p>
+            <div class="Gallery__ButtonsWrapper">
+                <a href="<?php echo wp_login_url();?>" class="Gallery__Button">Logga in</a>
+                <a href="<?php echo wp_registration_url();?>" class="Gallery__Button">Skapa konto</a>
+            </div>
         </div>
-        <div class="Gallery__StaffBox">
-            <p class="Gallery__StaffTitle">Här kan du logga in</p>
-            <a href="<?php echo wp_login_url();?>" class="Gallery__Button">Logga in</a>
-            <a href="<?php echo wp_registration_url();?>" class="Gallery__Button">Skapa konto</a>
-        </div>
-    </div>
+        </div>  
+    </div>  
 
-
-    <div class="container">    
+    <div class="container"> 
+    <!-- <div class="blogcontainer">       -->
     <ul class="Gallery__List">
         
         <?php
@@ -58,7 +62,7 @@
             // echo var_dump($staff);
 
             // $image = get_field('gallery_image')['sizes']['medium'];
-            $image = get_field('gallery_image');
+            $image = get_field('gallery_image')['sizes']['pizza'];
             $galleryName = get_field('gallery_name');
             $galleryTitle =get_field('gallery_title');
             $galleryContactEmail =get_field('gallery_contactemail');

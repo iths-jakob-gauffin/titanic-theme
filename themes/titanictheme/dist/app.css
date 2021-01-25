@@ -106,6 +106,8 @@ a {
   height: 8rem;
   overflow: hidden;
   position: relative;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 .Header__Logo {
   width: 15%;
@@ -148,7 +150,7 @@ a {
   font-weight: 900;
   text-transform: uppercase;
   text-decoration: none;
-  color: #1070A8;
+  color: #1070a8;
   height: 100%;
   width: 100%;
   display: flex;
@@ -160,7 +162,7 @@ a {
 }
 .Header__Link--Active {
   color: white;
-  background-color: #1070A8;
+  background-color: #1070a8;
 }
 .Header__LinkText {
   position: relative;
@@ -190,9 +192,15 @@ a {
 .Header__LinkIconWrapper--Active {
   transform: translate(-50%, -60%);
 }
+.Header__SearchForm {
+  display: flex;
+  align-items: center;
+}
 .Header__SearchField {
   padding: 0.5rem;
   min-width: 25rem;
+  min-width: 20rem;
+  padding: 0.7rem;
 }
 .Header__SearchAndUserWrapper {
   display: flex;
@@ -209,7 +217,7 @@ a {
   height: 4.5rem;
   padding-left: 1.5rem;
   margin-left: 1.5rem;
-  border-left: 3px solid #1070A8;
+  border-left: 3px solid #1070a8;
 }
 .Header__UserIcon {
   height: 4rem;
@@ -230,13 +238,13 @@ a {
 .Header__UserName {
   font-size: 2rem;
   font-weight: 700;
-  color: #1070A8;
-  border-bottom: 2px solid #1070A8;
+  color: #1070a8;
+  border-bottom: 2px solid #1070a8;
 }
 .Header__Logout {
   font-size: 1.2rem;
   text-transform: uppercase;
-  color: #1070A8;
+  color: #1070a8;
 }
 
 .container {
@@ -245,11 +253,15 @@ a {
 }
 
 .Blog {
-  padding-bottom: 5rem;
+  background-color: white;
+  padding: 5rem 0 10rem 0;
 }
 .Blog__Post {
   padding: 0 5rem;
   font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 1400px) {
   .Blog__Post {
@@ -268,6 +280,7 @@ a {
 }
 .Blog__PostTitle {
   font-size: 2.5rem;
+  color: #1070a8;
   padding: 5rem 0 0.5rem 0;
 }
 .Blog__PostText {
@@ -275,6 +288,7 @@ a {
 }
 .Blog__PostDate {
   padding: 0 0 3rem 0;
+  color: #1070a8;
 }
 .Blog__PostLink {
   position: absolute;
@@ -300,7 +314,6 @@ a {
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  margin-bottom: 5rem;
 }
 .Blog__TitleWrapper {
   position: absolute;
@@ -329,11 +342,15 @@ a {
 }
 
 .SingleBlog {
-  padding-bottom: 5rem;
+  padding: 0 0 10rem 0;
+  background-color: white;
 }
 .SingleBlog__Post {
   padding: 0 5rem;
   font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 1400px) {
   .SingleBlog__Post {
@@ -352,12 +369,14 @@ a {
 }
 .SingleBlog__PostTitle {
   font-size: 2.5rem;
+  color: #1070a8;
   padding: 5rem 0 0.5rem 0;
 }
 .SingleBlog__PostText {
   padding: 5rem 0;
 }
 .SingleBlog__PostDate {
+  color: #1070a8;
   padding: 0 0 3rem 0;
 }
 .SingleBlog__Image {
@@ -402,7 +421,7 @@ a {
   height: 100%;
 }
 .SingleBlog__Text__Button {
-  background-color: #1070A8;
+  background-color: #1070a8;
   padding: 0.8rem 4rem;
   color: white;
   font-weight: 500;
@@ -446,15 +465,61 @@ a {
   background-size: cover;
   background-position: center;
   position: relative;
+  padding: 5rem 5rem 10rem 5rem;
+  background-color: white;
+}
+.FrontPage__WelcomeText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #1070a8;
+  padding: 10rem 10rem;
+  background: radial-gradient(white 0%, transparent 60%);
+}
+.FrontPage__Hr {
+  margin-bottom: 4rem;
+  color: #1070a8;
+  background-color: #1070a8;
+  height: 1px;
+  width: 30%;
+}
+.FrontPage__Hr--SingleHarbor {
+  margin-bottom: 2.5rem;
+}
+.FrontPage__Title {
+  font-size: 2.5rem;
+  color: #1070a8;
+  margin-bottom: 2.5rem;
+}
+.FrontPage__ArchiveHarbor {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.FrontPage__ArchiveHarbor :nth-child(1) {
+  transition-delay: 0s;
+}
+.FrontPage__ArchiveHarbor :nth-child(2) {
+  transition-delay: 0.25s;
+}
+.FrontPage__ArchiveHarbor :nth-child(3) {
+  transition-delay: 0.5s;
+}
+.FrontPage__ArchiveHarbor :nth-child(4) {
+  transition-delay: 0.75s;
 }
 .FrontPage__FlexWrapper {
   display: flex;
   width: 100%;
-  margin: 2rem 0 4rem 0;
+  margin: 2rem 0 5rem 0;
 }
 .FrontPage__FlexWrapper .post-thumbnail {
   height: 20rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   position: relative;
 }
 .FrontPage__FlexWrapper .post-thumbnail::after {
@@ -481,7 +546,7 @@ a {
   flex-wrap: wrap;
 }
 .FrontPage__FlexWrapper .innerwrapper {
-  background-color: white;
+  background-color: rgba(216, 227, 236, 0.9);
   display: flex;
   flex: 1 1 30%;
   max-width: 40%;
@@ -495,16 +560,31 @@ a {
   margin-right: 0;
 }
 .FrontPage__FlexWrapper .innerwrapper h2 {
-  font-size: 2.5rem;
-  margin-left: 1.5rem;
+  font-size: 3rem;
   margin-bottom: 1.3rem;
+  text-align: center;
 }
 .FrontPage__FlexWrapper .innerwrapper a, .FrontPage__FlexWrapper .innerwrapper a:visited {
-  color: #1070A8;
+  color: #1070a8;
+}
+.FrontPage__FlexWrapper .innerwrapper form {
+  display: block;
+  padding: 1.5rem;
 }
 .FrontPage__FlexWrapper .innerwrapper button {
-  margin-left: 1.5rem;
-  margin-bottom: 1.5rem;
+  width: 100%;
+  background-color: #1070a8;
+  padding: 0.8rem 4rem;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.5rem;
+  font-size: 1.8rem;
+}
+.FrontPage__FlexWrapper .innerwrapper button:hover {
+  background-color: #0b4e75;
 }
 .FrontPage__FlexWrapper .mphb_sc_rooms-wrapper,
 .FrontPage__FlexWrapper .mphb-room-type:not(:first-of-type),
@@ -521,6 +601,12 @@ a {
   top: 0;
   left: 0;
 }
+.FrontPage form {
+  display: block;
+}
+.FrontPage .mphb_sc_search-wrapper {
+  margin-bottom: 2.5rem;
+}
 .FrontPage .mphb_sc_search-form * {
   font-size: 1.5rem;
 }
@@ -529,6 +615,7 @@ a {
   font-weight: 500;
   margin-bottom: 0.5rem;
   display: inline-block;
+  color: #1070a8;
 }
 .FrontPage .mphb_sc_search-form input {
   padding: 0.5rem;
@@ -536,7 +623,7 @@ a {
   min-width: 100%;
 }
 .FrontPage .mphb_sc_search-form .button {
-  background-color: #1070A8;
+  background-color: #1070a8;
   padding: 0.8rem 4rem;
   color: white;
   font-weight: 500;
@@ -562,8 +649,22 @@ body {
 
 .Booking {
   display: flex;
-  padding: 2.5rem;
   background-color: white;
+  padding: 5rem 5rem 10rem 5rem;
+}
+.Booking__BackToHarborButton {
+  background-color: #1070a8;
+  padding: 0.8rem 4rem;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+.Booking__BackToHarborButton:hover {
+  background-color: #0b4e75;
 }
 .Booking__FormWrapper {
   background: white;
@@ -577,7 +678,7 @@ body {
 }
 .Booking__FormWrapper .mphb-booking-details-title,
 .Booking__FormWrapper .mphb-customer-details-title {
-  color: #1070A8;
+  color: #1070a8;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -586,7 +687,7 @@ body {
 }
 .Booking__FormWrapper h3 .Booking__ConfirmationHarbor {
   font-size: 3rem;
-  color: #1070A8;
+  color: #1070a8;
   margin-bottom: 2rem;
 }
 .Booking__FormWrapper .mphb-check-out-date {
@@ -614,7 +715,7 @@ body {
   display: block;
   font-size: 1.5rem;
   font-weight: 500;
-  background-color: #1070A8;
+  background-color: #1070a8;
   color: white;
 }
 .Booking__AmenitieList {
@@ -660,7 +761,7 @@ body {
 .Booking .mphb-price-breakdown-title,
 .Booking .mphb-price-breakdown-total {
   font-size: 2.5rem;
-  color: #1070A8;
+  color: #1070a8;
 }
 .Booking .mphb-price-breakdown-title th, .Booking .mphb-price-breakdown-title span,
 .Booking .mphb-price-breakdown-total th,
@@ -754,7 +855,7 @@ body {
 .Booking__AnyQuestionsTitle {
   font-size: 4rem !important;
   margin-bottom: 1rem;
-  color: #1070A8;
+  color: #1070a8;
 }
 .Booking__AnyQuestionsText {
   font-size: 3rem;
@@ -802,20 +903,17 @@ body {
   min-width: 25rem;
 }
 .Booking .mphb-total-price {
-  padding-left: 1.5rem;
   margin-bottom: 1.5rem;
 }
 .Booking .mphb-total-price output, .Booking .mphb-total-price span {
   font-size: 3rem;
-  color: #1070A8;
+  color: #1070a8;
 }
 .Booking .mphb_sc_checkout-submit-wrapper {
   display: flex;
-  justify-content: center;
-  margin-bottom: 5rem;
 }
 .Booking .mphb_sc_checkout-submit-wrapper input {
-  background-color: #1070A8;
+  background-color: #1070a8;
   padding: 0.8rem 4rem;
   color: white;
   font-weight: 500;
@@ -829,10 +927,11 @@ body {
 .Booking__ConfirmationTitle {
   font-size: 3rem;
   margin-bottom: 1.5rem;
-  color: #1070A8;
+  color: #1070a8;
 }
 .Booking__ConfirmationText {
   font-size: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .SearchResults {
@@ -840,10 +939,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 5rem 5rem 10rem 5rem;
 }
 .SearchResults__Title {
   font-size: 2.5rem;
   border: 1px solid black;
+}
+.SearchResults__QueryTitle {
+  font-size: 2.5rem;
+  color: #1070a8;
+  margin-bottom: 5rem;
 }
 .SearchResults__Text {
   font-size: 2rem;
@@ -891,7 +996,7 @@ body {
 }
 .SearchResults .mphb-room-type-title {
   font-size: 2.5rem;
-  color: #1070A8;
+  color: #1070a8;
   margin-bottom: 0.5rem;
 }
 .SearchResults .mphb-reservation-cart {
@@ -935,7 +1040,7 @@ body {
   margin-bottom: 1.5rem;
 }
 .SearchResults .button {
-  background-color: #1070A8;
+  background-color: #1070a8;
   padding: 0.8rem 4rem;
   color: white;
   font-weight: 500;
@@ -962,7 +1067,7 @@ body {
   margin-right: 5rem;
   font-size: 2rem;
   font-weight: 500;
-  color: #1070A8;
+  color: #1070a8;
   display: block;
   margin-bottom: 1.5rem;
 }
@@ -987,7 +1092,6 @@ body {
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  margin-bottom: 5rem;
 }
 .Gallery__TitleWrapper {
   position: absolute;
@@ -1023,6 +1127,8 @@ body {
   flex-wrap: wrap;
   list-style: none;
   justify-content: space-between;
+  padding: 5rem 5rem 10rem 5rem;
+  background-color: white;
 }
 .Gallery__ListItem {
   width: 100%;
@@ -1047,7 +1153,7 @@ body {
 }
 .Gallery__CardTitle {
   padding: 1.5rem 0 1rem 0;
-  color: #1070A8;
+  color: #1070a8;
   font-size: 2.5rem;
   font-weight: 700 !important;
 }
@@ -1055,22 +1161,28 @@ body {
   font-size: 2rem;
 }
 .Gallery__StaffBox {
-  background-color: #D8E3EC;
-  padding: 2rem 5rem 2rem 4rem;
+  background-color: white;
+  padding: 2rem 5rem 0 4rem;
   display: inline-block;
   position: absolute;
   bottom: 0;
   right: 0;
   border-top-left-radius: 5rem;
+  margin-right: 5rem;
 }
 .Gallery__StaffTitle {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 3rem;
-  color: #1070A8;
+  margin-bottom: 2rem;
+  color: #1070a8;
+}
+.Gallery__ButtonsWrapper {
+  border-bottom: 3px solid #1070a8;
+  padding-bottom: 2rem;
 }
 .Gallery__Button {
-  background-color: #1070A8;
+  display: inline-block;
+  background-color: #1070a8;
   padding: 0.8rem 4rem;
   color: white;
   font-weight: 500;
@@ -1159,9 +1271,9 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  border: 1px solid red;
 }
 .Search__BackgroundImage {
+  box-shadow: inset 0px -10px 10px -10px rgba(0, 0, 0, 0.5);
   position: relative;
   height: 20rem;
   width: 100%;
@@ -1169,16 +1281,22 @@ body {
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
+.Search__SearchList {
+  display: flex;
+  flex-direction: column;
+}
 .Search__Title {
   position: absolute;
   color: white;
   font-size: 3rem;
   background-color: rgba(16, 112, 168, 0.7);
-  padding: 1.5rem 5rem 1.5rem 5rem;
+  padding: 1.5rem 5rem 1.5rem 10rem;
   margin: 0;
   font-weight: 400;
   top: 44%;
   left: 0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 .Search__QueryString {
   font-size: 2.5rem;
@@ -1195,7 +1313,7 @@ body {
   flex: 1 1 45%;
 }
 .Search__ResultLink {
-  border-bottom: 1px solid #1070A8;
+  border-bottom: 1px solid #1070a8;
   display: inline-block;
 }
 .Search__ResultTitle {
@@ -1209,7 +1327,7 @@ body {
 }
 .Search__ResultText {
   font-size: 3.5rem;
-  color: #1070A8;
+  color: #1070a8;
   margin-bottom: 1rem;
 }
 .Search__LabelWrapper {
@@ -1232,7 +1350,6 @@ body {
   margin: 0 0.6rem;
 }
 .Search__Amenities {
-  border: 1px solid red;
   flex: 1 1 55%;
   padding: 1.5rem 1.5rem 2rem;
   background-color: white;
@@ -1246,15 +1363,15 @@ body {
   list-style: none;
   margin-left: 4rem;
   margin-bottom: 2rem;
-  border-bottom: 1px solid #1070A8;
   display: inline-block;
   padding-bottom: 0.6rem;
 }
 .Search__AmenitieLink {
   font-size: 3.5rem;
-  color: #1070A8;
+  color: #1070a8;
   margin-bottom: 1rem;
   font-weight: 700;
+  border-bottom: 1px solid #1070a8;
 }
 
 .map {
@@ -1268,7 +1385,7 @@ body {
 }
 
 button {
-  background-color: #1070A8;
+  background-color: #1070a8;
   padding: 0.8rem 4rem;
   color: white;
   font-weight: 500;
@@ -1283,10 +1400,10 @@ button:hover {
 
 .mphb-reserve-btn.button {
   font-size: 1.5rem;
-  border: 2px solid #1070A8;
+  border: 2px solid #1070a8;
   background-color: white;
   padding: 0.8rem 4rem;
-  color: #1070A8;
+  color: #1070a8;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   font-weight: 900;
@@ -1297,7 +1414,7 @@ button:hover {
 
 .button.mphb-button.mphb-confirm-reservation {
   font-size: 1.5rem;
-  background-color: #1070A8;
+  background-color: #1070a8;
   padding: 0.8rem 4rem;
   color: white;
   font-weight: 500;
@@ -1325,7 +1442,7 @@ button:hover {
   background-color: white;
   display: flex;
   flex-direction: column;
-  padding: 2.5rem;
+  padding: 5rem 5rem 10rem 5rem;
 }
 .SingleMRT__EntryInfoWrapper {
   display: flex;
@@ -1336,7 +1453,7 @@ button:hover {
   margin-right: 2.5rem;
 }
 .SingleMRT__RichText h2 {
-  color: #1070A8;
+  color: #1070a8;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
@@ -1345,7 +1462,6 @@ button:hover {
 }
 .SingleMRT__Amenities {
   flex: 1 1 25%;
-  background-color: #D8E3EC;
 }
 .SingleMRT__AmenitieTitle {
   padding: 0.5rem;
@@ -1353,12 +1469,13 @@ button:hover {
   display: block;
   font-size: 1.5rem;
   font-weight: 500;
-  background-color: #1070A8;
+  background-color: #1070a8;
   color: white;
 }
 .SingleMRT__AmenitieList {
   list-style: none;
   padding: 1rem;
+  background-color: #D8E3EC;
 }
 .SingleMRT__AmenitieListItem {
   display: flex;
@@ -1398,7 +1515,7 @@ button:hover {
 }
 .SingleMRT__FormWrapper .mphb-room-type-gallery-wrapper h3 {
   font-size: 2rem;
-  color: #1070A8;
+  color: #1070a8;
 }
 .SingleMRT__FormWrapper #gallery-1 {
   margin: 0;
@@ -1415,7 +1532,7 @@ button:hover {
 .SingleMRT .bookingWrapper {
   padding-bottom: 1rem;
   margin-bottom: 2rem;
-  border-bottom: 1px solid #1070A8;
+  border-bottom: 1px solid #1070a8;
 }
 .SingleMRT .bookingWrapper .leftWrapper:nth-child(2) {
   margin-bottom: 2rem;
@@ -1434,7 +1551,7 @@ button:hover {
   margin-right: 2rem;
   font-size: 2rem;
   font-weight: 500;
-  color: #1070A8;
+  color: #1070a8;
   display: inline-block;
   margin-bottom: 1.5rem;
 }
@@ -1588,7 +1705,7 @@ button:hover {
 }
 .login #loginform label {
   margin-bottom: 1rem;
-  color: #1070A8;
+  color: #1070a8;
 }
 .login #loginform input {
   margin-bottom: 2.5rem;
@@ -1625,7 +1742,7 @@ button:hover {
 .login #loginform .submit input {
   display: block;
   width: 100%;
-  background-color: #1070A8;
+  background-color: #1070a8;
   padding: 0.8rem 4rem;
   color: white;
   font-weight: 500;
@@ -1646,7 +1763,7 @@ button:hover {
   padding-bottom: 5rem;
 }
 .login #nav a {
-  color: #1070A8;
+  color: #1070a8;
   transition: color 0.2s ease-in-out;
 }
 .login #nav a:hover {
@@ -1661,7 +1778,7 @@ button:hover {
 }
 .login #registerform label {
   margin-bottom: 1rem;
-  color: #1070A8;
+  color: #1070a8;
 }
 .login #registerform input {
   margin-bottom: 2.5rem;
@@ -1697,14 +1814,14 @@ button:hover {
   margin: 0;
   border: none;
   font-size: 2rem;
-  color: #1070A8;
+  color: #1070a8;
   padding: 0 2.4rem;
   padding-top: 2.5rem;
 }
 .login #wp-submit {
   display: block;
   width: 100%;
-  background-color: #1070A8;
+  background-color: #1070a8;
   padding: 0.8rem 4rem;
   color: white;
   font-weight: 500;
@@ -1726,4 +1843,569 @@ button:hover {
   font-size: 1.5rem;
   border-left: none;
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+.container {
+  padding: 0rem 5rem;
+  position: relative;
+}
+
+.SingleHarbor {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 5rem 10rem 5rem;
+}
+.SingleHarbor__Title {
+  font-size: 2.5rem;
+}
+.SingleHarbor__RichTextAndMapWrapper {
+  display: flex;
+  margin-bottom: 5rem;
+}
+.SingleHarbor__RichText {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 2.5rem;
+}
+.SingleHarbor__RichText h2 {
+  color: #1070a8;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.SingleHarbor__RichText p {
+  font-size: 1.5rem;
+}
+.SingleHarbor__BookingButton {
+  background-color: #1070a8;
+  padding: 0.8rem 4rem;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.5rem;
+  display: inline;
+}
+.SingleHarbor__BookingButton:hover {
+  background-color: #0b4e75;
+}
+.SingleHarbor__BookingButton--Entry {
+  display: inline-block;
+}
+.SingleHarbor__BookingButton--Large {
+  font-size: 2.5rem;
+  display: block;
+  text-align: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.SingleHarbor__MapWrapper {
+  flex: 1 1 50%;
+  min-height: 45rem;
+  max-height: 65rem;
+}
+.SingleHarbor__MapWrapper iframe:first-of-type {
+  width: 100% !important;
+  height: 100% !important;
+}
+.SingleHarbor__ExtraInfoSection {
+  display: flex;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.SingleHarbor__Amenities {
+  margin-right: 1.5rem;
+}
+.SingleHarbor__Amenities:last-child {
+  margin-right: 0;
+}
+.SingleHarbor__Amenities--Amenities {
+  flex: 0 1 20%;
+}
+.SingleHarbor__Amenities--Events {
+  flex: 1 1 30%;
+}
+.SingleHarbor__Amenities--Posts {
+  flex: 1 1 50%;
+}
+.SingleHarbor__AmenitieTitle {
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: #1070a8;
+  color: white;
+}
+.SingleHarbor__AmenitieList {
+  background-color: #D8E3EC;
+  list-style: none;
+  padding: 1rem;
+}
+.SingleHarbor__AmenitieListItem {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.SingleHarbor__AmenitieListItem i {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  width: 2rem;
+  display: inline-block;
+  text-align: center;
+}
+.SingleHarbor__EventListItem {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 1rem 1rem 2rem;
+  border-bottom: 1px solid #1070a8;
+}
+.SingleHarbor__EventListItem:last-child {
+  border-bottom: none;
+}
+.SingleHarbor__DateAndEventTitleWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.SingleHarbor__EventDay {
+  font-size: 2rem;
+}
+.SingleHarbor__EventMonth {
+  font-size: 2rem;
+}
+.SingleHarbor__EventTitle {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.SingleHarbor__EventThumbnailWrapper {
+  display: flex;
+  align-items: center;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.SingleHarbor__EventThumbnail {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.SingleHarbor__EventTitle {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.SingleHarbor__PostListItem {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 1rem 1rem 2rem;
+  border-bottom: 1px solid #1070a8;
+}
+.SingleHarbor__PostListItem:last-child {
+  border-bottom: none;
+}
+.SingleHarbor__PostTextWrapper {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 7.5rem);
+  margin-right: 1.5rem;
+}
+.SingleHarbor__TitleAndDateWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.SingleHarbor__PublishedDate {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-weight: 700;
+  color: #1070a8;
+}
+.SingleHarbor__PostTitle {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+.SingleHarbor__PostContent {
+  font-size: 1.5rem;
+}
+.SingleHarbor__PostThumbnailWrapper {
+  display: flex;
+  align-items: center;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.SingleHarbor__PostThumbnail {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.SingleHarbor__AmenitieLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.SingleHarbor__EventList, .SingleHarbor__PostList {
+  list-style: none;
+}
+.SingleHarbor__PostListItem, .SingleHarbor__EventListItem {
+  background-color: #D8E3EC;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+.SingleHarbor__PostListItem:hover, .SingleHarbor__EventListItem:hover {
+  background-color: white;
+}
+.SingleHarbor__PostListItem:hover::after, .SingleHarbor__EventListItem:hover::after {
+  border-left: 3px solid #1070a8;
+}
+.SingleHarbor__PostListItem::after, .SingleHarbor__EventListItem::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.SingleHarbor__Carousel {
+  width: 100%;
+  margin: 0 0 5rem 0;
+}
+.SingleHarbor__Carousel img {
+  width: 100% !important;
+  height: 35rem !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.SingleHarbor__SectionHeader {
+  font-size: 2.5rem;
+  color: #1070a8;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.container {
+  padding: 0rem 5rem;
+  position: relative;
+}
+
+.ArchiveHarbor {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 5rem 10rem 5rem;
+}
+.ArchiveHarbor :nth-child(1) {
+  transition-delay: 0s;
+}
+.ArchiveHarbor :nth-child(2) {
+  transition-delay: 0.25s;
+}
+.ArchiveHarbor :nth-child(3) {
+  transition-delay: 0.5s;
+}
+.ArchiveHarbor :nth-child(4) {
+  transition-delay: 0.75s;
+}
+.ArchiveHarbor__HarborCard {
+  transform: translateX(0);
+  transition: all 0.7s ease-out;
+}
+.ArchiveHarbor__HarborCard--Drop {
+  transform: translateX(15rem);
+  opacity: 0;
+}
+.ArchiveHarbor__HarborCard {
+  position: relative;
+  min-width: 35rem;
+  flex: 1 1 40rem;
+  margin-right: 2.5rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.ArchiveHarbor__HarborCard:last-child {
+  margin-right: 0;
+}
+.ArchiveHarbor__HarborCardImage {
+  position: relative;
+  background-size: cover !important;
+  padding-top: 30rem;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.ArchiveHarbor__HarborCardImage::after {
+  content: "";
+  background: url("graphics/ny1.svg");
+  background-size: contain !important;
+  background-repeat: no-repeat;
+  background-position-y: 101%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.ArchiveHarbor__HarborLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.ArchiveHarbor__ContentWrapper {
+  padding: 2rem;
+  background-color: #D8E3EC;
+  position: relative;
+}
+.ArchiveHarbor__Title {
+  position: absolute;
+  top: -8.5rem;
+  background: linear-gradient(to right, rgba(16, 112, 168, 0.5) 20%, rgba(16, 112, 168, 0.8) 100%);
+  padding: 0.5rem 1.5rem 0.5rem 2rem;
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: white;
+  margin-left: -2rem;
+  margin-bottom: 1.5rem;
+}
+.ArchiveHarbor__AmenitieTitleAndAmenitieListWrapper {
+  position: absolute;
+  top: -1rem;
+  width: 100%;
+}
+.ArchiveHarbor__AmenitieTitle {
+  font-size: 1.8rem;
+  color: #1070a8;
+  margin-bottom: 1rem;
+}
+.ArchiveHarbor__AmenitieList {
+  position: absolute;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  margin-right: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.ArchiveHarbor__AmenitieListItem {
+  max-width: 45%;
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.ArchiveHarbor__AmenitieListItem i {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  width: 2rem;
+  display: inline-block;
+  text-align: center;
+}
+.ArchiveHarbor__PriceWrapper {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(15deg);
+}
+.ArchiveHarbor__PriceWrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1070a8;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  z-index: 1;
+}
+.ArchiveHarbor__Price {
+  position: relative;
+  z-index: 10;
+  font-size: 2rem;
+}
+.ArchiveHarbor__Price--Per {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.ArchiveHarbor__BookButtonWrapper {
+  padding-top: 15rem;
+  padding-bottom: 1.5rem;
+}
+.ArchiveHarbor__BookButton {
+  background-color: #1070a8;
+  padding: 0.8rem 4rem;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.5rem;
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+}
+.ArchiveHarbor__BookButton:hover {
+  background-color: #0b4e75;
+}
+.ArchiveHarbor__EventListItem {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 1rem 1rem 2rem;
+  border-bottom: 1px solid #1070a8;
+}
+.ArchiveHarbor__EventListItem:last-child {
+  border-bottom: none;
+}
+.ArchiveHarbor__DateAndEventTitleWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.ArchiveHarbor__EventDay {
+  font-size: 2rem;
+}
+.ArchiveHarbor__EventMonth {
+  font-size: 2rem;
+}
+.ArchiveHarbor__EventTitle {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.ArchiveHarbor__EventThumbnailWrapper {
+  display: flex;
+  align-items: center;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.ArchiveHarbor__EventThumbnail {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ArchiveHarbor__EventTitle {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.ArchiveHarbor__PostListItem {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 1rem 1rem 2rem;
+  border-bottom: 1px solid #1070a8;
+}
+.ArchiveHarbor__PostListItem:last-child {
+  border-bottom: none;
+}
+.ArchiveHarbor__PostTextWrapper {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 7.5rem);
+  margin-right: 1.5rem;
+}
+.ArchiveHarbor__PostTitle {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+.ArchiveHarbor__PostContent {
+  font-size: 1.5rem;
+}
+.ArchiveHarbor__PostThumbnailWrapper {
+  display: flex;
+  align-items: center;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.ArchiveHarbor__PostThumbnail {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ArchiveHarbor__AmenitieLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.ArchiveHarbor__EventList, .ArchiveHarbor__PostList {
+  list-style: none;
+}
+.ArchiveHarbor__PostListItem, .ArchiveHarbor__EventListItem {
+  background-color: #D8E3EC;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+.ArchiveHarbor__PostListItem:hover, .ArchiveHarbor__EventListItem:hover {
+  background-color: white;
+}
+.ArchiveHarbor__PostListItem:hover::after, .ArchiveHarbor__EventListItem:hover::after {
+  border-left: 3px solid #1070a8;
+}
+.ArchiveHarbor__PostListItem::after, .ArchiveHarbor__EventListItem::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.ArchiveHarbor__Carousel {
+  width: 100%;
+  margin: 0 0 7.5rem 0;
+}
+.ArchiveHarbor__Carousel img {
+  width: 100% !important;
+  height: 35rem !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ArchiveHarbor__SectionHeader {
+  font-size: 2.5rem;
+  color: #1070a8;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  align-self: flex-start;
 }

@@ -31,18 +31,17 @@ function titanicFiles(){
         // echo "JAAA";
         wp_register_script('jakobsSearchResultJavascript', get_template_directory_uri() . '/dist/search.js', ['jquery'], 1, true);
         wp_enqueue_script('jakobsSearchResultJavascript');
-    } else{
-        // echo "nejsan";
-    }
-
+    } 
 
     if(is_page( "booking-confirmation" )){
         wp_register_script('jakobsConfirmBookingJavascript', get_template_directory_uri() . '/dist/confirm.js', ['jquery'], 1, true);
         wp_enqueue_script('jakobsConfirmBookingJavascript');
-        // echo "det är bokning";
-    } else {
-        // echo "DET ÄR INTE BOKNING";
-    }
+    } 
+
+    if(is_front_page() || is_post_type_archive( 'harbor' )){
+        wp_register_script('jakobsCardSlideJavascript', get_template_directory_uri() . '/dist/cardSlide.js', ['jquery'], 1, true);
+        wp_enqueue_script('jakobsCardSlideJavascript');
+    } 
 
 }
 
@@ -56,6 +55,7 @@ function titanicFeatures(){
 
     add_image_size( 'pizza', 479, 400, true );
     add_image_size( 'backgroundImage', 1440, 500, true );
+    add_image_size( 'carouselImage', 500, 350, true );
 
 }
 
@@ -189,7 +189,7 @@ function navList($harbor){
                     
                     <a href="<?php echo esc_url(site_url('events')); ?>"
                     class="<?php 
-                    $activePage = is_page("events");
+                    $activePage = is_page("events") || is_singular("event");
                     $cssClass = ($activePage? "Header__Link Header__Link--Active" : "Header__Link");
                     echo $cssClass;
                     ?>">
@@ -215,7 +215,7 @@ function navList($harbor){
                 echo esc_url(site_url($bookingHarborUrl)); ?>"
                     class="<?php 
                     ;
-                    $activePage = checkIfUrlContainsString($currentUrl, $bookingHarborUrl);
+                    $activePage = checkIfUrlContainsString($currentUrl, $bookingHarborUrl) || is_page("booking-confirmation") ? true : false;
                     $cssClass = ($activePage? "Header__Link Header__Link--Active":"Header__Link");
                     echo $cssClass;
                     ?>"
@@ -303,7 +303,7 @@ function navList($harbor){
 };
 
 
-function wp_search_form( $form ) { $form = "<section class='search search-form'><form role='search' method='get' action='" . home_url( "/" ) . "' > <label class='screen-reader-text' for='s'>" . __("", "domain") . "</label> <input type='search' class='search-field  Header__SearchField' value='" . get_search_query() . "' name='s' id='s' placeholder='T.ex. \"bensin\", \"tennis\", \"butik\" etc.' /> <button type='submit' id='searchsubmit' class='search-submit Search__Button' value='". esc_attr__("Sök", "domain") ."' ><i class='fa fa-search'></i></button> </form></section>"; return $form; } add_filter( 'get_search_form', 'wp_search_form' );
+function wp_search_form( $form ) { $form = "<section class='search search-form'><form class='Header__SearchForm' role='search' method='get' action='" . home_url( "/" ) . "' > <label class='screen-reader-text' for='s'>" . __("", "domain") . "</label> <input type='search' class='search-field  Header__SearchField' value='" . get_search_query() . "' name='s' id='s' placeholder='T.ex. \"bensin\", \"tennis\", \"butik\" etc.' /> <button type='submit' id='searchsubmit' class='search-submit Search__Button' value='". esc_attr__("Sök", "domain") ."' ><i class='fa fa-search'></i></button> </form></section>"; return $form; } add_filter( 'get_search_form', 'wp_search_form' );
 
 // inkludera custom post types i söket
 function include_cpt_search( $query ) {
