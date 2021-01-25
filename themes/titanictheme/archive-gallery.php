@@ -30,11 +30,12 @@
         <div class="Search__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
             <div class="Search__TitleWrapper">
                 <h1 class="Search__Title">
-                <?php echo ucfirst($_SESSION['hamn']); ?>s personal
+                <?php echo ucfirst($_SESSION['hamn']); ?>s gästhamn
                 </h1>
+                <p style="font-size: 3rem; color: white;">Single-harbor.php</p>
             </div>
             <div class="Gallery__StaffBox">
-            <p class="Gallery__StaffTitle">Personallogin</p>
+            <p class="Gallery__StaffTitle">Inloggning för personal</p>
             <div class="Gallery__ButtonsWrapper">
                 <a href="<?php echo wp_login_url();?>" class="Gallery__Button">Logga in</a>
                 <a href="<?php echo wp_registration_url();?>" class="Gallery__Button">Skapa konto</a>
@@ -42,7 +43,6 @@
         </div>
         </div>  
     </div>  
-
 
     <div class="container"> 
     <!-- <div class="blogcontainer">       -->
