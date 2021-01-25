@@ -65,7 +65,7 @@
                     <?php $text = get_the_content();?> <?php echo wp_trim_words($text, 50); ?> 
                 </div>    
         </article> 
-            <div class="Blog__HrLine"><hr></div>    
+            <div class="Blog__HrLine"><hr class="FrontPage__Hr"></div>    
         
     <?php
         }

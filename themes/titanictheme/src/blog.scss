@@ -33,6 +33,7 @@
 
     &__PostTitle {
         @include h2;
+        color: $Primary;
         // border: 1px solid black;
         padding: 5rem 0 0.5rem 0;
     }
@@ -43,6 +44,7 @@
 
     &__PostDate {
         padding: 0 0 3rem 0;
+        color: $Primary;
     }
 
     &__PostLink {

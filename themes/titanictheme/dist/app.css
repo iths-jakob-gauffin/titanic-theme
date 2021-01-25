@@ -272,6 +272,7 @@ a {
 }
 .Blog__PostTitle {
   font-size: 2.5rem;
+  color: #1070A8;
   padding: 5rem 0 0.5rem 0;
 }
 .Blog__PostText {
@@ -279,6 +280,7 @@ a {
 }
 .Blog__PostDate {
   padding: 0 0 3rem 0;
+  color: #1070A8;
 }
 .Blog__PostLink {
   position: absolute;
@@ -359,12 +361,14 @@ a {
 }
 .SingleBlog__PostTitle {
   font-size: 2.5rem;
+  color: #1070A8;
   padding: 5rem 0 0.5rem 0;
 }
 .SingleBlog__PostText {
   padding: 5rem 0;
 }
 .SingleBlog__PostDate {
+  color: #1070A8;
   padding: 0 0 3rem 0;
 }
 .SingleBlog__Image {
