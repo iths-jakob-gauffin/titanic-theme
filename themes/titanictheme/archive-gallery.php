@@ -32,7 +32,6 @@
                 <h1 class="Search__Title">
                 <?php echo ucfirst($_SESSION['hamn']); ?>s gästhamn
                 </h1>
-                <p style="font-size: 3rem; color: white;">Single-harbor.php</p>
             </div>
             <div class="Gallery__StaffBox">
             <p class="Gallery__StaffTitle">Inloggning för personal</p>
@@ -83,18 +82,15 @@
                             </h1>
 
                             <h2 class="Gallery__CardExcerpt">
-                            <!-- <?php the_excerpt(); ?> -->
                             <?php echo $galleryTitle; ?>
                             </h2>   
 
                             <h2 class="Gallery__CardContent">
-                            <!-- <?php the_content(); ?> -->
                             Email: 
                             <?php echo $galleryContactEmail;  ?>
 
                             </h2>   
                             <h2 class="Gallery__CardContent">
-                            <!-- <?php the_content(); ?> -->
                             Tel: 
                             <?php echo $galleryContactNumber;  ?>
                             </h2>   

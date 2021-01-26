@@ -22,15 +22,12 @@
 
     // global $query_string;
     // echo var_dump($query_string);
-    
     // $test = wp_parse_str( $query_string, $search_query );
     // echo var_dump($search_query);
     // $search = new WP_Query( $search_query );
 ?>
     
-    <!-- <h1>Det hääär är Index.php</h1> -->
     <!-- --------Header-------- -->
-    <!-- <div class="Blog"> -->
         <div class="BackgroundImageWrapper">
         <div class="Search__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
             <div class="Search__TitleWrapper">
@@ -40,7 +37,6 @@
             </div>
         </div>  
     </div>  
-    <!-- </div> -->
 <!-- --------Header slut---------- -->
 
     <div class="container">
@@ -49,8 +45,6 @@
         while(have_posts()){
         the_post();
         $hamnen = get_field("hamn")[0]->post_title;
-        // echo var_dump($hamnen);
-        // echo var_dump($_SESSION['hamn']);
 
         if (strtolower($hamnen) === strtolower($_SESSION['hamn'])){
         ?>
@@ -67,7 +61,7 @@
                     <?php $text = get_the_content();?> <?php echo wp_trim_words($text, 50); ?> 
                 </div>    
         </article> 
-            <div class="Blog__HrLine"><hr class="FrontPage__Hr"></div>    
+            <hr class="Blog__HrLine">   
         
     <?php
         }
