@@ -18,17 +18,17 @@ $imgUrl = "";
         $imgUrl = get_the_post_thumbnail_url($value->ID, "backgroundImage");
         }}
         // echo var_dump($imgUrl); ?>
-    
-    <h1>Det här är page-events.php</h1>
+
 <!-- --------Header-------- -->
-    <div class="Events">
-        <div class="Events__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
-         <div class="Events__TitleWrapper">
-            <h1 class="Events__Title">
-            <?php echo ucfirst($_SESSION['hamn']);?> Events
-            </h1>
-        </div>
-    </div>
+<div class="BackgroundImageWrapper">
+        <div class="Search__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
+            <div class="Search__TitleWrapper">
+                <h1 class="Search__Title">
+                Kommande Events för <?php echo ucfirst($_SESSION['hamn']); ?>s gästhamn
+                </h1>
+            </div>
+        </div>  
+    </div>  
 <!-- --------Header slut---------- -->
     <main class="Events">
     <?php
@@ -63,37 +63,36 @@ $imgUrl = "";
         $fixedTime = $time->format('H : i');
         $hamnen = get_field('hamn')[0]->post_title;            
         $eventImage = get_field('event_image')['sizes']['pizza'];
-        // echo var_dump($eventImage['sizes']['pizza']);
 
-        if(strtolower($hamnen) === strtolower($_SESSION['hamn'])){
-            ?>
+    if(strtolower($hamnen) === strtolower($_SESSION['hamn'])){
+    ?>
             <li class="Events__OuterListItem">
-            <a class="Events__Link" href="<?php the_permalink(); ?>">
-            <ul class="Events__List">
-                <li class="Events__ListItem">
+                <a class="Events__Link" href="<?php the_permalink(); ?>">
+                    <ul class="Events__List">
+                        <li class="Events__ListItem">
 
-                <div class="Events__CustomFieldImageContainer">
-                    <img src="<?php echo $eventImage;?>" class="Events__CustomFieldImage">
-                </div>  
-                    <!-- <div class="Events__BackgroundImage" style="background: url('<?php echo $eventImage; ?>')"></div> -->
+                            <div class="Events__CustomFieldImageContainer">
+                                <img src="<?php echo $eventImage;?>" class="Events__CustomFieldImage">
+                            </div>
+                            
+                            <h1 class="Events__ListTitle">
+                                <?php the_title(); ?>
+                            </h1>
+                            <h2  class="Events__CardContentText">
+                                <?php the_content(); the_excerpt();?>
+                            </h2>
+                            <h2 class="Events__CardContentTime">
+                                <?php echo $fixedDate . ", kl: " . $fixedTime; ?>
+                            </h2>
 
-                    <!-- <div><?php echo var_dump($eventImage); ?></div> -->
-                    
-                    <h1 class="Events__ListTitle">
-                        <?php the_title(); ?>
-                    </h1>
-                    <?php the_content(); the_excerpt();
-                    ?>
-                    <h2><?php echo $fixedDate . ", kl: " . $fixedTime; ?></h2>
-                </li>
-            </ul>
-            </a>
+                        </li>
+                    </ul>
+                </a>
             </li>
         <?php
-
+    
         }
 
-        
     }
     wp_reset_postdata();
     ?>
