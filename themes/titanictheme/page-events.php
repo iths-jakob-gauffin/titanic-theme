@@ -72,8 +72,8 @@ $imgUrl = "";
             <ul class="Events__List">
                 <li class="Events__ListItem">
 
-                <div class="Events_CustomFieldImageContainer">
-                    <img src="<?php echo $eventImage;?>" class="Events_CustomFieldImage">
+                <div class="Events__CustomFieldImageContainer">
+                    <img src="<?php echo $eventImage;?>" class="Events__CustomFieldImage">
                 </div>  
                     <!-- <div class="Events__BackgroundImage" style="background: url('<?php echo $eventImage; ?>')"></div> -->
 
