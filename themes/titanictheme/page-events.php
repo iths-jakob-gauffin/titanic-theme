@@ -79,7 +79,7 @@ $imgUrl = "";
                                 <?php the_title(); ?>
                             </h1>
                             <h2  class="Events__CardContentText">
-                                <?php the_content(); the_excerpt();?>
+                                <?php the_excerpt();?>
                             </h2>
                             <h2 class="Events__CardContentTime">
                                 <?php echo $fixedDate . ", kl: " . $fixedTime; ?>

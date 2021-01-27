@@ -12,35 +12,55 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
+        padding: 5rem 0 0 0;
         background-color: $White;
+        // border: 1px solid red;
     }
 
     &__OuterListItem {
-    // height: 100%;
-    width: 30%;
-    // padding: 0 4rem;
-    // margin: 0px;
+    // width: 30%;
+    flex: 1 1 20%;
+    max-width: 20%;
+    min-width: 31.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5rem;
+    margin-left: auto;
+    margin-right: auto;
     @include p;
-    border: 1px solid blue;
+    // border: 1px solid blue;
+    }
+
+    &__Link {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-content: center;
     }
 
     &__List {
-    // height: 100%;
-    // width: 100%;
-    // padding: 0 4rem;
-    margin: 4rem;
     display: flex;
     flex-direction: row;
     align-items: center;
+    list-style: none;
     @include p;
-    border: 1px solid black;
+    cursor: pointer;
+    transition: all $transition;
+    @include p;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    border-radius: 0px 0px 40px 0px;
+
+    &:hover{
+        background-color: lightblue;
+        }
     }
 
     // &__ListItem {
+    // // height: 100%;
+    // // width: 100%;
     // border: 1px solid red;
     // }
 
@@ -53,7 +73,7 @@
     &__CustomFieldImage {
     height: 100%;
     width: 100%;
-    // object-fit: cover;
+    object-fit: cover;
     // border: 1px solid black;
     }
 
@@ -61,9 +81,8 @@
         @include pageTitle;
         padding: 1.5rem 0 1.5rem 3rem;
         margin: 0;
-        font-weight: 400;
+        font-weight: 500;
         @include h2;
-        // height: 25%;
         color: blue;
         // border: 1px solid black;
     }
@@ -71,10 +90,9 @@
     &__CardContentText {
         @include p;
         padding: 0rem 0 1.5rem 3rem;
-        margin: 0;
+        margin-right: 1.5rem;
         font-weight: 200;
-        // @include h2;
-        // height: 25%;
+        // @include h4;
         color: black;
         // border: 1px solid black;
     }
@@ -83,10 +101,9 @@
         @include p;
         padding: 0rem 0 1.5rem 3rem;
         margin: 0;
-        font-weight: 200;
-        // @include h2;
-        // height: 25%;
-        color: black;
+        font-weight: 400;
+        // @include h4;
+        color: blue;
         // border: 1px solid black;
     }
 
