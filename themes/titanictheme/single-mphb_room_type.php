@@ -55,7 +55,6 @@
                 <h1 class="Search__Title">
                 <?php echo ucfirst($_SESSION['hamn']); ?> - bokning
                 </h1>
-                <p style="font-size: 3rem; color: white;">Single-mphb_room_type.php</p>
             </div>
         </div>  
     </div>  

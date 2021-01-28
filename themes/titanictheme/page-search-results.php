@@ -11,7 +11,6 @@
                 $checkOutDate = $dateCheckOut->format('d M, Y');
                 echo $checkInDate; ?> - <?php echo $checkOutDate; ?>
                 </h1>
-                <p style="font-size: 3rem; color: white;">page-search-results.php</p>
             </div>
         </div>  
     </div>

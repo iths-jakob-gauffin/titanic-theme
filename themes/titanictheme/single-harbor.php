@@ -77,7 +77,6 @@ $specificHarbor = [];
                 <h1 class="Search__Title">
                 <?php echo ucfirst($_SESSION['hamn']); ?>s gästhamn
                 </h1>
-                <p style="font-size: 3rem; color: white;">Single-harbor.php</p>
             </div>
         </div>  
     </div>  

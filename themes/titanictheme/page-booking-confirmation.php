@@ -42,7 +42,6 @@
                     <h1 class="Search__Title">
                     <?php echo ucfirst($_SESSION['hamn']); ?> - bokning
                     </h1>
-                    <p style="font-size: 3rem; color: white;">Det här är page-booking-confirmation.php</p>
                 </div>
             </div>  
         </div> 
@@ -117,7 +116,6 @@
                     <h1 class="Search__Title">
                     <?php echo ucfirst($_SESSION['hamn']); ?> - bokningsbekräftelse
                     </h1>
-                    <p style="font-size: 3rem; color: white;">page-booking-confirmation.php else-statementet</p>
                 </div>
             </div>  
         </div>  

@@ -5,9 +5,6 @@
         ?>
         <div class="BackgroundImageWrapper">
             <div class="Search__BackgroundImage Search__BackgroundImage--FrontPage" style="background: url('<?php echo get_template_directory_uri() . '/dist/image/search.jpg'; ?>')">
-                <div class="Search__TitleWrapper">
-                    <p style="font-size: 3rem; color: white;">front-page.php</p>
-                </div>
                 <h1 class="FrontPage__WelcomeText">
                     Varmt välkommen!
                 </h1>

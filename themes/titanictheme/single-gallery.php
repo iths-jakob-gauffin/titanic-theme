@@ -2,10 +2,6 @@
 
     <div class="container">
         <main class="Single">
-            <h1 class="Single__Title">
-                Single-gallery.php
-            </h1>
-
             <?php
 
             while(have_posts()){

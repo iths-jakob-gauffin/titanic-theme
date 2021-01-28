@@ -5,7 +5,6 @@
                 <h1 class="Search__Title">
                 <?php echo "Våra hamnar"; ?>
                 </h1>
-                <p style="font-size: 3rem; color: white;">archive-harbor.php</p>
             </div>
         </div>  
     </div>  

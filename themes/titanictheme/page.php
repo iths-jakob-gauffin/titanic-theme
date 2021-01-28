@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-    <h1>Det här är page.php</h1>
     <?php
 
     while(have_posts()){

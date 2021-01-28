@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-    <h1>Det här är page-hamnar.php</h1>
     <div class="container">
     <?php
 

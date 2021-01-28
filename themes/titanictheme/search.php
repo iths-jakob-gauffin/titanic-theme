@@ -1,5 +1,4 @@
-<?php get_header(); ?>
-    <h1>search.php</h1>
+<?php get_header(); ?>    
     <div class="BackgroundImageWrapper">
         <div class="Search__BackgroundImage" style="background: url('<?php echo get_template_directory_uri() . '/dist/image/search.jpg'; ?>')">
         ¨<div class="Search__TitleWrapper">
