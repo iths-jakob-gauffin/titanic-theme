@@ -41,7 +41,7 @@
         margin: 0;
         font-weight: 600;
         @include h1;
-        color: blue;
+        color: $Primary;
     }
 
     &__Date {
@@ -50,7 +50,7 @@
         margin: 0;
         font-weight: 200;
         @include h4;
-        color: blue;
+        color: $Primary;
         // border: 1px solid black;
     }
 

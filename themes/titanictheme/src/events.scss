@@ -12,23 +12,24 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
-        padding: 5rem 0 0 0;
+        justify-content: space-between;
+        padding: 5rem 10rem;
         background-color: $White;
+        
         // border: 1px solid red;
     }
 
     &__OuterListItem {
     // width: 30%;
-    flex: 1 1 20%;
-    max-width: 20%;
+    flex: 1 1 25%;
+    max-width: 30%;
     min-width: 31.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 5rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
     @include p;
     // border: 1px solid blue;
     }
@@ -41,6 +42,8 @@
     }
 
     &__List {
+    // border: 1px solid green;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -58,11 +61,10 @@
         }
     }
 
-    // &__ListItem {
-    // // height: 100%;
-    // // width: 100%;
-    // border: 1px solid red;
-    // }
+    &__ListItem {
+        display: block;
+        width: 100%;
+    }
 
     &__CustomFieldImageContainer {
     height: 25rem;
@@ -77,33 +79,43 @@
     // border: 1px solid black;
     }
 
+    &__TextWrapper{
+        padding: $spacingS $spacingL $spacingL;
+    }
+
     &__ListTitle {
         @include pageTitle;
-        padding: 1.5rem 0 1.5rem 3rem;
-        margin: 0;
+        // padding: 1.5rem 0 1.5rem 3rem;
+        margin-bottom: 1.5rem;
         font-weight: 500;
         @include h2;
-        color: blue;
-        // border: 1px solid black;
+        color: $Primary;
     }
 
     &__CardContentText {
         @include p;
-        padding: 0rem 0 1.5rem 3rem;
-        margin-right: 1.5rem;
+        margin-bottom: 1.5rem;
+        // padding: 0rem 0 1.5rem 3rem;
+        // margin-right: 1.5rem;
         font-weight: 200;
         // @include h4;
         color: black;
-        // border: 1px solid black;
+        height: 5rem;
+        overflow: hidden;
+        width: 100%;
+        display: block;
+
+        // border: 1px solid red;
     }
 
     &__CardContentTime {
         @include p;
-        padding: 0rem 0 1.5rem 3rem;
+        margin-bottom: 1.5rem;
+        // padding: 0rem 0 1.5rem 3rem;
         margin: 0;
         font-weight: 400;
         // @include h4;
-        color: blue;
+        color: $Primary;
         // border: 1px solid black;
     }
 

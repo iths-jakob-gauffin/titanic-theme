@@ -20,7 +20,7 @@ $imgUrl = "";
         // echo var_dump($imgUrl); ?>
 
 <!-- --------Header-------- -->
-<div class="BackgroundImageWrapper">
+    <div class="BackgroundImageWrapper">
         <div class="Search__BackgroundImage" style="background: url('<?php echo $imgUrl; ?>')">
             <div class="Search__TitleWrapper">
                 <h1 class="Search__Title">
@@ -74,17 +74,18 @@ $imgUrl = "";
                             <div class="Events__CustomFieldImageContainer">
                                 <img src="<?php echo $eventImage;?>" class="Events__CustomFieldImage">
                             </div>
+                            <div class="Events__TextWrapper">
                             
-                            <h1 class="Events__ListTitle">
-                                <?php the_title(); ?>
-                            </h1>
-                            <h2  class="Events__CardContentText">
-                                <?php the_excerpt();?>
-                            </h2>
-                            <h2 class="Events__CardContentTime">
-                                <?php echo $fixedDate . ", kl: " . $fixedTime; ?>
-                            </h2>
-
+                                <h1 class="Events__ListTitle">
+                                    <?php the_title(); ?>
+                                </h1>
+                                <h2  class="Events__CardContentText">
+                                    <?php echo wp_trim_words(get_the_excerpt(), 10);?>
+                                </h2>
+                                <h2 class="Events__CardContentTime">
+                                    <?php echo $fixedDate . ", kl: " . $fixedTime; ?>
+                                </h2>
+                            </div>
                         </li>
                     </ul>
                 </a>

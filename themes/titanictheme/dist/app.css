@@ -1154,20 +1154,20 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  padding: 5rem 0 0 0;
+  justify-content: space-between;
+  padding: 5rem 10rem;
   background-color: white;
 }
 .Events__OuterListItem {
-  flex: 1 1 20%;
-  max-width: 20%;
+  flex: 1 1 25%;
+  max-width: 30%;
   min-width: 31.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 5rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
   font-size: 1.5rem;
 }
 .Events__Link {
@@ -1177,6 +1177,7 @@ body {
   align-content: center;
 }
 .Events__List {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1191,6 +1192,10 @@ body {
 .Events__List:hover {
   background-color: lightblue;
 }
+.Events__ListItem {
+  display: block;
+  width: 100%;
+}
 .Events__CustomFieldImageContainer {
   height: 25rem;
   width: 100%;
@@ -1201,27 +1206,32 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.Events__TextWrapper {
+  padding: 1.5rem 2.5rem 2.5rem;
+}
 .Events__ListTitle {
   font-size: 4rem;
-  padding: 1.5rem 0 1.5rem 3rem;
-  margin: 0;
+  margin-bottom: 1.5rem;
   font-weight: 500;
   font-size: 2.5rem;
-  color: blue;
+  color: #1070a8;
 }
 .Events__CardContentText {
   font-size: 1.5rem;
-  padding: 0rem 0 1.5rem 3rem;
-  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
   font-weight: 200;
   color: black;
+  height: 5rem;
+  overflow: hidden;
+  width: 100%;
+  display: block;
 }
 .Events__CardContentTime {
   font-size: 1.5rem;
-  padding: 0rem 0 1.5rem 3rem;
+  margin-bottom: 1.5rem;
   margin: 0;
   font-weight: 400;
-  color: blue;
+  color: #1070a8;
 }
 
 .container {
@@ -1265,7 +1275,7 @@ body {
   margin: 0;
   font-weight: 600;
   font-size: 3rem;
-  color: blue;
+  color: #1070a8;
 }
 .SingleEvent__Date {
   font-size: 1.5rem;
@@ -1273,7 +1283,7 @@ body {
   margin: 0;
   font-weight: 200;
   font-size: 1.8rem;
-  color: blue;
+  color: #1070a8;
 }
 .SingleEvent__Text {
   font-size: 1.5rem;
